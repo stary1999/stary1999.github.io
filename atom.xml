@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  
+  <link href="https://stary1999.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://stary1999.github.io/"/>
+  <updated>2021-05-05T04:45:27.888Z</updated>
+  <id>https://stary1999.github.io/</id>
+  
+  <author>
+    <name>stary</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://stary1999.github.io/2021/06/28/idea%20%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"/>
+    <id>https://stary1999.github.io/2021/06/28/idea%20%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</id>
+    <published>2021-06-28T09:10:22.082Z</published>
+    <updated>2021-05-05T04:45:27.888Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="idea-使用指南"><a href="#idea-使用指南" class="headerlink" title="idea 使用指南"></a>idea 使用指南</h1><h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><h4 id="1-try-catch-、生成测试"><a href="#1-try-catch-、生成测试" class="headerlink" title="1.try-catch 、生成测试"></a>1.try-catch 、生成测试</h4><p>ctrl+alt+t</p><h4 id="2-快速生成get、set等函数"><a href="#2-快速生成get、set等函数" class="headerlink" title="2.快速生成get、set等函数"></a>2.快速生成get、set等函数</h4><p>alt+insert</p><h4 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h4><h2 id="debug"><a href="#debug" class="headerlink" title="debug"></a>debug</h2><p>断点+debug</p><p>run模式和debug模式</p><h2 id="修改配置文件需要重新部署"><a href="#修改配置文件需要重新部署" class="headerlink" title="修改配置文件需要重新部署"></a>修改配置文件需要重新部署</h2><p>例如：web.xml</p><p>修改代码热部署即可</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;idea-使用指南&quot;&gt;&lt;a href=&quot;#idea-使用指南&quot; class=&quot;headerlink&quot; title=&quot;idea 使用指南&quot;&gt;&lt;/a&gt;idea 使用指南&lt;/h1&gt;&lt;h2 id=&quot;快捷键&quot;&gt;&lt;a href=&quot;#快捷键&quot; class=&quot;headerlink</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://stary1999.github.io/2021/06/28/firefox%E4%B8%BB%E9%A1%B5%E8%A2%AB%E5%8A%AB%E6%8C%81/"/>
+    <id>https://stary1999.github.io/2021/06/28/firefox%E4%B8%BB%E9%A1%B5%E8%A2%AB%E5%8A%AB%E6%8C%81/</id>
+    <published>2021-06-28T09:10:22.075Z</published>
+    <updated>2021-05-03T03:41:46.465Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="firefox主页被劫持"><a href="#firefox主页被劫持" class="headerlink" title="firefox主页被劫持"></a>firefox主页被劫持</h1><h4 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h4><p>打开浏览器，自动弹出360的界面</p><h4 id="解决："><a href="#解决：" class="headerlink" title="解决："></a>解决：</h4><p>解决方案一：</p><p>进行主页修复，重设火狐主页，详情请访问： <a href="http://doc.firefoxchina.cn/document/repair/">http://doc.firefoxchina.cn/document/repair/</a></p><p>解决方案二：<br>如果无法修改选项中火狐主页的地址，可能中了恶意扩展或者火狐配置被篡改。</p><p>1.检查 附加组件 – 扩展 中是否有可疑扩展，禁用掉。<br>2.在地址栏里输入”about:support”<br>3.单击配置文件夹后的”显示文件夹”按钮。<br>4.在弹出来的文件夹中找到那个叫做”user.js”的文件，右键选择”编辑”。<br>5.在弹出来的窗口中找到user_pref(“browser.startup.homepage”, “被锁定的网址”)<br>6.直接删除”user.js”或者删除这行代码。</p><p>解决方案三：</p><p>如果还不行，就在你安装的路径打开火狐，如果打开没没被劫持就是快捷方式被篡改了，将快捷方式去掉，重新生成。</p><p><img src="C:\Users\张雄\AppData\Roaming\Typora\typora-user-images\image-20210503114125619.png" alt="image-20210503114125619"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;firefox主页被劫持&quot;&gt;&lt;a href=&quot;#firefox主页被劫持&quot; class=&quot;headerlink&quot; title=&quot;firefox主页被劫持&quot;&gt;&lt;/a&gt;firefox主页被劫持&lt;/h1&gt;&lt;h4 id=&quot;问题描述：&quot;&gt;&lt;a href=&quot;#问题描述：&quot; c</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://stary1999.github.io/2021/06/28/4_30_MySQL/"/>
+    <id>https://stary1999.github.io/2021/06/28/4_30_MySQL/</id>
+    <published>2021-06-28T09:10:22.060Z</published>
+    <updated>2021-04-30T05:05:00.730Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h1><h2 id="1-Idea连接MySQL常见报错"><a href="#1-Idea连接MySQL常见报错" class="headerlink" title="1.Idea连接MySQL常见报错"></a>1.Idea连接MySQL常见报错</h2><h4 id="a-驱动版本与MySQL版本不同"><a href="#a-驱动版本与MySQL版本不同" class="headerlink" title="a.驱动版本与MySQL版本不同"></a>a.驱动版本与MySQL版本不同</h4><p><img src="C:\Users\张雄\AppData\Roaming\Typora\typora-user-images\image-20210430123446936.png" alt="image-20210430123446936"></p><h4 id="b-时区错误："><a href="#b-时区错误：" class="headerlink" title="b.时区错误："></a>b.时区错误：</h4><p>连接MySQL后，输入下列命令。</p><p><img src="C:\Users\张雄\AppData\Roaming\Typora\typora-user-images\image-20210430123607848.png" alt="image-20210430123607848"></p><h4 id="c-驱动弃用"><a href="#c-驱动弃用" class="headerlink" title="c.驱动弃用"></a>c.驱动弃用</h4><p>修改配置文件驱动</p><p><img src="C:\Users\张雄\AppData\Roaming\Typora\typora-user-images\image-20210430123855060.png" alt="image-20210430123855060"></p><h5 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h5><p><img src="C:\Users\张雄\AppData\Roaming\Typora\typora-user-images\image-20210430125823512.png" alt="image-20210430125823512"></p><h4 id="d-加密方式变化"><a href="#d-加密方式变化" class="headerlink" title="d.加密方式变化"></a>d.加密方式变化</h4><p>MySQL8.0后加密方式变化，可能出现连接不上的问题</p><p>报错：Client does not support authentication protocol requested by server; consider upgrading MySQL client</p><p>mysql8 之前的版本中加密规则是mysql_native_password,而在mysql8之后,加密规则是caching_sha2_password</p><p><img src="C:\Users\张雄\AppData\Roaming\Typora\typora-user-images\image-20210430124334509.png" alt="image-20210430124334509"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;MySQL&quot;&gt;&lt;a href=&quot;#MySQL&quot; class=&quot;headerlink&quot; title=&quot;MySQL&quot;&gt;&lt;/a&gt;MySQL&lt;/h1&gt;&lt;h2 id=&quot;1-Idea连接MySQL常见报错&quot;&gt;&lt;a href=&quot;#1-Idea连接MySQL常见报错&quot; class</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://stary1999.github.io/2021/06/28/4_29_tomcat%20and%20severlet/"/>
+    <id>https://stary1999.github.io/2021/06/28/4_29_tomcat%20and%20severlet/</id>
+    <published>2021-06-28T09:10:22.028Z</published>
+    <updated>2021-05-03T03:37:26.253Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="4-29-tomcat-and-severlet"><a href="#4-29-tomcat-and-severlet" class="headerlink" title="4_29_tomcat and severlet"></a>4_29_tomcat and severlet</h1><h3 id="1-idea激活，使用30天试用期插件"><a href="#1-idea激活，使用30天试用期插件" class="headerlink" title="1.idea激活，使用30天试用期插件"></a>1.idea激活，使用30天试用期插件</h3><h3 id="2-tomcat日志乱码，"><a href="#2-tomcat日志乱码，" class="headerlink" title="2.tomcat日志乱码，"></a>2.tomcat日志乱码，</h3><p><img src="file:///C:/Users/张雄/AppData/Local/Temp/msohtmlclip1/01/clip_image001.png" alt="img"></p><p>找到tomcat安装目录conf下logging.properties文件，打开后搜索：java.util.logging.ConsoleHandler.encoding</p><p>修改为GBK</p><p><img src="file:///C:/Users/张雄/AppData/Local/Temp/msohtmlclip1/01/clip_image003.jpg" alt="img"></p><h3 id="3-tomcat服务器使用："><a href="#3-tomcat服务器使用：" class="headerlink" title="3.tomcat服务器使用："></a>3.tomcat服务器使用：</h3><p>   a，正常流程安装，安装好后，浏览器输入localhost:8080测试，注意JDK路径与环境变量配置</p><p>   b，与idea关联使用：</p><p>​       注意事项：每次修改服务的相关代码后，都需要重启tomcat服务，（例如servlet），tomcat启动较慢，修改其他文件可以不用重启服务，只需重新编译class和资源。</p><p>   <img src="file:///C:/Users/张雄/AppData/Local/Temp/msohtmlclip1/01/clip_image005.jpg" alt="img"></p><p><img src="file:///C:/Users/张雄/AppData/Local/Temp/msohtmlclip1/01/clip_image007.jpg" alt="img"></p><p><img src="file:///C:/Users/张雄/AppData/Local/Temp/msohtmlclip1/01/clip_image009.jpg" alt="img"></p><p><img src="file:///C:/Users/张雄/AppData/Local/Temp/msohtmlclip1/01/clip_image011.jpg" alt="img"></p><h3 id="4-书城阶段总结："><a href="#4-书城阶段总结：" class="headerlink" title="4.书城阶段总结："></a>4.书城阶段总结：</h3><p>   前端html+css实现静态样式</p><p>   jquary用来做事件响应，（表单验证）</p><p>   tomcat作服务器，servlet用来响应请求。实现页面跳转以及从客户端获取、处理数据。</p><h3 id="5-servlet："><a href="#5-servlet：" class="headerlink" title="5.servlet："></a>5.servlet：</h3><p>​    重定向、请求分发，响应流</p><p>注意：     设置服务器、浏览器的编码。</p><p>​                   在web.xml中需要声明servlet。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;4-29-tomcat-and-severlet&quot;&gt;&lt;a href=&quot;#4-29-tomcat-and-severlet&quot; class=&quot;headerlink&quot; title=&quot;4_29_tomcat and severlet&quot;&gt;&lt;/a&gt;4_29_tomcat an</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://stary1999.github.io/2021/06/28/hello-world/"/>
+    <id>https://stary1999.github.io/2021/06/28/hello-world/</id>
+    <published>2021-06-28T02:22:28.784Z</published>
+    <updated>2021-06-28T02:22:28.784Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
