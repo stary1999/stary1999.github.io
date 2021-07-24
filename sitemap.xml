@@ -2,6 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://stary1999.github.io/2021/07/22/Redis6/</loc>
+    
+    <lastmod>2021-07-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stary1999.github.io/2021/07/23/faceQuestions/</loc>
+    
+    <lastmod>2021-07-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stary1999.github.io/2021/07/22/JVM/</loc>
+    
+    <lastmod>2021-07-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stary1999.github.io/2021/06/29/tools-2021-06-29-hexoInstallAndUse/</loc>
+    
+    <lastmod>2021-07-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stary1999.github.io/2021/07/11/tools-2021-07-11-DesignPatterns/</loc>
+    
+    <lastmod>2021-07-16</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stary1999.github.io/2021/07/10/java-2021-07-10-JavaSE/</loc>
+    
+    <lastmod>2021-07-16</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://stary1999.github.io/2021/07/10/language-2021-07-10-vue/</loc>
     
     <lastmod>2021-07-16</lastmod>
@@ -16,21 +58,7 @@
   </url>
   
   <url>
-    <loc>https://stary1999.github.io/2021/07/11/tools-2021-07-11-DesignPatterns/</loc>
-    
-    <lastmod>2021-07-14</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://stary1999.github.io/2021/07/10/java-2021-07-10-JavaWeb/</loc>
-    
-    <lastmod>2021-07-10</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://stary1999.github.io/2021/07/10/java-2021-07-10-JavaSE/</loc>
     
     <lastmod>2021-07-10</lastmod>
     
@@ -107,13 +135,6 @@
   </url>
   
   <url>
-    <loc>https://stary1999.github.io/2021/06/29/tools-2021-06-29-hexoInstallAndUse/</loc>
-    
-    <lastmod>2021-07-01</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://stary1999.github.io/2021/06/30/tools-2021-06-30-mavenUse/</loc>
     
     <lastmod>2021-06-30</lastmod>
@@ -179,169 +200,197 @@
 
   <url>
     <loc>https://stary1999.github.io/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
+    <loc>https://stary1999.github.io/tags/java/</loc>
+    <lastmod>2021-07-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://stary1999.github.io/tags/%E9%9D%A2%E8%AF%95/</loc>
+    <lastmod>2021-07-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://stary1999.github.io/tags/%E5%AE%9E%E9%AA%8C/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://stary1999.github.io/tags/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://stary1999.github.io/tags/ubuntu/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://stary1999.github.io/tags/SDN/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://stary1999.github.io/tags/%E6%97%A5%E5%BF%97/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://stary1999.github.io/tags/%E5%BF%83%E5%BE%97/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://stary1999.github.io/tags/default/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://stary1999.github.io/tags/idea/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://stary1999.github.io/tags/%E8%AF%AD%E6%B3%95/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://stary1999.github.io/tags/%E5%85%A5%E9%97%A8/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://stary1999.github.io/tags/markdown/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://stary1999.github.io/tags/vue/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://stary1999.github.io/tags/%E5%89%8D%E7%AB%AF/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://stary1999.github.io/tags/hexo/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://stary1999.github.io/tags/%E8%B8%A9%E5%9D%91/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://stary1999.github.io/tags/%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2021-07-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://stary1999.github.io/tags/java/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://stary1999.github.io/tags/git/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://stary1999.github.io/tags/github/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://stary1999.github.io/tags/web/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://stary1999.github.io/tags/jsp/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://stary1999.github.io/tags/Redis/</loc>
+    <lastmod>2021-07-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://stary1999.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <lastmod>2021-07-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://stary1999.github.io/tags/jvm/</loc>
+    <lastmod>2021-07-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://stary1999.github.io/tags/%E6%A1%86%E6%9E%B6/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://stary1999.github.io/tags/SpringBoot2/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -349,43 +398,43 @@
 
   
   <url>
+    <loc>https://stary1999.github.io/categories/java/</loc>
+    <lastmod>2021-07-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://stary1999.github.io/categories/2021%E8%AF%BE%E8%AE%BE/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://stary1999.github.io/categories/%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://stary1999.github.io/categories/default/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://stary1999.github.io/categories/%E8%AF%AD%E8%A8%80/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://stary1999.github.io/categories/%E6%A1%86%E6%9E%B6/</loc>
-    <lastmod>2021-07-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://stary1999.github.io/categories/java/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
