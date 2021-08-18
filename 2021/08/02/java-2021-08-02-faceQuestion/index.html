@@ -1,0 +1,398 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="面试题(第一季)"><meta name="keywords" content="java,面试,笔记"><meta name="author" content="stary,undefined"><meta name="copyright" content="stary"><title>面试题(第一季)【繁星点点】</title><link rel="stylesheet" href="/css/fan.css"><link rel="stylesheet" href="/css/thirdparty/jquery.mCustomScrollbar.min.css"><link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"><link rel="icon" href="/favicon.ico"><!-- script(src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML")--><script src="/js/mathjax/mathjax.js"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+});
+</script><script>var isPassword = '' || false;
+if (isPassword) {
+    if (prompt('请输入文章密码') !== '') {
+        alert('密码错误！');
+        history.back();
+    }
+}</script><script>window.GLOBAL_CONFIG = {
+  root: '/',
+  algolia: false,
+  localSearch: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  gitment: ,
+  valine: ,
+}</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="繁星点点" type="application/atom+xml">
+</head><body><canvas id="universe"></canvas><!--#body--><div id="sidebar"><div class="toggle-sidebar-info button-hover"><span data-toggle="文章目录">站点概览</span></div><div class="sidebar-toc"><div class="sidebar-toc-title">目录</div><div class="sidebar-toc-progress"><span class="progress-notice">您已阅读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc-progress-bar"></div></div><div class="sidebar-toc-content" id="sidebar-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java-SE"><span class="toc-number">1.</span> <span class="toc-text">Java SE</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E5%A2%9E%E5%8F%98%E9%87%8F"><span class="toc-number">1.1.</span> <span class="toc-text">自增变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E4%BE%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%85%B7%E4%BD%93%E5%8F%AF%E5%8F%82%E8%A7%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%8C%E5%BF%85%E9%A1%BB%E6%8E%8C%E6%8F%A1"><span class="toc-number">1.2.</span> <span class="toc-text">单例设计模式(具体可参见设计模式，必须掌握)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E9%A5%BF%E6%B1%89%E5%BC%8F"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. 饿汉式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%87%92%E6%B1%89%E5%BC%8F"><span class="toc-number">1.2.2.</span> <span class="toc-text">2. 懒汉式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E5%88%9D%E5%A7%8B%E5%8C%96%E5%AE%9E%E4%BE%8B%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">1.3.</span> <span class="toc-text">类初始化实例初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%E6%9C%BA%E5%88%B6"><span class="toc-number">1.4.</span> <span class="toc-text">方法参数传递机制</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E7%9A%84%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%E6%9C%BA%E5%88%B6"><span class="toc-number">1.4.0.1.</span> <span class="toc-text">方法的参数传递机制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%92%E5%BD%92%E4%B8%8E%E8%BF%AD%E4%BB%A3"><span class="toc-number">1.5.</span> <span class="toc-text">递归与迭代</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E5%92%8C%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F"><span class="toc-number">1.6.</span> <span class="toc-text">成员变量和局部变量</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SSM"><span class="toc-number">2.</span> <span class="toc-text">SSM</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring%E4%B8%AD%E6%94%AF%E6%8C%81%E7%9A%84%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1%E4%BC%A0%E6%92%AD%E5%B1%9E%E6%80%A7%E5%92%8C%E4%BA%8B%E5%8A%A1%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB"><span class="toc-number">2.1.</span> <span class="toc-text">Spring中支持的常用数据库事务传播属性和事务隔离级别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BA%8B%E5%8A%A1%E7%9A%84%E4%BC%A0%E6%92%AD%E8%A1%8C%E4%B8%BA"><span class="toc-number">2.1.1.</span> <span class="toc-text">1. 事务的传播行为</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%BA%8B%E5%8A%A1%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB"><span class="toc-number">2.1.2.</span> <span class="toc-text">2. 事务隔离级别</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1%E5%B9%B6%E5%8F%91%E9%97%AE%E9%A2%98"><span class="toc-number">2.1.2.1.</span> <span class="toc-text">数据库事务并发问题:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB"><span class="toc-number">2.1.2.2.</span> <span class="toc-text">隔离级别:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">2.1.2.3.</span> <span class="toc-text">总结</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SpringMVC%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="toc-number">2.2.</span> <span class="toc-text">SpringMVC工作流程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E5%BC%80%E5%8F%91%E6%AD%A5%E9%AA%A4"><span class="toc-number">2.2.0.1.</span> <span class="toc-text">核心开发步骤</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MyBatis"><span class="toc-number">2.3.</span> <span class="toc-text">MyBatis</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#MyBatis%E4%B8%AD%E5%BD%93%E5%AE%9E%E4%BD%93%E7%B1%BB%E4%B8%AD%E7%9A%84%E5%B1%9E%E6%80%A7%E5%90%8D%E5%92%8C%E8%A1%A8%E4%B8%AD%E7%9A%84%E5%AD%97%E6%AE%B5%E4%B8%8D%E4%B8%80%E6%A0%B7%EF%BC%8C%E6%80%8E%E4%B9%88%E5%8A%9E"><span class="toc-number">2.3.0.1.</span> <span class="toc-text">MyBatis中当实体类中的属性名和表中的字段不一样，怎么办?</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java%E9%AB%98%E7%BA%A7%E9%9D%A2%E8%AF%95%E9%A2%98"><span class="toc-number">3.</span> <span class="toc-text">Java高级面试题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux"><span class="toc-number">3.1.</span> <span class="toc-text">Linux</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git"><span class="toc-number">3.2.</span> <span class="toc-text">Git</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redis"><span class="toc-number">3.3.</span> <span class="toc-text">Redis</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#RDB"><span class="toc-number">3.3.1.</span> <span class="toc-text">RDB</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AOF"><span class="toc-number">3.3.2.</span> <span class="toc-text">AOF</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL"><span class="toc-number">3.4.</span> <span class="toc-text">MySQL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JVM"><span class="toc-number">3.5.</span> <span class="toc-text">JVM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E9%9D%A2%E8%AF%95%E9%A2%98"><span class="toc-number">3.6.</span> <span class="toc-text">项目面试题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Redis%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">3.6.1.</span> <span class="toc-text">Redis在项目中的使用场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Elasticsearch%E4%B8%8Esolr%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">3.6.2.</span> <span class="toc-text">Elasticsearch与solr的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E7%82%B9%E7%99%BB%E5%BD%95"><span class="toc-number">3.6.3.</span> <span class="toc-text">单点登录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%AD%E7%89%A9%E8%BD%A6%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B"><span class="toc-number">3.6.4.</span> <span class="toc-text">购物车实现过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">3.6.5.</span> <span class="toc-text">消息队列在项目中的使用</span></a></li></ol></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info-avatar"><img class="author-info-avatar-img" src="/avatar.png"></div><div class="author-info-name">stary</div><div class="author-info-description"></div><div class="links-buttons"><a class="links-button button-hover" href="https://github.com/stary1999" target="_blank">GitHub<i class="icon-dot bg-color1"></i></a><a class="links-button button-hover" href="mailto:stary2020@163.com" target="_blank">E-Mail<i class="icon-dot bg-color9"></i></a><a class="links-button button-hover" href="tencent://message/?uin=1497447121&amp;Site=&amp;Menu=yes" target="_blank">QQ<i class="icon-dot bg-color9"></i></a></div><div class="author-info-articles"><a class="author-info-articles-archives article-meta" href="/archives"><span class="pull-top">日志</span><span class="pull-bottom">28</span></a><a class="author-info-articles-tags article-meta" href="/tags"><span class="pull-top">标签</span><span class="pull-bottom">36</span></a><a class="author-info-articles-categories article-meta" href="/categories"><span class="pull-top">分类</span><span class="pull-bottom">6</span></a></div></div></div><div id="main-container"><header><div id="menu-outer"><i class="menu-list-icon fas fa-bars"></i><nav id="menu-inner"><a class="menu-item" href="/home">首页</a><a class="menu-item" href="/tags">标签</a><a class="menu-item" href="/categories">分类</a><a class="menu-item" href="/archives">归档</a><a class="menu-item" href="/about">关于</a></nav><div class="right-info"><a class="title-name" href="/">繁星点点</a><span id="now-time"></span></div></div></header><div id="content-outer"><div id="content-inner"><article id="post"><div class="post-header"><div class="title">面试题(第一季)</div><div class="container"><time class="button-hover post-date"><i class="fas fa-calendar-alt article-icon" aria-hidden="true"></i> 发表于 2021-08-02 | 更新于 2021-08-03</time><!--time.button-hover.post-date #[i.fas.fa-calendar-alt.article-icon(aria-hidden="true")] #[=__('post.modified')] #[=date(page['updated'], config.date_format)]--><div class="button-hover categories"><i class="fa fa-inbox article-icon" aria-hidden="true"></i><a class="link-a" href="/categories/java/">java</a></div><div class="button-hover tags"><i class="fa fa-tag article-icon" aria-hidden="true"></i><a class="link-a" href="/tags/java/">java</a><span>&nbsp;|&nbsp;</span><i class="fa fa-tag article-icon" aria-hidden="true"></i><a class="link-a" href="/tags/%E9%9D%A2%E8%AF%95/">面试</a><span>&nbsp;|&nbsp;</span><i class="fa fa-tag article-icon" aria-hidden="true"></i><a class="link-a" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a></div></div></div><div class="main-content"><p>参考尚硅谷教学视频:<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Eb411P7bP?spm_id_from=333.788.b_636f6d6d656e74.25">https://www.bilibili.com/video/BV1Eb411P7bP?spm_id_from=333.788.b_636f6d6d656e74.25</a></p>
+<p>转载自:<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_42999092/article/details/109068522">https://blog.csdn.net/qq_42999092/article/details/109068522</a></p>
+<h1 id="Java-SE"><a href="#Java-SE" class="headerlink" title="Java SE"></a>Java SE</h1><h2 id="自增变量"><a href="#自增变量" class="headerlink" title="自增变量"></a>自增变量</h2><p>i++与++i</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test01</span><span class="params">()</span></span>&#123;</span><br><span class="line">     <span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">     i=i++;</span><br><span class="line">     <span class="keyword">int</span> j=i++;</span><br><span class="line">     <span class="keyword">int</span> k=i+ ++i*i++;</span><br><span class="line"></span><br><span class="line">     System.out.println(<span class="string">&quot;i=&quot;</span>+i);</span><br><span class="line">     System.out.println(<span class="string">&quot;j=&quot;</span>+j);</span><br><span class="line">     System.out.println(<span class="string">&quot;k=&quot;</span>+k);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>结果:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">i=<span class="number">4</span></span><br><span class="line">j=<span class="number">1</span></span><br><span class="line">k=<span class="number">11</span></span><br></pre></td></tr></table></figure>
+
+<p><code> int k=i+ ++i*i++;</code>过程:</p>
+<p><img src="/2021/08/02/java-2021-08-02-faceQuestion/20201014103557836.png" alt="在这里插入图片描述"></p>
+<p>小结:</p>
+<p>赋值=，最后计算</p>
+<p>=右边的从左到右加载值依次压入操作数栈</p>
+<p>实际先算哪个，看运算符优先级</p>
+<p>自增、自减操作都是直接修改变量值，不经过操作数栈</p>
+<p>最后的赋值之前，临时结果也是存储在操作数栈中。</p>
+<p>详情参考JVM虚拟机指令</p>
+<h2 id="单例设计模式-具体可参见设计模式，必须掌握"><a href="#单例设计模式-具体可参见设计模式，必须掌握" class="headerlink" title="单例设计模式(具体可参见设计模式，必须掌握)"></a>单例设计模式(具体可参见设计模式，必须掌握)</h2><p>单例模式:Singleton，即某个类在整个系统中只能有一个实例对象可被获取和使用的代码模式。如代表JVM运行环境的Runtime类。</p>
+<p>要点:</p>
+<p>一是某个类只能有一个实例，构造器私有化。二是他必须自行创建实例，含有一个该类的静态变量来保存这个唯一的实例。三是他必须自行向整个系统提供这个实例，对外提供该类实例的方式:直接暴露、用静态变量的get方法获取。</p>
+<h3 id="1-饿汉式"><a href="#1-饿汉式" class="headerlink" title="1. 饿汉式"></a>1. 饿汉式</h3><p>直接创建对象，不存在线程安全问题</p>
+<ul>
+<li><p>直接实例化饿汉式(简介直观)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton1</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 1、构造器私有化</span></span><br><span class="line"><span class="comment">     * 2、自行创建，并且用静态变量保存</span></span><br><span class="line"><span class="comment">     * 3、向外提供实例</span></span><br><span class="line"><span class="comment">     * 4、强调这是一个单例，我们可以用final修改</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton1</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Singleton1 INSTANCE = <span class="keyword">new</span> Singleton1();</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>枚举式(最简洁)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">enum</span>  <span class="title">Singleton2</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 枚举类型：表示该类型是有限的几个</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    INSTANCE</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>静态代码块饿汉式(适合复杂实例化对象)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton3</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *  静态代码块</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Singleton3 INSTANCE;</span><br><span class="line">    <span class="keyword">private</span> String info;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            INSTANCE = <span class="keyword">new</span> Singleton3(<span class="string">&quot;123&quot;</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(e);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton3</span><span class="params">(String info)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.info = info;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="2-懒汉式"><a href="#2-懒汉式" class="headerlink" title="2. 懒汉式"></a>2. 懒汉式</h3><p>延迟创建对象</p>
+<ul>
+<li><p>线程不安全(使用于单线程)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton4</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 1、构造器私有化</span></span><br><span class="line"><span class="comment">     * 2、用一个静态变量保存这个唯一的实例</span></span><br><span class="line"><span class="comment">     * 3、提供一个静态方法，获取这个实例对象</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">static</span> Singleton4 instance;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton4</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton4 <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;</span><br><span class="line">                instance = <span class="keyword">new</span> Singleton4();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> instance;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>线程安全(使用于多线程)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton5</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 1、构造器私有化</span></span><br><span class="line"><span class="comment">     * 2、用一个静态变量保存这个唯一的实例</span></span><br><span class="line"><span class="comment">     * 3、提供一个静态方法，获取这个实例对象</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">static</span> Singleton5 instance;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton5</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton5 <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">synchronized</span> (Singleton5.class) &#123;</span><br><span class="line">                <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;</span><br><span class="line">                    instance = <span class="keyword">new</span> Singleton5();</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">return</span> instance;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>静态内部类模式 (适用于多线程)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton6</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 1、内部类被加载和初始化时，才创建INSTANCE实例对象</span></span><br><span class="line"><span class="comment">     * 2、静态内部类不会自动创建,随着外部类的加载初始化而初始化，他是要单独去加载和实例化的</span></span><br><span class="line"><span class="comment">     * 3、因为是在内部类加载和初始化时，创建的，因此线程安全</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton6</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Inner</span></span>&#123;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Singleton6 INSTANCE = <span class="keyword">new</span> Singleton6();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton6 <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> Inner.INSTANCE;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="类初始化实例初始化"><a href="#类初始化实例初始化" class="headerlink" title="类初始化实例初始化"></a>类初始化实例初始化</h2><p>类初始化</p>
+<blockquote>
+<p>一个类要创建实例需要先加载并初始化该类<br>main方法所在的类需要先加载和初始化<br>一个子类要初始化需要先初始化父类<br>一个类初始化就是执行 clinit 方法<br>clinit 方法由静态类变量显示赋值代码和静态代码块组成<br>类变量显示赋值代码和静态代码块代码从上到下执行<br>clinit 方法只调用一次</p>
+</blockquote>
+<p>实例初始化过程</p>
+<blockquote>
+<p>实例初始化就是执行 init() 方法<br>init () 方法可能重载有多个，有几个构造器就有几个 init() 方法<br>init() 方法由非静态实例变量显示赋值代码和非静态代码块，对应构造器代码组成非静态实例变量显示赋值代码和非静态代码块从上到下顺序执行，而对应构造器的代码最后执行<br>每次创建实例对象，调用对应构造器，执行的就是对应的 ini方法<br>init 方法的首行是super()和super(实参列表) ,即对应父类的 init 方法</p>
+</blockquote>
+<p>Father.java</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.atguigu.classLoader;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 父类初始化&lt;clinit&gt;</span></span><br><span class="line"><span class="comment"> * 1、j = method()</span></span><br><span class="line"><span class="comment"> * 2、 父类的静态代码块</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 父类实例化方法:</span></span><br><span class="line"><span class="comment"> * 1、super()（最前）</span></span><br><span class="line"><span class="comment"> * 2、i = test() (9)</span></span><br><span class="line"><span class="comment"> * 3、子类的非静态代码块 (3)</span></span><br><span class="line"><span class="comment"> * 4、子类的无参构造（最后）(2)</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 非静态方法前面其实有一个默认的对象this</span></span><br><span class="line"><span class="comment"> * this在构造器或&lt;init&gt; 他表示的是正在创建的对象，因为咱们这里是正在创建Son对象，所以</span></span><br><span class="line"><span class="comment"> * test()执行的就是子类重写的代码(面向对象多态)</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 这里i=test() 执行的就是子类重写的test()方法</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> gcq</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Create</span> 2020-09-25</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Father</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> i = test();</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> j = method();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;(1)&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    Father() &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;(2)&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;(3)&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">test</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;(4)&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">method</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;(5)&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Son.java</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.atguigu.classLoader;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 子类的初始化&lt;clinit&gt;</span></span><br><span class="line"><span class="comment"> * 1、j = method()</span></span><br><span class="line"><span class="comment"> * 2、子类的静态代码块</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 先初始化父类 (5)(1)</span></span><br><span class="line"><span class="comment"> * 初始化子类 (10) (6)</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 子类实例化方法:</span></span><br><span class="line"><span class="comment"> * 1、super()（最前</span></span><br><span class="line"><span class="comment"> * 2、i = test() (9)</span></span><br><span class="line"><span class="comment"> * 3、子类的非静态代码块 (8)</span></span><br><span class="line"><span class="comment"> * 4、子类的无参构造（最后）(7)</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> gcq</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Create</span> 2020-09-25</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Son</span> <span class="keyword">extends</span> <span class="title">Father</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> i = test();</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> j = method();</span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;(6)&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    Son() &#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">        System.out.println(<span class="string">&quot;(7)&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;(8)&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">test</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;(9)&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">method</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;(10)&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Son son = <span class="keyword">new</span> Son();</span><br><span class="line">        System.out.println();</span><br><span class="line">        Son son1 = <span class="keyword">new</span> Son();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="方法参数传递机制"><a href="#方法参数传递机制" class="headerlink" title="方法参数传递机制"></a>方法参数传递机制</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.atguigu.methodParam;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> gcq</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Create</span> 2020-09-28</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Exam4</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">        String str = <span class="string">&quot;hello&quot;</span>;</span><br><span class="line">        Integer num = <span class="number">200</span>;</span><br><span class="line">        <span class="keyword">int</span>[] arr = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">        MyData my = <span class="keyword">new</span> MyData();</span><br><span class="line"></span><br><span class="line">        change(i,str,num,arr,my);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// arr my变了</span></span><br><span class="line">        System.out.println(<span class="string">&quot;i= &quot;</span> + i);</span><br><span class="line">        System.out.println(<span class="string">&quot;str= &quot;</span> + str);</span><br><span class="line">        System.out.println(<span class="string">&quot;num= &quot;</span> + num);</span><br><span class="line">        System.out.println(<span class="string">&quot;arr= &quot;</span> + Arrays.toString(arr));</span><br><span class="line">        System.out.println(<span class="string">&quot;my.a= &quot;</span> + my.a);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">change</span><span class="params">(<span class="keyword">int</span> j, String s, Integer n, <span class="keyword">int</span>[] a, MyData m)</span> </span>&#123;</span><br><span class="line">        j += <span class="number">1</span>;</span><br><span class="line">        s += <span class="string">&quot;world&quot;</span>;</span><br><span class="line">        n += <span class="number">1</span>;</span><br><span class="line">        a[<span class="number">0</span>] += <span class="number">1</span>;</span><br><span class="line">        m.a += <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyData</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>考点:<br>方法的参数传递机制</p>
+<p>String、包装类等对象的不可变性</p>
+<h4 id="方法的参数传递机制"><a href="#方法的参数传递机制" class="headerlink" title="方法的参数传递机制"></a>方法的参数传递机制</h4><p>1、形参是基本的数据类型:传递数据值</p>
+<p>2、实参是引用数据类型:传递值地址</p>
+<h2 id="递归与迭代"><a href="#递归与迭代" class="headerlink" title="递归与迭代"></a>递归与迭代</h2><h2 id="成员变量和局部变量"><a href="#成员变量和局部变量" class="headerlink" title="成员变量和局部变量"></a>成员变量和局部变量</h2><p>考点:<br>就近原则</p>
+<p>变量的分类</p>
+<p>成员变量:类变量、实例变量</p>
+<p>局部变量</p>
+<p>非静态代码块的执行:每次创建实例对象都会执行</p>
+<p>方法的调用规则:调用一次执行一次</p>
+<p>局部变量与成员变量区别</p>
+<ol>
+<li><p>声明的位置</p>
+<ul>
+<li>局部变量:方法体{}中，形参，代码块{}中</li>
+<li>成员变量:类方法外</li>
+<li>类变量:有static修饰</li>
+<li>实例变量:没有static修饰</li>
+</ul>
+</li>
+<li><p>修饰符</p>
+<ul>
+<li>局部变量:final</li>
+<li>成员变量:public、protected、private、final、static、volatile、transient、</li>
+</ul>
+</li>
+<li><p>值存储位置</p>
+<ul>
+<li>局部变量:栈</li>
+<li>实例变量:堆</li>
+<li>类变量:方法区</li>
+</ul>
+<p><img src="/2021/08/02/java-2021-08-02-faceQuestion/20201014104703729.png" alt="JVM 运行时数据区"></p>
+<p>堆(heap)，此内存区域的唯一目的就是存放实例对象，几乎所有的对象实例都在这里分配内存。这一点在Java虚拟机规范中的描述是:所有的对象实例以及数组都要在堆上分配。</p>
+<p>提倡所说的栈(stack)，是指虚拟机栈。虚拟机栈用于存储局部变量表等。局部变量表存放了编译期可知长度的各种基本数据类型(boolean、byte、char、short、int、float、long、double)、对象引用(reference类型，它不等同于对象本身，是对象在堆内存的首地址)。方法执行完，自动释放。</p>
+<p>方法区(Method Area)用于存储已被虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据</p>
+</li>
+<li><p>作用域:</p>
+<ul>
+<li>局部变量从声明处开始，到所属的}号结束</li>
+<li>实例变量:在当前类中this(有时候this可以省略)，在其他类对象中，对象名.访问</li>
+<li>类变量:在当前类中，类名(有时类名可以省略)，在其他类中:类名.(或对象名.访问)</li>
+</ul>
+</li>
+<li><p>生命周期</p>
+<ul>
+<li>局部变量:每一个线程，每一次调用执行都是新的生命周期</li>
+<li>实例变量:随着对象的初始化而初始化，随着对象的被回收而消亡，每一个对象的实例变量都是独立的类变量:随着类的初始化而初始化，随着类的卸载而消亡，该类的所有对象的类变量是共享的<ul>
+<li>当局部变量与某变量重名时如姐区分?<ul>
+<li>与实例变量重名:在成员变量前加this</li>
+<li>与类变量重名:在类变量前加类名</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="SSM"><a href="#SSM" class="headerlink" title="SSM"></a>SSM</h1><h2 id="Spring中支持的常用数据库事务传播属性和事务隔离级别"><a href="#Spring中支持的常用数据库事务传播属性和事务隔离级别" class="headerlink" title="Spring中支持的常用数据库事务传播属性和事务隔离级别"></a>Spring中支持的常用数据库事务传播属性和事务隔离级别</h2><h3 id="1-事务的传播行为"><a href="#1-事务的传播行为" class="headerlink" title="1. 事务的传播行为"></a>1. 事务的传播行为</h3><p>当事务方法被另一个事务方法调用时，必须指定事务应该如何传播，例如方法可能继续在现有事务中运行，也可能开启一个新事务，并在自己的事务中运行，事务传播的行为有传播属性指定，spring中定义了7种类传播行为</p>
+<table>
+<thead>
+<tr>
+<th>传播属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>REQUIRED</td>
+<td>如果有事务在运行，当前的方法就在这个事务内运行，否则就启动一个新的事务，并在自己的事务内运行</td>
+</tr>
+<tr>
+<td>REQUIRED_NEW</td>
+<td>当前方法必须启动事务，并在它自己的事务内运行，如果有事务正在运行，应该将他挂起</td>
+</tr>
+<tr>
+<td>SUPPORTS</td>
+<td>如果有事务在运行，当前的方法就在这个事务内运行，否则他可以不运行在事务中</td>
+</tr>
+<tr>
+<td>NOT_SUPPORTE</td>
+<td>当前的方法不应该运行在事务中，如果有运行的事务，将他挂起</td>
+</tr>
+<tr>
+<td>MANDATORY</td>
+<td>当前的方法必须运行在事务内部，如果没有正在运行的事务，就抛出异常</td>
+</tr>
+<tr>
+<td>NEVER</td>
+<td>当前方法不应该运行在事务中，如果有运行的事务，就抛出异常</td>
+</tr>
+<tr>
+<td>NESTED</td>
+<td>如果有事务在运行，当前的方法就应该在这个事物的嵌套事务内运行，否则，就启动一个新的事务，并在它自己的事务内运行</td>
+</tr>
+</tbody></table>
+<p>事务传播属性可以在@Transactional注解的propagation属性中定义</p>
+<h3 id="2-事务隔离级别"><a href="#2-事务隔离级别" class="headerlink" title="2. 事务隔离级别"></a>2. 事务隔离级别</h3><h4 id="数据库事务并发问题"><a href="#数据库事务并发问题" class="headerlink" title="数据库事务并发问题:"></a>数据库事务并发问题:</h4><p>假设现在有两个事务:Transaction01和Transaction02并发执行</p>
+<ul>
+<li>脏读<br>02读取了01更新后的值后，01回滚，此时02读取到的值便无效了</li>
+<li>不可重复读<br>01读取值后，02将该值修改，01再次读数，两次读数不一致</li>
+<li>幻读<br>01读取了一部分数据，然后02又插入了一些新的数据，01再读时，数据增加</li>
+</ul>
+<h4 id="隔离级别"><a href="#隔离级别" class="headerlink" title="隔离级别:"></a>隔离级别:</h4><p>数据库系统必须具有隔离并发运行各个事务的能力，使他们不会相互影响，避免各种并发问题。一个事务与其他事务隔离的程度称为隔离级别。SQL标准中规定了多种事务隔离级别，不同的隔离级别对应不同的干扰程度，隔离级别越高，数据一致性就越好，但并发性越弱。</p>
+<ol>
+<li><p>读未提交:READ UNCOMMITTED<br>允许Transaction01读取Transaction02未提交的修改。</p>
+</li>
+<li><p>读已提交：READ COMMITTED<br> 要求Transaction01只能读取Transaction02已提交的修改。</p>
+</li>
+<li><p>可重复读：REPEATABLE READ<br> 确保Transaction01可以多次从一个字段中读取到相同的值，即Transaction01执行期间禁止其它事务对这个字段进行更新。</p>
+</li>
+<li><p>串行化：SERIALIZABLE<br> 确保Transaction01可以多次从一个表中读取到相同的行，在Transaction01执行期间，禁止其它事务对这个表进行添加、更新、删除操作。可以避免任何并发问题，但性能十分低下。</p>
+</li>
+<li><p>各个隔离级别解决并发问题的能力见下表</p>
+</li>
+</ol>
+<p><img src="/2021/08/02/java-2021-08-02-faceQuestion/20201014104905860.png" alt="在这里插入图片描述"></p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.请简单介绍Spring支持的常用数据库事务传播属性和事务隔离级别？</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 事务的属性：</span></span><br><span class="line"><span class="comment">	 * 	1.★propagation：用来设置事务的传播行为</span></span><br><span class="line"><span class="comment">	 * 		事务的传播行为：一个方法运行在了一个开启了事务的方法中时，当前方法是使用原来的事务还是开启一个新的事务</span></span><br><span class="line"><span class="comment">	 * 		-Propagation.REQUIRED：默认值，使用原来的事务</span></span><br><span class="line"><span class="comment">	 * 		-Propagation.REQUIRES_NEW：将原来的事务挂起，开启一个新的事务</span></span><br><span class="line"><span class="comment">	 * 	2.★isolation：用来设置事务的隔离级别</span></span><br><span class="line"><span class="comment">	 * 		-Isolation.REPEATABLE_READ：可重复读，MySQL默认的隔离级别</span></span><br><span class="line"><span class="comment">	 * 		-Isolation.READ_COMMITTED：读已提交，Oracle默认的隔离级别，开发时通常使用的隔离级别</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="SpringMVC工作流程"><a href="#SpringMVC工作流程" class="headerlink" title="SpringMVC工作流程"></a>SpringMVC工作流程</h2><p>整体流程</p>
+<p>SpringMVC框架是一个基于请求驱动的Web框架，并且使用了”前端控制器”模型来进行设计，再根据”请求映射规则”分发给响应的页面控制器进行处理。</p>
+<p><img src="/2021/08/02/java-2021-08-02-faceQuestion/2020101410495014.png" alt="在这里插入图片描述"></p>
+<p>具体步骤:</p>
+<ol>
+<li>首先晕乎乎发送请求到前端控制器，前端控制器根据请求信息(如URL)来决定选择哪一个页面控制器进行处理并把请求托付给它，即以前的控制器的逻辑控制部分</li>
+<li>页面控制器收到请求后，进行功能处理，首先需要收集和绑定请求参数到一个对象，这个对象在Spring web MVC中叫命令，并进行验证，然后将命令对象委托给业务对象进行处理，处理完毕后返回一个ModelAndView</li>
+<li>前端控制器收回控制权，然后根据返回的逻辑视图名，选择相应的视图进行渲染，并把模型数据传入以便视图渲染</li>
+<li>前端控制器再次收回控制权，将响应返回给用户，至此整个结束</li>
+</ol>
+<p><img src="/2021/08/02/java-2021-08-02-faceQuestion/20201014105003756.png" alt="在这里插入图片描述"></p>
+<p>步骤:</p>
+<ol>
+<li>发起请求到前端控制器(DispatcherServlet)</li>
+<li>前端控制器请求HandlerMapping查找Handle(可以根据xml配置、注解进行查找)</li>
+<li>处理器映射器HandlerMapping向前端控制器返回Handler，HandlerMapping会把请求映射为HandlerExecutionChain对象(包含一个Handler处理器(页面控制)对象，对个HandlerInterceptor拦截器)，通过这种策略模式，很容易添加新的映射策略</li>
+<li>前端控制器调用处理器适配器去执行Handler</li>
+<li>处理器适配器HandlerAdapter将会根据适配的结果去执行Handler</li>
+<li>Handler执行完成给适配器返回ModelAndView</li>
+<li>处理器适配器向前端控制器返回ModelAndView</li>
+<li>前端控制器请求视图解析器去进行视图解析(根据逻辑视图名解析成为真正的视图)，通过这种策略很容易更换其他视图技术，只需要更改视图解析器即可。</li>
+<li>视图解析器向前端控制器返回View</li>
+<li>前端控制器进行视图渲染(视图渲染将模型数据(在ModelAndView对象中)填充到request域)</li>
+<li>前端控制器向用户响应结果</li>
+</ol>
+<h4 id="核心开发步骤"><a href="#核心开发步骤" class="headerlink" title="核心开发步骤"></a>核心开发步骤</h4><ol>
+<li>DispatcherServlet在web.xml中的部署描述，从而拦截请求到Spring web MVC</li>
+<li>HandlerMapping的配置，从而将请求映射到处理器</li>
+<li>HandlerAdapter的配置，从而支持多种类型的处理器<br>ps:处理器映射和适配器使用纾解的话包含在了注解驱动中，不需要再单独配置</li>
+<li>ViewResolver的配置，从而将逻辑视图名解析为具体视图技术</li>
+<li>处理器(页面控制器)的配置，从而解析功能处理<br>View是一个接口，实现类支持不同的View类型</li>
+</ol>
+<h2 id="MyBatis"><a href="#MyBatis" class="headerlink" title="MyBatis"></a>MyBatis</h2><h4 id="MyBatis中当实体类中的属性名和表中的字段不一样，怎么办"><a href="#MyBatis中当实体类中的属性名和表中的字段不一样，怎么办" class="headerlink" title="MyBatis中当实体类中的属性名和表中的字段不一样，怎么办?"></a>MyBatis中当实体类中的属性名和表中的字段不一样，怎么办?</h4><p>解决方案:</p>
+<ol>
+<li><p>写SQL语句的时候，写别名</p>
+</li>
+<li><p>在MyBatis的全局配置文件中开启驼峰命名规则</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 开启驼峰命名规则，可以将数据库中下划线映射为驼峰命名</span></span><br><span class="line"><span class="comment">	列如 last_name 可以映射为 lastName</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">setting</span> <span class="attr">name</span>=<span class="string">&quot;mapUnderscoreToCameLCase&quot;</span> <span class="attr">value</span>=<span class="string">&quot;true&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>要求:数据库字段中含有下划线</p>
+</li>
+<li><p>在Mapper映射文件中使用resultMap自定义映射</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- </span></span><br><span class="line"><span class="comment">	自定义映射</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">resultMap</span> <span class="attr">type</span>=<span class="string">&quot;com.atguigu.pojo.Employee&quot;</span> <span class="attr">id</span>=<span class="string">&quot;myMap&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 映射主键 --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">id</span> <span class="attr">cloumn</span>=<span class="string">&quot;id&quot;</span> <span class="attr">property</span>=<span class="string">&quot;id&quot;</span>/&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 映射其他列 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">&quot;last_name&quot;</span> <span class="attr">property</span>=<span class="string">&quot;lastName&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">&quot;email&quot;</span> <span class="attr">property</span>=<span class="string">&quot;email&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">&quot;salary&quot;</span> <span class="attr">property</span>=<span class="string">&quot;salary&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">&quot;dept_id&quot;</span> <span class="attr">property</span>=<span class="string">&quot;deptId&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">resultMap</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h1 id="Java高级面试题"><a href="#Java高级面试题" class="headerlink" title="Java高级面试题"></a>Java高级面试题</h1><h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><p>常用命令:进程类<br><code>Service(centos6)</code></p>
+<p>注册在系统中的标准化程序，有方便统一的管理方式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">service服务名start</span><br><span class="line">service服务名stop</span><br><span class="line">service服务名restart</span><br><span class="line">service服务名reload</span><br><span class="line">service服务名status</span><br><span class="line"></span><br><span class="line">#查看服务的方法 /etc/init.d/ 服务名</span><br><span class="line">#通过 chkconfig 命令设置自启动</span><br><span class="line">#查看服务 chkconfig -list l grepXXX</span><br><span class="line"></span><br><span class="line">chkconfig -level 5 服务名on</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>运行级别:runlevel(centos6)</p>
+<p><img src="/2021/08/02/java-2021-08-02-faceQuestion/2020101410522554.png" alt="在这里插入图片描述"></p>
+<p>linux系统有7种运行级别(runlevel)，最常用的是3和5</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">运行级别0:系统停机状态，系统默认运行级别不能设为0，否则不能正常启动</span><br><span class="line">运行级别1:单用户工作状态，root权限，用于系统维护，禁止远程登陆</span><br><span class="line">运行级别2:多用户状态(没有NFS),不支持网络</span><br><span class="line">运行级别3:完全的多用户状态(有NFS),登陆后进入控制台命令行模式</span><br><span class="line">运行级别4:系统未使用，保留</span><br><span class="line">运行级别5: X11控制台，登陆后进入图形GUI模式</span><br><span class="line">运行级别6:系统正常关闭并重启，默认运行级别不能设为6,否则不能正常启动.</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><code>Systemctl(centos7)</code></p>
+<p>注册在系统中的标准化程序，有方便统一的管理方式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">systemctl start 服务名(xxx.service</span><br><span class="line">systemct restart 服务名(xxxx.service)</span><br><span class="line">systemctl stop 服务名(xxxx.service)</span><br><span class="line">systemctl reload 服务名(xxxx.service)</span><br><span class="line">systemctl status 服务名(xxxx.service)</span><br><span class="line"></span><br><span class="line">#查看服务的方法 /usr/lib/systemd/system</span><br><span class="line">#查看服务的命令</span><br><span class="line"></span><br><span class="line">systemctl list-unit-files</span><br><span class="line">systemctl --type service</span><br><span class="line"></span><br><span class="line">#通过systemctl命令设置自启动</span><br><span class="line"></span><br><span class="line">自启动systemctl enable service_ _name</span><br><span class="line">不自启动systemctl disable service_ name</span><br></pre></td></tr></table></figure>
+
+<h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><p>创建分支</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git branch &lt;分支名&gt;</span><br><span class="line">git branch -v 查看分支</span><br></pre></td></tr></table></figure>
+
+<p>切换分支</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout &lt;分支名&gt;</span><br><span class="line">一步完成: git checkout -b &lt;分支名&gt;</span><br></pre></td></tr></table></figure>
+
+<p>合并分支</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">先切换到主干 git checkout master</span><br><span class="line">git merge &lt;分支名&gt;</span><br></pre></td></tr></table></figure>
+
+<p>删除分支</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">先切换到主干 git checkout master</span><br><span class="line">git branch -D &lt;分支名&gt;</span><br></pre></td></tr></table></figure>
+
+<p>Git工作流:</p>
+<p><img src="/2021/08/02/java-2021-08-02-faceQuestion/20201014105249439.png" alt="在这里插入图片描述"></p>
+<h2 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h2><p>Redis持久化有几种类型，他们的区别?</p>
+<p>Redis提供了2个不同形式的持久化方式</p>
+<ul>
+<li>RDB(Redis DataBase)</li>
+<li>AOF(Append OF File)</li>
+</ul>
+<hr>
+<h3 id="RDB"><a href="#RDB" class="headerlink" title="RDB"></a>RDB</h3><p>在指定的时间间隔内将内存中的数据集快照写入磁盘，也就是行话讲的Snapshot快照，它恢复时是将快照文件直接读到内存里。</p>
+<p><strong>备份如何执行?</strong></p>
+<p>Redis会单独创建(fork)个子进程来进行持久化，先将数据写入到一个临时文件中，待持久化过程都结束了，再用这个临时文件替换上次持久化好的文件。整个过程中，主进程是不进行任何的IO操作，这就确保了极高的性能，如果需要进行大规模数据的恢复，若对数据恢复的完整性不是非常敏感，那RDB方式要比AOF方式更加的高效。RDB的缺点是最后一次持久化后的数据可能丢失。</p>
+<p><strong>RDB的保存文件</strong></p>
+<p>在Redis.conf中配置文件名称，默认为dump.rdb。rdb文件的保存路径，也可以修改，默认为Redis启动命令所在的目录下</p>
+<p><strong>RDB的备份</strong></p>
+<p>先通过<code>config get dir</code>查询RDB文件的目录，将*.rdb的文件拷贝到别的地方</p>
+<p><strong>RDB的恢复</strong></p>
+<p>关闭Redis，先把备份文件拷贝到工作目录下，启动Redis，备份数据会直接加载。</p>
+<p><strong>RDB的优点</strong></p>
+<p>节省磁盘空间</p>
+<p>恢复速度更快</p>
+<p><strong>RDB的缺点</strong></p>
+<p>虽然Redis在fork时使用了写时拷贝技术，但是如果数据庞大时，还是比较消耗性能。在备份周期在一定间隔时间做一次备份，所以如果Redis意外down掉的话，就会丢失最后一次快照后的所有修改</p>
+<h3 id="AOF"><a href="#AOF" class="headerlink" title="AOF"></a>AOF</h3><p>以日志的形式来记录每个写操作，将Redis执行过的所有写指令记录下来(读操作不记录)，只许追加文件但不可以改写文件，Redis启动之初会读取该文件重新构建数据，换言之，Redis重启的话就根据日志文件的内容将写指令从前到后执行一次，以完成数据的恢复工作</p>
+<p><strong>Rewrite</strong></p>
+<p>AOF采用文件追加方式，文件会越来越大为避免出现此种情况，新增了重写机制，当AOF文件的大小超过所设定的阈值时，Redis就会启动AOF文件的内容压缩，只保留可以恢复数据的最小指令集可以使用命令bgrewriteaof</p>
+<p><strong>Redis如何实现重写</strong></p>
+<p>AOF文件持续增长而过大时，会fork出一条新进程来将文件写(也是先写临时文件最后在rename)，遍历新进程的内存中数据，记录每一条的set语句。写AAOF文件的操作，并读取旧的AOF文件，将整个内存中的数据库内容用命令的方式写一个新的aof文件，这点和快照优点类似。</p>
+<p><strong>何时重写</strong></p>
+<p>写虽然可以节约大量磁盘空间，减少恢复时间。但是每次重写还是由一定的负担的，因此设定Redis要满足一定的条件才会重写。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">auto- aof- rewrite- percentage 100</span><br><span class="line">auto- aof- rewrite-min-size 64mb</span><br></pre></td></tr></table></figure>
+
+<p>系统载入时或上次重写完毕时，Redis会记录此时AOF大小，设为base size，如果Redis的AOF当前大小&gt;=base size+base_size*100%(默认)且当前大小&gt;=64mb(默认)的情况下，Redis会对AOF进行重写。</p>
+<p><strong>AOF的优点</strong></p>
+<p>备份机制更稳健，丢失数据概率更低。可读的日志文本，通过操作AOF文件，可以处理误操作。</p>
+<p><strong>AOF的缺点</strong></p>
+<p>比起RDB占用更多的磁盘空间。恢复备份速度要慢。每次读写都同步的话，有一定的性能压力。存在个别bug，造成不能恢复。</p>
+<h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h2><p><strong>MySQL什么时候建立索引、什么时候不适合建立索引?</strong></p>
+<p>那些情况需要创建索引:</p>
+<ol>
+<li>主键自动建立唯一索引</li>
+<li>频繁作为查询条件的字段应该创建索引</li>
+<li>查询中与其他表关联的字段，外检关系建立索引</li>
+<li>频繁更新的字段不适合创建索引，因为每次更新不单是更新了记录还会更新索引</li>
+<li>单键组索引的选择问题，who?在高并发下领向创建组合索引</li>
+<li>查询中排序的字段，排序字段若通过索引法访问将大大提高排序速度</li>
+<li>查询中统计或者分组字段</li>
+</ol>
+<p>那些情况下不要建立索引</p>
+<ol>
+<li>表记录太少。原因:提高了查询速度，同时却会降低更新表的速度，如对表进行INSTER、UPDATE和DELETE</li>
+<li>经常增删改的表。原因:更新表时，MySQL不仅要保存数据，还要保存一下索引文件数据重复且分布平均的表字段，因此应该只为最经常查询和最经常排序的数据列建立索引。</li>
+<li>注意，如果某个数据列包含许多重复的内容，为它建立索引就没有太大的实际效果。</li>
+</ol>
+<p><img src="/2021/08/02/java-2021-08-02-faceQuestion/2020101410564535.png" alt="在这里插入图片描述"></p>
+<h2 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h2><p><strong>JVM垃圾回收机制、GC发生在JVM哪部分，有几种GC，他们的算法是什么</strong></p>
+<p>GC发生在JVM的堆里面</p>
+<p>有Monit GC、Major GC。具体有:CMS、G1、serial、……，算法有标记压缩、标记复制、标记清除。</p>
+<p><img src="/2021/08/02/java-2021-08-02-faceQuestion/20201014105709667.png" alt="在这里插入图片描述"></p>
+<p><img src="/2021/08/02/java-2021-08-02-faceQuestion/20201014105716599.png" alt="在这里插入图片描述"></p>
+<h2 id="项目面试题"><a href="#项目面试题" class="headerlink" title="项目面试题"></a>项目面试题</h2><h3 id="Redis在项目中的使用场景"><a href="#Redis在项目中的使用场景" class="headerlink" title="Redis在项目中的使用场景"></a>Redis在项目中的使用场景</h3><table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th align="center">使用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>String</td>
+<td align="center">比如说，我想知道什么时候封锁一个 IP 地址 Incrby 命令</td>
+</tr>
+<tr>
+<td>Hash</td>
+<td align="center">存储用户信息[ id, name , age]<br>Hset( key ,field, value)<br>Hset( key ,id, 101)<br>Hset( key ,name, admin)<br>Hset( key ,age, 23)<br>修改案例———<br>Hget(userKev,jd)+<br>Hset(userKey,id,102)<br>为什么不使用String类型来存储 String拿到对象值之后需要反序列化，我们只需要更改id name, age 没有意义反序列化<br>Set(userKey;用信息的字符串)<br>Get(userKey)<br>不建议使用String 类型。</td>
+</tr>
+<tr>
+<td>List</td>
+<td align="center">实现最新消息的排行，还可以利用 List 的 push 命令，将任务存在list集合<br>中，同时使用另-个命令，将任务从集合中取出[ pop ]。。<br>Redis - List 数据类型来模拟消息队列。[电商中的秒杀就可以采用这种方式<br>来完成一个秒杀活动]。</td>
+</tr>
+<tr>
+<td>Set</td>
+<td align="center">特殊之处:可以自动排重。比如说微博中将每个人的好友存在集合( Set) 中，+<br>这样求两个人的共通好友的操作。我们只需要求交集即可。</td>
+</tr>
+<tr>
+<td>Zset</td>
+<td align="center">以某一个条件为权重，进行排序。<br>京东:商品详情的时候，都会有一个综合排名，还可以按照价格进行排名</td>
+</tr>
+</tbody></table>
+<h3 id="Elasticsearch与solr的区别"><a href="#Elasticsearch与solr的区别" class="headerlink" title="Elasticsearch与solr的区别"></a>Elasticsearch与solr的区别</h3><p>背景:他们都是基于Lucene搜索服务器基础上开发的，一款优秀的高性能企业级搜索服务器(都是基于分词技术构建的<strong>倒排索引</strong>的方式进行查询)</p>
+<p>开发语言:java。Solr2004年诞生，ES2010年诞生，ES更新，功能更强大(新技术的出现，会弥补老技术的缺点，吸取老技术的优点)。</p>
+<p>区别:</p>
+<ol>
+<li>当建立索引的时候，solr会产生io阻塞，而es不会，es查询性能要高于solr</li>
+<li>在不断动态添加数据的时候，solr的检索效率会变得低下，而es没有什么变化</li>
+<li>Solr利用zookeeper进行分布式管理，而es自带有分布式系统的管理功能，Solr一般都要部署到web服务器上，比如tomcat，启动tomcat的时候需要配置tomcat和solr的关联(Solr的本质，是一个动态的web项目)</li>
+<li>solr支持更多格式的数据(XML、json、csv等)，而es仅仅支持json文件格式</li>
+<li>solr是传统搜索应用的有利解决方案，但是es更加适用于新兴的实时搜索应用。单纯对已有的数据进行检索，solr效率更好，高于es。</li>
+<li>solr官网提供的功能更多，而es本身更加注重于核心功能，高级功能都有的第三方插件完成</li>
+</ol>
+<h3 id="单点登录"><a href="#单点登录" class="headerlink" title="单点登录"></a>单点登录</h3><p>单点登录:一处登录多处使用!</p>
+<p>前提:单点登录使用在分布式系统中，一处登录，处处运行。</p>
+<p><img src="/2021/08/02/java-2021-08-02-faceQuestion/20201014110632902.png" alt="在这里插入图片描述"></p>
+<p>实例:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">京东：单点登录，是将 token 放入到 cookie 中</span><br><span class="line">案例：将浏览器的 cookie 禁用，则在登录京东则失效，无论如何登录不了</span><br></pre></td></tr></table></figure>
+
+<h3 id="购物车实现过程"><a href="#购物车实现过程" class="headerlink" title="购物车实现过程"></a>购物车实现过程</h3><p>购物车：</p>
+<p> 1、购物车跟用户的关系 ？</p>
+<ul>
+<li>一个用户必须对应一个购物车【一个用户不管买多少商品，都会存在属于自己的购物车中】</li>
+<li>单点登录一定要在购车前</li>
+</ul>
+<p> 2、跟购物车有关的操作有那些？</p>
+<p> 0 用户未登录状态</p>
+<p> 添加到什么地方，未登录将数据保存到什么地方？</p>
+<p> Redis —京东</p>
+<p> Cookie 自己开发项目的时候【如果浏览器禁用Cookie】</p>
+<p> 用户登录状态。Redis 缓存中 【读写速度快】:Hash: Hset(key,field,value)、 Key:user:userId,cart、 Hset(key,skuId,value); 存在数据库中 【Oracle，mysql】</p>
+<p> 展示购物车</p>
+<ul>
+<li><p>未登录状态显示:直接从 cookie 中 取得数据展示即可</p>
+</li>
+<li><p>登录状态:用户一旦登录，必须显示数据库【redis】 + cookie 中的购物车的数据。Cookie 中有三条记录，Redis 中有五条记录，真正展示的时候应该是八条记录</p>
+</li>
+</ul>
+<h3 id="消息队列在项目中的使用"><a href="#消息队列在项目中的使用" class="headerlink" title="消息队列在项目中的使用"></a>消息队列在项目中的使用</h3><p>背景:在分布式系统中如何处理高并发的</p>
+<p>由于在高并发的环境下，来不及同步处理用户发送的请求，则会导致请求发生阻塞，比如说，大量的insert、update之类的请求同时到达数据库，直接导致无数的行锁表锁，甚至会导致请求堆积过多，从而触发too many connections(连接数太多)错误，使用消息队列可以解决(异步通信)</p>
+<p>异步:<br><img src="/2021/08/02/java-2021-08-02-faceQuestion/2020101411064799.png" alt="在这里插入图片描述"></p>
+<p>并行:<br><img src="/2021/08/02/java-2021-08-02-faceQuestion/20201014110654572.png" alt="在这里插入图片描述"></p>
+<p>排队<br><img src="/2021/08/02/java-2021-08-02-faceQuestion/20201014110703235.png" alt="在这里插入图片描述"></p>
+<p>消息队列在电商中的使用场景:<br><img src="/2021/08/02/java-2021-08-02-faceQuestion/20201014110711735.png" alt="在这里插入图片描述"></p>
+<p>消息队列的弊端</p>
+<p>消息的不确定性:延迟队列和轮询技术来解决问题即可</p>
+<p>推荐使用activeMQ</p>
+</div><div class="post-copyright"><div class="post-copyright-author"><span class="post-copyright-meta">本文作者: </span><span class="post-copyright-info"><a href="mailto:undefined">stary</a></span></div><div class="post-copyright-type"><span class="post-copyright-meta">本文链接: </span><span class="post-copyright-info"><a href="https://stary1999.github.io/2021/08/02/java-2021-08-02-faceQuestion/">https://stary1999.github.io/2021/08/02/java-2021-08-02-faceQuestion/</a></span></div><div class="post-copyright-notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://stary1999.github.io">繁星点点</a>！</span></div></div></article><div id="pagination"><div class="prev-post pull-left"><span class="line line-top"></span><span class="line line-right"></span><span class="line line-bottom"></span><span class="line line-left"></span><a href="/2021/08/03/java-2021-08-03-springcloudKuang/"><i class="fas fa-angle-left">&nbsp;</i><span>springcloudKuang</span></a></div><div class="next-post pull-right"><span class="line line-top"></span><span class="line line-right"></span><span class="line line-bottom"></span><span class="line line-left"></span><a href="/2021/07/31/java-2021-07-31-SpringCloud/"><span>SpringCloud</span><span>&nbsp;</span><i class="fas fa-angle-right"></i></a></div></div><!--div!= paginator()--></div></div><div class="button-hover" id="return-top"><i class="fas fa-arrow-up" aria-hidden="true"></i></div><footer><div id="footer"><div class="button-hover" id="side-button"><i class="fas fa-arrow-right"></i></div><div class="right-content"><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fas fa-file-o"></i></span><span id="busuanzi_value_page_pv"></span><span></span></div><div class="copyright">&copy;2017 ～ 2021 By stary</div></div></div></footer></div><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/thirdparty/jquery-3.3.1.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/thirdparty/velocity.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/thirdparty/jquery.mCustomScrollbar.concat.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/fan.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/canvas_bg.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/utils.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/scroll.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/sidebar.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/copy.js"></script><!--script(src=url)--></body></html>
