@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>未来网络技术课程设计小结 | Hexo</title>
+  <meta name="description" content="博客内容为课设个人小结，具体课设参考课设报告 资料查找这次课设的题目是在老师给的题目中四选一，在初步选定做DDos的检测与防御之后，就需要在网络上查询相关的资料、以及前人的设计方案，最初使用搜索引擎直接搜索关键字和题目，经过筛选后，有用的结果主要就一篇博文，其他的大多是类似的内容，博文写得比较详细，但是设计方案比较简略，无法有效地达到实现目的要求（自主检测与防御）。 从这，可以看出，从事相关方面的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="未来网络技术课程设计小结">
+<meta property="og:url" content="http://stary2020.gitee.io/2021/07/04/course-2021-07-04-SDNnetANDDDos/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="博客内容为课设个人小结，具体课设参考课设报告 资料查找这次课设的题目是在老师给的题目中四选一，在初步选定做DDos的检测与防御之后，就需要在网络上查询相关的资料、以及前人的设计方案，最初使用搜索引擎直接搜索关键字和题目，经过筛选后，有用的结果主要就一篇博文，其他的大多是类似的内容，博文写得比较详细，但是设计方案比较简略，无法有效地达到实现目的要求（自主检测与防御）。 从这，可以看出，从事相关方面的">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-07-04T02:18:24.000Z">
+<meta property="article:modified_time" content="2021-08-19T02:37:46.234Z">
+<meta property="article:author" content="stary">
+<meta property="article:tag" content="实验">
+<meta property="article:tag" content="课程设计">
+<meta property="article:tag" content="ubuntu">
+<meta property="article:tag" content="SDN">
+<meta property="article:tag" content="日志">
+<meta property="article:tag" content="心得">
+<meta name="twitter:card" content="summary">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://stary2020.gitee.io/2021/07/04/course-2021-07-04-SDNnetANDDDos/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/stary1999" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">stary</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">Young geek &amp;&amp; ...</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Jiangsu, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav menu-highlight">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/stary" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享经验!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/2021%E8%AF%BE%E8%AE%BE/">2021课设</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/default/">default</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%A1%86%E6%9E%B6/">框架</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/">语言</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redis/" rel="tag">Redis</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SDN/" rel="tag">SDN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringBoot2/" rel="tag">SpringBoot2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringCloud/" rel="tag">SpringCloud</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/default/" rel="tag">default</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/idea/" rel="tag">idea</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jsp/" rel="tag">jsp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jvm/" rel="tag">jvm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/springCloud/" rel="tag">springCloud</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/" rel="tag">vue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web/" rel="tag">web</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%91%E7%9B%98/" rel="tag">云盘</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%92%E8%81%94/" rel="tag">互联</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%A5%E9%97%A8/" rel="tag">入门</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%9E%E9%AA%8C/" rel="tag">实验</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag">工具</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BF%83%E5%BE%97/" rel="tag">心得</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%89%8B%E6%9C%BA/" rel="tag">手机</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%88%E7%8E%87/" rel="tag">效率</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag">数据库</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E5%BF%97/" rel="tag">日志</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A1%86%E6%9E%B6/" rel="tag">框架</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8B%82%E7%A5%9E/" rel="tag">狂神</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag">笔记</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%AD%E6%B3%95/" rel="tag">语法</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/" rel="tag">课程设计</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B8%A9%E5%9D%91/" rel="tag">踩坑</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95/" rel="tag">面试</a><span class="tag-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/Java/" style="font-size: 13px;">Java</a> <a href="/tags/Redis/" style="font-size: 13px;">Redis</a> <a href="/tags/SDN/" style="font-size: 13px;">SDN</a> <a href="/tags/SpringBoot2/" style="font-size: 13px;">SpringBoot2</a> <a href="/tags/SpringCloud/" style="font-size: 13px;">SpringCloud</a> <a href="/tags/default/" style="font-size: 14px;">default</a> <a href="/tags/git/" style="font-size: 13px;">git</a> <a href="/tags/github/" style="font-size: 13px;">github</a> <a href="/tags/hexo/" style="font-size: 13px;">hexo</a> <a href="/tags/idea/" style="font-size: 13px;">idea</a> <a href="/tags/java/" style="font-size: 13.75px;">java</a> <a href="/tags/jsp/" style="font-size: 13px;">jsp</a> <a href="/tags/jvm/" style="font-size: 13px;">jvm</a> <a href="/tags/markdown/" style="font-size: 13px;">markdown</a> <a href="/tags/springCloud/" style="font-size: 13px;">springCloud</a> <a href="/tags/ubuntu/" style="font-size: 13px;">ubuntu</a> <a href="/tags/vue/" style="font-size: 13px;">vue</a> <a href="/tags/web/" style="font-size: 13px;">web</a> <a href="/tags/%E4%BA%91%E7%9B%98/" style="font-size: 13px;">云盘</a> <a href="/tags/%E4%BA%92%E8%81%94/" style="font-size: 13px;">互联</a> <a href="/tags/%E5%85%A5%E9%97%A8/" style="font-size: 13px;">入门</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 13px;">前端</a> <a href="/tags/%E5%AE%9E%E9%AA%8C/" style="font-size: 13px;">实验</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 13.5px;">工具</a> <a href="/tags/%E5%BF%83%E5%BE%97/" style="font-size: 13px;">心得</a> <a href="/tags/%E6%89%8B%E6%9C%BA/" style="font-size: 13px;">手机</a> <a href="/tags/%E6%95%88%E7%8E%87/" style="font-size: 13px;">效率</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 13px;">数据库</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 13px;">日志</a> <a href="/tags/%E6%A1%86%E6%9E%B6/" style="font-size: 13.25px;">框架</a> <a href="/tags/%E7%8B%82%E7%A5%9E/" style="font-size: 13px;">狂神</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 13.25px;">笔记</a> <a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 13px;">语法</a> <a href="/tags/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/" style="font-size: 13px;">课程设计</a> <a href="/tags/%E8%B8%A9%E5%9D%91/" style="font-size: 13px;">踩坑</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 13.5px;">面试</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">八月 2021</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">七月 2021</a><span class="archive-list-count">18</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">六月 2021</a><span class="archive-list-count">7</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled ">
+        
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/2021/08/19/default-hello-world/" class="thumb">
+    
+    
+        <span class="thumb-image thumb-none"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/default/">default</a>
+              </p>
+              <p class="item-title">
+                <a href="/2021/08/19/default-hello-world/" class="title">Hello World</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-08-19T10:12:38.000Z" itemprop="datePublished">2021-08-19</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/2021/08/03/faceToFace/" class="thumb">
+    
+    
+        <span class="thumb-image thumb-none"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/default/">default</a>
+              </p>
+              <p class="item-title">
+                <a href="/2021/08/03/faceToFace/" class="title">faceToFace</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-08-03T09:22:11.000Z" itemprop="datePublished">2021-08-03</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/2021/08/03/java-2021-08-03-springcloudKuang/" class="thumb">
+    
+    
+        <span class="thumb-image thumb-none"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/java/">java</a>
+              </p>
+              <p class="item-title">
+                <a href="/2021/08/03/java-2021-08-03-springcloudKuang/" class="title">springcloudKuang</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-08-03T09:21:30.000Z" itemprop="datePublished">2021-08-03</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/2021/08/02/java-2021-08-02-faceQuestion/" class="thumb">
+    
+    
+        <span class="thumb-image thumb-none"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/java/">java</a>
+              </p>
+              <p class="item-title">
+                <a href="/2021/08/02/java-2021-08-02-faceQuestion/" class="title">面试题(第一季)</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-08-02T07:12:51.000Z" itemprop="datePublished">2021-08-02</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/2021/08/01/faceQuestions2/" class="thumb">
+    
+    
+        <span class="thumb-image thumb-none"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/java/">java</a>
+              </p>
+              <p class="item-title">
+                <a href="/2021/08/01/faceQuestions2/" class="title">面试题2</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-08-01T12:56:06.000Z" itemprop="datePublished">2021-08-01</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B5%84%E6%96%99%E6%9F%A5%E6%89%BE"><span class="toc-number">1.</span> <span class="toc-text">资料查找</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8"><span class="toc-number">2.</span> <span class="toc-text">工具使用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1"><span class="toc-number">3.</span> <span class="toc-text">模块设计</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%87%E5%87%86%E7%9A%84%E6%A0%BC%E5%BC%8F"><span class="toc-number">4.</span> <span class="toc-text">标准的格式</span></a></li></ol>
+    </nav>
+  </div>
+</aside>
+
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-course-2021-07-04-SDNnetANDDDos" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      未来网络技术课程设计小结
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2021/07/04/course-2021-07-04-SDNnetANDDDos/" class="article-date">
+	  <time datetime="2021-07-04T02:18:24.000Z" itemprop="datePublished">2021-07-04</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/2021%E8%AF%BE%E8%AE%BE/">2021课设</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/SDN/" rel="tag">SDN</a>, <a class="article-tag-link-link" href="/tags/ubuntu/" rel="tag">ubuntu</a>, <a class="article-tag-link-link" href="/tags/%E5%AE%9E%E9%AA%8C/" rel="tag">实验</a>, <a class="article-tag-link-link" href="/tags/%E5%BF%83%E5%BE%97/" rel="tag">心得</a>, <a class="article-tag-link-link" href="/tags/%E6%97%A5%E5%BF%97/" rel="tag">日志</a>, <a class="article-tag-link-link" href="/tags/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/" rel="tag">课程设计</a>
+  </span>
+
+
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2021/07/04/course-2021-07-04-SDNnetANDDDos/#comments" class="article-comment-link">评论</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 2.6k(字)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 8(分)</span>
+	
+
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <p>博客内容为课设个人小结，具体课设参考课设报告</p>
+<h1 id="资料查找"><a href="#资料查找" class="headerlink" title="资料查找"></a>资料查找</h1><p>这次课设的题目是在老师给的题目中四选一，在初步选定做DDos的检测与防御之后，就需要在网络上查询相关的资料、以及前人的设计方案，最初使用搜索引擎直接搜索关键字和题目，经过筛选后，有用的结果主要就一篇博文，其他的大多是类似的内容，博文写得比较详细，但是设计方案比较简略，无法有效地达到实现目的要求（自主检测与防御）。</p>
+<p>从这，可以看出，从事相关方面的研究的人并不是太多，至少没有广泛的编写博客并被搜索引擎检测到。不过，值得注意的是，同等的筛选条件下，google比百度的结果要好很多，当然，不能否认百度的搜索结果更加贴近日常生活中，比较符合国人习惯，但是如果需要查询专业一些的资料、文献的话，还是优先考虑google、bing等搜索引擎。至于国内其他的搜索引擎，例如搜狗、360、神马等，在资料收集方面，甚至还不如百度。</p>
+<p>其次是很多资料并不一定会被搜索引擎所检索到，需要到专门的论坛、网站去搜索，这方面也是google比百度强的一个因素。对于一个比较热门的技术或实现架构，可以尝试在B站或者知乎、CSDN上寻找相关的教学视频、博文。但如果这几个地方都找不到的话，就需要去相关工具的官网，或者github上寻找相关的项目，现在许多开源的项目都把代码托管到了github上，可以在上面查看使用说明、官方文档，遇到问题的时候，在github的issue上面找找，或许能够解决问题。</p>
+<p>最重要也是难度比较高的资料收集方式，便是查找论文，不过论文主要对于不需要太大代码量的设计比较友好，对于需要大量编程来实现的项目，通过论文的方式只能获取实现的思路与基本算法，具体代码实现仍旧是一个十分困难的事儿，所以，对于项目而言，最佳的方式仍旧是官网和使用手册。其次是YouTube，YouTube类似B站，可以在上面找到许多相关的教学视频。</p>
+<p>对于it行业来说，前言的技术、架构，多是国外开发的，代码也是英文编写的，所以英语在编程的学习过程中至关重要，因为使用手册大概率是英文的、官网也很有可能是英文的，代码肯定是英文的，而代码中的注释也大概率是英文的。所以，在遇到不懂的东西的时候，需要查找东西的时候，你所查询得到的结果，大概率也是英文。对于非英语母语的我而言，看下去，是最困难的一件事，但是却必须坚持看下去，值得一提的是，google翻译很好用，但是很多时候，自动翻译的情况下，它会将一些很重要的信息也给翻译成中文，所以，如果时间允许的情况下，最好还是直接看英文原文。</p>
+<h1 id="工具使用"><a href="#工具使用" class="headerlink" title="工具使用"></a>工具使用</h1><p>工具的使用一般网上都有教程，大多时候跟着教程一步一步走即可，但是这里面最容易出现却又最容易忽略的问题，便是版本问题。</p>
+<p>在进行仿真实验等的过程中，往往需要同时使用多个工具进行协同，如果版本没有控制好，极大可能造成，每一步都是正确的，但是合起来就不正确了。</p>
+<p>Example：本次实验需要用到的工具主要有，VMware、Ubuntu、mininet、floodligh、sFlow。大体流程是在VMware中创建Ubuntu虚拟机，在虚拟机中安装mininet用来搭建SDN仿真网络，使用floodlight下发流表控制，使用sFlow进行流量监控。但是需要注意的一点是，floodlight的使用需要预先安装jdk环境，在Ubuntu中使用命令安装时jdk时，14的Ubuntu默认安装的是1.7的jdk，16的Ubuntu默认安装的是1.8的jdk。但是对于floodlight而言，1.0以下的版本是基于jdk1.7的，而1.0以后的则是需要jdk1.8的环境才能运行，所以，如果在14版本的Ubuntu中安装了1.7的jdk，然后安装1.0以后版本的floodlight，那floodlight便无法顺利运行。</p>
+<p>其次是编译，在本次实验中，floodlight的编译需要使用ant，或者maven。相较于传统的项目而言，maven确实要好用很多，很适合项目的移植，而且在IDE中导入maven项目也比较方便。不过在这次的floodlight工程中，每次打包都需要编译、测试等，每次都执行测试步骤，有些浪费时间。</p>
+<p>最后是关于日志。一个工具的使用过程，必然伴随着日志的产生，通过分析日志，可以比较清晰明了地知道工具的状态。例如，在使用ant编译过程中报错，不能一看到“100个错”就被吓退，去仔细看日志文件，检查是什么地方出错，事实上，最后发现，所谓的100个错，是中文编码字符集不统一导致的，这也进一步说明了，在平时编码的过程中，字符集的统一的重要性，值得一提的一点是，编码不同往往会导致中文乱码，但是英文不会，所以，如果条件允许，注释什么的，也尽量使用英文编写。此外，在确实发生乱码的情况下，使用编码转换工具，最好不要生硬地改变编码，这样容易导致乱码（中文）。<br>除了工具本身提供的日志之外，我们在编写一个项目的过程中，也应该注意日志的使用，一个项目在运行过程中，其内部的运行过程与结果对我们而言是封闭的（debug）除外，我们不知道编写的代码是否出错，在那里错。所以日志输出就显得很重要，在合适的位置插入日志输入，可以便于我们在控制台上检测、判断我们的程序的问题是出在那里。输出某些关键的参数，一方面能够让我们直观地知道程序的运行状态，另一方面也能方面我们后面调试修改程序。</p>
+<h1 id="模块设计"><a href="#模块设计" class="headerlink" title="模块设计"></a>模块设计</h1><p>在floodlight中添加模块：</p>
+<p>编写类继承特定的接口并实现接口的抽象类，然后在两个配置文件中将模块注册，这样floodlight在启动的时候便可以开启相应的模块，然后再模块的startUp方法中定义自己需要添加的功能。可以通过调用接口的实现类来获取对象，（例如switch信息），根据获取的对象，便可以获取整个floodlight中的开放的参数。</p>
+<p>获取参数后，将参数信息传到处理的函数中，从所有信息中解析出我们实验所需要的信息，然后对信息进行二次封装，方便其他类对信息进行使用。</p>
+<p>自主检测与防御。将获取到的信息与阈值进行比较（这里提供一个想法，阈值可不可以通过某种自主学习的算法实现），根据判断结果来执行后续的操作。</p>
+<p>下发流表进行控制。在命令行中下发流表可以通过直接敲命令的方式实现，但在编程中，下发流表需要经过开启连接-传递参数-关闭连接的过程，而且着重要注意对参数的封装。现在主流的参数传递方法为json，能够比较友好地在前端和后端进行数据传输。</p>
+<h1 id="标准的格式"><a href="#标准的格式" class="headerlink" title="标准的格式"></a>标准的格式</h1><p>在制作PPT和Word报告是，平时做的比较随意，在一些格式、细节上不是太重视，这也进一步导致了文档本身的不够规范问题。</p>
+<p>对于一份标准的word格式的论文。封面，样式，字体，是否有横线，页边距。目录的缩进、字体、行距。正文中的各级标题，行距，字体，西文字体，代码格式，页眉页脚，题注表注等内容，以及对参考文献的引用等。这些细节或许很小，可以忽略，但是对于一份正式的报告而言，这些细节却是必须的。</p>
+<p>PPT。PPT主要是用来作演示的，所以PPT的排版需要着重考虑观者的感受，PPT中不一定非得有很多内容，但是一定得把自己要体现的核心东西表现出来。PPT不一定非得很多页，但是每页需要体现出每页的价值。对于一些比较正式的汇报，PPT中则不应该出现太多花里胡哨的东西，对于正式的汇报而言，需要着重突出“学术性”和“庄重性”，其他的元素过多容易喧宾夺主，也容易影响观众观感。奥卡姆剃刀原则：如无必要，勿增实体。此外，对于某个特定主题的PPT而言，尽量不要出现过多其他的元素，PPT中的任何一个图片，应该有它存在的价值，不能为了有图片而存在图片，每一个元素都应该对他的存在负责。</p>
+<p>流程图。流程图是一个很有必要的东西，很多时候，我们可以把冗长的文字描述转换为流程图，或者其他的图标，这样做最大的好处便是直观，方便观众去理解我们所要表达的东西，其次是简化页面，报告中与其全是文字，何不如将部分文字转化为图表，这样的排版，更能让人有看下去的想法。类似的还有结构图，拓扑图等。</p>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://stary2020.gitee.io/2021/07/04/course-2021-07-04-SDNnetANDDDos/" title="未来网络技术课程设计小结" target="_blank" rel="external">http://stary2020.gitee.io/2021/07/04/course-2021-07-04-SDNnetANDDDos/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/stary1999" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/stary1999" target="_blank"><span class="text-dark">stary</span><small class="ml-1x">Young geek &amp;&amp; ...</small></a></h3>
+        <div>个人简介。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2021/07/04/tools-2021-07-04-gitAndGitHub/" title="git和GitHub的使用"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/2021/06/30/tools-2021-06-30-mavenUse/" title="maven的使用"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">
+        <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+  </div>
+  </div>
+</nav>
+  
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/stary" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        &copy; 2021 stary
+        
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '',
+    appKey: '',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
+
+
+
+
+
+
+
+</body>
+</html>
