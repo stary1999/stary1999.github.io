@@ -263,6 +263,41 @@
   </url>
   
   <url>
+    <loc>http://stary2020.gitee.io/tags/idea/</loc>
+    <lastmod>2021-08-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stary2020.gitee.io/tags/%E6%95%88%E7%8E%87/</loc>
+    <lastmod>2021-08-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stary2020.gitee.io/tags/%E6%89%8B%E6%9C%BA/</loc>
+    <lastmod>2021-08-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stary2020.gitee.io/tags/%E4%BA%91%E7%9B%98/</loc>
+    <lastmod>2021-08-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stary2020.gitee.io/tags/%E4%BA%92%E8%81%94/</loc>
+    <lastmod>2021-08-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://stary2020.gitee.io/tags/%E5%AE%9E%E9%AA%8C/</loc>
     <lastmod>2021-08-19</lastmod>
     <changefreq>daily</changefreq>
@@ -305,76 +340,6 @@
   </url>
   
   <url>
-    <loc>http://stary2020.gitee.io/tags/%E6%95%88%E7%8E%87/</loc>
-    <lastmod>2021-08-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://stary2020.gitee.io/tags/%E6%89%8B%E6%9C%BA/</loc>
-    <lastmod>2021-08-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://stary2020.gitee.io/tags/%E4%BA%91%E7%9B%98/</loc>
-    <lastmod>2021-08-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://stary2020.gitee.io/tags/%E4%BA%92%E8%81%94/</loc>
-    <lastmod>2021-08-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://stary2020.gitee.io/tags/idea/</loc>
-    <lastmod>2021-08-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://stary2020.gitee.io/tags/%E8%AF%AD%E6%B3%95/</loc>
-    <lastmod>2021-08-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://stary2020.gitee.io/tags/%E5%85%A5%E9%97%A8/</loc>
-    <lastmod>2021-08-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://stary2020.gitee.io/tags/markdown/</loc>
-    <lastmod>2021-08-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://stary2020.gitee.io/tags/vue/</loc>
-    <lastmod>2021-08-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://stary2020.gitee.io/tags/%E5%89%8D%E7%AB%AF/</loc>
-    <lastmod>2021-08-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://stary2020.gitee.io/tags/hexo/</loc>
     <lastmod>2021-08-19</lastmod>
     <changefreq>daily</changefreq>
@@ -411,6 +376,41 @@
   
   <url>
     <loc>http://stary2020.gitee.io/tags/github/</loc>
+    <lastmod>2021-08-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stary2020.gitee.io/tags/%E8%AF%AD%E6%B3%95/</loc>
+    <lastmod>2021-08-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stary2020.gitee.io/tags/%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2021-08-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stary2020.gitee.io/tags/markdown/</loc>
+    <lastmod>2021-08-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stary2020.gitee.io/tags/vue/</loc>
+    <lastmod>2021-08-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stary2020.gitee.io/tags/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2021-08-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -517,14 +517,14 @@
   </url>
   
   <url>
-    <loc>http://stary2020.gitee.io/categories/2021%E8%AF%BE%E8%AE%BE/</loc>
+    <loc>http://stary2020.gitee.io/categories/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2021-08-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stary2020.gitee.io/categories/%E5%B7%A5%E5%85%B7/</loc>
+    <loc>http://stary2020.gitee.io/categories/2021%E8%AF%BE%E8%AE%BE/</loc>
     <lastmod>2021-08-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
