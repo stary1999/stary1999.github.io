@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://stary2020.gitee.io/2021/08/20/leetcode/</loc>
+    <lastmod>2021-08-23</lastmod>
+  </url>
+  <url>
+    <loc>http://stary2020.gitee.io/2021/08/13/something/</loc>
+    <lastmod>2021-08-20</lastmod>
+  </url>
+  <url>
+    <loc>http://stary2020.gitee.io/2021/07/29/default-2021-07-29-phoneAndCloud/</loc>
+    <lastmod>2021-08-20</lastmod>
+  </url>
+  <url>
+    <loc>http://stary2020.gitee.io/2021/06/28/default-hello-world/</loc>
+    <lastmod>2021-08-20</lastmod>
+  </url>
+  <url>
     <loc>http://stary2020.gitee.io/2021/07/04/course-2021-07-04-SDNnetANDDDos/</loc>
     <lastmod>2021-08-19</lastmod>
   </url>
@@ -9,23 +25,11 @@
     <lastmod>2021-08-19</lastmod>
   </url>
   <url>
-    <loc>http://stary2020.gitee.io/2021/08/19/default-hello-world/</loc>
-    <lastmod>2021-08-19</lastmod>
-  </url>
-  <url>
     <loc>http://stary2020.gitee.io/2021/06/28/default-idea%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</loc>
     <lastmod>2021-08-19</lastmod>
   </url>
   <url>
-    <loc>http://stary2020.gitee.io/2021/06/28/default-4-29-tomcat-and-severlet/</loc>
-    <lastmod>2021-08-19</lastmod>
-  </url>
-  <url>
     <loc>http://stary2020.gitee.io/2021/06/28/default-4-30-MySQL/</loc>
-    <lastmod>2021-08-19</lastmod>
-  </url>
-  <url>
-    <loc>http://stary2020.gitee.io/2021/07/29/default-2021-07-29-phoneAndCloud/</loc>
     <lastmod>2021-08-19</lastmod>
   </url>
   <url>
@@ -105,11 +109,11 @@
     <lastmod>2021-08-19</lastmod>
   </url>
   <url>
-    <loc>http://stary2020.gitee.io/2021/07/22/JVM/</loc>
+    <loc>http://stary2020.gitee.io/2021/07/22/java-2021-07-22-JVM/</loc>
     <lastmod>2021-08-19</lastmod>
   </url>
   <url>
-    <loc>http://stary2020.gitee.io/2021/08/01/faceQuestions2/</loc>
+    <loc>http://stary2020.gitee.io/2021/08/01/java-2021-08-15-faceQuestions2/</loc>
     <lastmod>2021-08-19</lastmod>
   </url>
   <url>
@@ -117,7 +121,7 @@
     <lastmod>2021-08-19</lastmod>
   </url>
   <url>
-    <loc>http://stary2020.gitee.io/2021/07/23/faceQuestions/</loc>
+    <loc>http://stary2020.gitee.io/2021/07/23/java-2021-07-23-faceQuestions/</loc>
     <lastmod>2021-08-19</lastmod>
   </url>
 </urlset> 
