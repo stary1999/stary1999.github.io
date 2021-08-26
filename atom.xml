@@ -106,20 +106,15 @@
     <link href="http://stary2020.gitee.io/2021/08/26/javaWeb2/"/>
     <id>http://stary2020.gitee.io/2021/08/26/javaWeb2/</id>
     <published>2021-08-26T04:47:12.000Z</published>
-    <updated>2021-08-26T07:24:39.323Z</updated>
+    <updated>2021-08-26T07:48:43.128Z</updated>
     
-    <content type="html"><![CDATA[<p>书城SSM版</p><p>改进方案</p><p>ssm+html</p><p>后台管理权限修改</p><p>界面修改</p><p>Redis缓存购物车</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>本项目是在上一版书城项目的基础上，进一步完善的，具体资源以及教程都来自/参考尚硅谷课程。</p><p>本次复盘，是在老师原有上课的基础上，补充一些未完成的细节，完善功能，使整个项目看起来更合理一些。因时间原因，项目仍有很多缺点不足，有待改进。加之jsp技术过于老旧，后面可能采取SpringBoot的方式实现类似功能的项目</p><p>书城SSM版</p><p>改进方案</p><p>ssm+html</p><p>后台管理权限修改</p><p>界面修改</p><p>Redis缓存购物车</p><h5 id="项目描述："><a href="#项目描述：" class="headerlink" title="项目描述："></a>项目描述：</h5><ul><li>基于SpringBoot2和themleaf的Web开发，对旧的Web商城项目的重构和完善，独立开发和设计了基础页面。项目分为前台用户模块和后台管理模块，前台包括了商品展示，商品购买，用户注册、登录，等功能。后台管理模块包括商品管理、用户管理、订单管理、管理员管理四个模块，实现包括增删改查、以及权限管理等功能。</li><li>项目仓库：<a href="https://github.com/stary1999/MyMall">https://github.com/stary1999/MyMall</a></li><li>文档：<a href="https://stary1999.github.io/2021/08/26/javaWeb2/">https://stary1999.github.io/2021/08/26/javaWeb2/</a></li></ul><h5 id="技术实现："><a href="#技术实现：" class="headerlink" title="技术实现："></a>技术实现：</h5><ul><li>SpringBoot作为后端开发，负责处理业务逻辑和视图分发。</li><li>MyBatis Plus作为数据库框架，处理数据库相关操作，MySQL存储数据表信息。</li><li>themleaf作为前端模板引擎，使用Bootstrap进行页面开发。</li></ul>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;书城SSM版&lt;/p&gt;
-&lt;p&gt;改进方案&lt;/p&gt;
-&lt;p&gt;ssm+html&lt;/p&gt;
-&lt;p&gt;后台管理权限修改&lt;/p&gt;
-&lt;p&gt;界面修改&lt;/p&gt;
-&lt;p&gt;Redis缓存购物车&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;h1 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h1&gt;&lt;p&gt;本项目是在上一版书城项目的基础上，进一步完善的，具体资源以及教程都来自/参考尚硅谷课程。&lt;/p&gt;
+&lt;p&gt;本次复盘，是在老师原有上课的基础上，</summary>
       
     
     
