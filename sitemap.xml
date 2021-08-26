@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://stary2020.gitee.io/2021/08/26/EVENGOfNetwork/</loc>
+    
+    <lastmod>2021-08-26</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://stary2020.gitee.io/2021/08/26/windowsServerHyperV/</loc>
     
     <lastmod>2021-08-26</lastmod>
@@ -354,6 +361,41 @@
   </url>
   
   <url>
+    <loc>http://stary2020.gitee.io/tags/%E8%AF%AD%E6%B3%95/</loc>
+    <lastmod>2021-08-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stary2020.gitee.io/tags/%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2021-08-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stary2020.gitee.io/tags/markdown/</loc>
+    <lastmod>2021-08-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stary2020.gitee.io/tags/vue/</loc>
+    <lastmod>2021-08-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stary2020.gitee.io/tags/%E5%89%8D%E7%AB%AF/</loc>
+    <lastmod>2021-08-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://stary2020.gitee.io/tags/hexo/</loc>
     <lastmod>2021-08-26</lastmod>
     <changefreq>daily</changefreq>
@@ -390,41 +432,6 @@
   
   <url>
     <loc>http://stary2020.gitee.io/tags/github/</loc>
-    <lastmod>2021-08-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://stary2020.gitee.io/tags/%E8%AF%AD%E6%B3%95/</loc>
-    <lastmod>2021-08-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://stary2020.gitee.io/tags/%E5%85%A5%E9%97%A8/</loc>
-    <lastmod>2021-08-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://stary2020.gitee.io/tags/markdown/</loc>
-    <lastmod>2021-08-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://stary2020.gitee.io/tags/vue/</loc>
-    <lastmod>2021-08-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://stary2020.gitee.io/tags/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2021-08-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

@@ -6,7 +6,7 @@
   <link href="http://stary2020.gitee.io/atom.xml" rel="self"/>
   
   <link href="http://stary2020.gitee.io/"/>
-  <updated>2021-08-26T05:35:22.569Z</updated>
+  <updated>2021-08-26T05:41:25.349Z</updated>
   <id>http://stary2020.gitee.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>EVE-NG仿真路由组网与交换机配置</title>
+    <link href="http://stary2020.gitee.io/2021/08/26/EVENGOfNetwork/"/>
+    <id>http://stary2020.gitee.io/2021/08/26/EVENGOfNetwork/</id>
+    <published>2021-08-26T05:40:34.000Z</published>
+    <updated>2021-08-26T05:41:25.349Z</updated>
+    
+    
+    
+    
+    <category term="default" scheme="http://stary2020.gitee.io/categories/default/"/>
+    
+    
+    <category term="default" scheme="http://stary2020.gitee.io/tags/default/"/>
+    
+  </entry>
   
   <entry>
     <title>基于windows server搭建的故障群集转移</title>
@@ -476,25 +493,6 @@
     <category term="工具" scheme="http://stary2020.gitee.io/tags/%E5%B7%A5%E5%85%B7/"/>
     
     <category term="java" scheme="http://stary2020.gitee.io/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vue的使用(入门)</title>
-    <link href="http://stary2020.gitee.io/2021/07/10/language-2021-07-10-vue/"/>
-    <id>http://stary2020.gitee.io/2021/07/10/language-2021-07-10-vue/</id>
-    <published>2021-07-10T13:09:01.000Z</published>
-    <updated>2021-08-19T02:34:47.881Z</updated>
-    
-    
-    
-    
-    <category term="框架" scheme="http://stary2020.gitee.io/categories/%E6%A1%86%E6%9E%B6/"/>
-    
-    
-    <category term="vue" scheme="http://stary2020.gitee.io/tags/vue/"/>
-    
-    <category term="前端" scheme="http://stary2020.gitee.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
