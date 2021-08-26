@@ -1,12 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://stary2020.gitee.io/2021/08/20/leetcode/</loc>
-    <lastmod>2021-08-23</lastmod>
+    <loc>http://stary2020.gitee.io/2021/08/26/windowsServerHyperV/</loc>
+    <lastmod>2021-08-26</lastmod>
+  </url>
+  <url>
+    <loc>http://stary2020.gitee.io/2021/08/26/PerceptionAndControl/</loc>
+    <lastmod>2021-08-26</lastmod>
+  </url>
+  <url>
+    <loc>http://stary2020.gitee.io/2021/08/26/javaWeb2/</loc>
+    <lastmod>2021-08-26</lastmod>
+  </url>
+  <url>
+    <loc>http://stary2020.gitee.io/2021/08/26/dockerOfDeploy/</loc>
+    <lastmod>2021-08-26</lastmod>
+  </url>
+  <url>
+    <loc>http://stary2020.gitee.io/2021/08/26/androidAndIoT/</loc>
+    <lastmod>2021-08-26</lastmod>
   </url>
   <url>
     <loc>http://stary2020.gitee.io/2021/08/13/something/</loc>
-    <lastmod>2021-08-20</lastmod>
+    <lastmod>2021-08-26</lastmod>
+  </url>
+  <url>
+    <loc>http://stary2020.gitee.io/2021/08/20/leetcode/</loc>
+    <lastmod>2021-08-26</lastmod>
   </url>
   <url>
     <loc>http://stary2020.gitee.io/2021/07/29/default-2021-07-29-phoneAndCloud/</loc>
