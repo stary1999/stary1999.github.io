@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://stary2020.gitee.io/about/index.html</loc>
+    
+    <lastmod>2021-08-26</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://stary2020.gitee.io/2021/08/26/javaWeb2/</loc>
+    
+    <lastmod>2021-08-26</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://stary2020.gitee.io/2021/08/26/EVENGOfNetwork/</loc>
     
     <lastmod>2021-08-26</lastmod>
@@ -17,13 +31,6 @@
   
   <url>
     <loc>http://stary2020.gitee.io/2021/08/26/PerceptionAndControl/</loc>
-    
-    <lastmod>2021-08-26</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://stary2020.gitee.io/2021/08/26/javaWeb2/</loc>
     
     <lastmod>2021-08-26</lastmod>
     
@@ -261,13 +268,6 @@
   </url>
   
   <url>
-    <loc>http://stary2020.gitee.io/about/index.html</loc>
-    
-    <lastmod>2021-08-18</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://stary2020.gitee.io/index/index.html</loc>
     
     <lastmod>2021-08-18</lastmod>
@@ -306,6 +306,27 @@
   
   <url>
     <loc>http://stary2020.gitee.io/tags/default/</loc>
+    <lastmod>2021-08-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stary2020.gitee.io/tags/java/</loc>
+    <lastmod>2021-08-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stary2020.gitee.io/tags/SpringBoot/</loc>
+    <lastmod>2021-08-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stary2020.gitee.io/tags/%E9%A1%B9%E7%9B%AE/</loc>
     <lastmod>2021-08-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -411,13 +432,6 @@
   
   <url>
     <loc>http://stary2020.gitee.io/tags/%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2021-08-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://stary2020.gitee.io/tags/java/</loc>
     <lastmod>2021-08-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -538,6 +552,13 @@
   </url>
   
   <url>
+    <loc>http://stary2020.gitee.io/categories/java/</loc>
+    <lastmod>2021-08-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://stary2020.gitee.io/categories/2021%E8%AF%BE%E8%AE%BE/</loc>
     <lastmod>2021-08-26</lastmod>
     <changefreq>daily</changefreq>
@@ -560,13 +581,6 @@
   
   <url>
     <loc>http://stary2020.gitee.io/categories/%E6%A1%86%E6%9E%B6/</loc>
-    <lastmod>2021-08-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://stary2020.gitee.io/categories/java/</loc>
     <lastmod>2021-08-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
