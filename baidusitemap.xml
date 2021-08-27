@@ -1,11 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://stary2020.gitee.io/2021/07/10/tools-2021-07-10-MyBatis/</loc>
+    <loc>http://stary2020.gitee.io/2021/08/26/javaWeb2/</loc>
     <lastmod>2021-08-27</lastmod>
   </url>
   <url>
-    <loc>http://stary2020.gitee.io/2021/08/26/javaWeb2/</loc>
+    <loc>http://stary2020.gitee.io/2021/07/04/course-2021-07-04-SDNnetANDDDos/</loc>
+    <lastmod>2021-08-27</lastmod>
+  </url>
+  <url>
+    <loc>http://stary2020.gitee.io/2021/06/28/default-firefox%E4%B8%BB%E9%A1%B5%E8%A2%AB%E5%8A%AB%E6%8C%81/</loc>
+    <lastmod>2021-08-27</lastmod>
+  </url>
+  <url>
+    <loc>http://stary2020.gitee.io/2021/07/14/java-2021-07-14-JavaWebBookCity/</loc>
+    <lastmod>2021-08-27</lastmod>
+  </url>
+  <url>
+    <loc>http://stary2020.gitee.io/2021/07/10/java-2021-07-10-SpringMVC/</loc>
+    <lastmod>2021-08-27</lastmod>
+  </url>
+  <url>
+    <loc>http://stary2020.gitee.io/2021/07/10/java-2021-07-10-Spring5/</loc>
+    <lastmod>2021-08-27</lastmod>
+  </url>
+  <url>
+    <loc>http://stary2020.gitee.io/2021/07/04/java-2021-07-04-springBoot2/</loc>
+    <lastmod>2021-08-27</lastmod>
+  </url>
+  <url>
+    <loc>http://stary2020.gitee.io/2021/07/31/java-2021-07-31-SpringCloud/</loc>
+    <lastmod>2021-08-27</lastmod>
+  </url>
+  <url>
+    <loc>http://stary2020.gitee.io/2021/08/03/java-2021-08-03-springcloudKuang/</loc>
+    <lastmod>2021-08-27</lastmod>
+  </url>
+  <url>
+    <loc>http://stary2020.gitee.io/2021/06/29/language-2021-06-29-markdown%E8%AF%AD%E6%B3%95/</loc>
+    <lastmod>2021-08-27</lastmod>
+  </url>
+  <url>
+    <loc>http://stary2020.gitee.io/2021/06/29/tools-2021-06-29-hexoInstallAndUse/</loc>
+    <lastmod>2021-08-27</lastmod>
+  </url>
+  <url>
+    <loc>http://stary2020.gitee.io/2021/07/11/tools-2021-07-11-DesignPatterns/</loc>
+    <lastmod>2021-08-27</lastmod>
+  </url>
+  <url>
+    <loc>http://stary2020.gitee.io/2021/07/10/tools-2021-07-10-MyBatis/</loc>
     <lastmod>2021-08-27</lastmod>
   </url>
   <url>
@@ -45,23 +89,11 @@
     <lastmod>2021-08-20</lastmod>
   </url>
   <url>
-    <loc>http://stary2020.gitee.io/2021/07/04/course-2021-07-04-SDNnetANDDDos/</loc>
-    <lastmod>2021-08-19</lastmod>
-  </url>
-  <url>
-    <loc>http://stary2020.gitee.io/2021/06/28/default-firefox%E4%B8%BB%E9%A1%B5%E8%A2%AB%E5%8A%AB%E6%8C%81/</loc>
-    <lastmod>2021-08-19</lastmod>
-  </url>
-  <url>
     <loc>http://stary2020.gitee.io/2021/06/28/default-idea%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</loc>
     <lastmod>2021-08-19</lastmod>
   </url>
   <url>
     <loc>http://stary2020.gitee.io/2021/06/28/default-4-30-MySQL/</loc>
-    <lastmod>2021-08-19</lastmod>
-  </url>
-  <url>
-    <loc>http://stary2020.gitee.io/2021/07/04/java-2021-07-04-springBoot2/</loc>
     <lastmod>2021-08-19</lastmod>
   </url>
   <url>
@@ -77,31 +109,7 @@
     <lastmod>2021-08-19</lastmod>
   </url>
   <url>
-    <loc>http://stary2020.gitee.io/2021/07/10/java-2021-07-10-Spring5/</loc>
-    <lastmod>2021-08-19</lastmod>
-  </url>
-  <url>
-    <loc>http://stary2020.gitee.io/2021/07/10/java-2021-07-10-SpringMVC/</loc>
-    <lastmod>2021-08-19</lastmod>
-  </url>
-  <url>
-    <loc>http://stary2020.gitee.io/2021/07/14/java-2021-07-14-JavaWebBookCity/</loc>
-    <lastmod>2021-08-19</lastmod>
-  </url>
-  <url>
-    <loc>http://stary2020.gitee.io/2021/07/31/java-2021-07-31-SpringCloud/</loc>
-    <lastmod>2021-08-19</lastmod>
-  </url>
-  <url>
     <loc>http://stary2020.gitee.io/2021/08/02/java-2021-08-02-faceQuestion/</loc>
-    <lastmod>2021-08-19</lastmod>
-  </url>
-  <url>
-    <loc>http://stary2020.gitee.io/2021/08/03/java-2021-08-03-springcloudKuang/</loc>
-    <lastmod>2021-08-19</lastmod>
-  </url>
-  <url>
-    <loc>http://stary2020.gitee.io/2021/06/29/language-2021-06-29-markdown%E8%AF%AD%E6%B3%95/</loc>
     <lastmod>2021-08-19</lastmod>
   </url>
   <url>
@@ -113,19 +121,11 @@
     <lastmod>2021-08-19</lastmod>
   </url>
   <url>
-    <loc>http://stary2020.gitee.io/2021/06/29/tools-2021-06-29-hexoInstallAndUse/</loc>
-    <lastmod>2021-08-19</lastmod>
-  </url>
-  <url>
     <loc>http://stary2020.gitee.io/2021/06/30/tools-2021-06-30-mavenUse/</loc>
     <lastmod>2021-08-19</lastmod>
   </url>
   <url>
     <loc>http://stary2020.gitee.io/2021/07/04/tools-2021-07-04-gitAndGitHub/</loc>
-    <lastmod>2021-08-19</lastmod>
-  </url>
-  <url>
-    <loc>http://stary2020.gitee.io/2021/07/11/tools-2021-07-11-DesignPatterns/</loc>
     <lastmod>2021-08-19</lastmod>
   </url>
   <url>
