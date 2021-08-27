@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>EVE-NG仿真路由组网与交换机配置 | Hexo</title>
+  <meta name="description" content="说明：本项目截止日期：2021年1月11日 本项目为之前的学习实践内容整理，记录学习过程，仅供参考、学习。 概述环境windows 10 VMware 15.5 EVE-NG VNC Xshell …… 设计本次实验拓扑图由12台路由器和一台电脑、一个云网络接口构成。 主体分为四个部分：由两台路由器组成的公司网络，由两台路由器组成的子公司网络，由7台路由器和云组成的运营商网络，和由一台路由器和一台">
+<meta property="og:type" content="article">
+<meta property="og:title" content="EVE-NG仿真路由组网与交换机配置">
+<meta property="og:url" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="说明：本项目截止日期：2021年1月11日 本项目为之前的学习实践内容整理，记录学习过程，仅供参考、学习。 概述环境windows 10 VMware 15.5 EVE-NG VNC Xshell …… 设计本次实验拓扑图由12台路由器和一台电脑、一个云网络接口构成。 主体分为四个部分：由两台路由器组成的公司网络，由两台路由器组成的子公司网络，由7台路由器和云组成的运营商网络，和由一台路由器和一台">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215423618.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215433479.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215534464.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215601197.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215613450.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215626515.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215633376.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215644389.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215650009.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215703083.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215708897.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215712952.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215728508.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215736938.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215747870.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215757456.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215809777.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215821981.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215827576.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215833265.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215837972.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215842647.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215853984.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215858598.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215908758.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215918229.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215927032.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215937138.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215942973.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215947092.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215957968.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826220003268.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826220021171.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826220030818.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826220036267.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826220040454.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826220050622.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826220055219.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826220105585.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826220109834.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826220118342.png">
+<meta property="og:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826220124689.png">
+<meta property="article:published_time" content="2021-08-26T05:40:34.000Z">
+<meta property="article:modified_time" content="2021-08-26T14:04:48.977Z">
+<meta property="article:author" content="stary">
+<meta property="article:tag" content="实践">
+<meta property="article:tag" content="网络">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215423618.png">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://stary1999.github.io" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">stary</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">愿启明星照亮信仰，照进现实</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Jiangsu, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav menu-highlight">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/stary" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享经验!</p> </br> <p>博客迁移，功能尚未完善，评论无效</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/2021%E8%AF%BE%E8%AE%BE/">2021课设</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/default/">default</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%A1%86%E6%9E%B6/">框架</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/">语言</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%A1%B9%E7%9B%AE/">项目</a><span class="category-list-count">5</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MyBatis/" rel="tag">MyBatis</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redis/" rel="tag">Redis</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SDN/" rel="tag">SDN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringBoot/" rel="tag">SpringBoot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringBoot2/" rel="tag">SpringBoot2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringCloud/" rel="tag">SpringCloud</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/" rel="tag">android</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/default/" rel="tag">default</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/idea/" rel="tag">idea</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a><span class="tag-list-count">12</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jsp/" rel="tag">jsp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jvm/" rel="tag">jvm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/springCloud/" rel="tag">springCloud</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/" rel="tag">vue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web/" rel="tag">web</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%A5%E9%97%A8/" rel="tag">入门</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%9E%E8%B7%B5/" rel="tag">实践</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%9E%E9%AA%8C/" rel="tag">实验</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag">工具</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BF%83%E5%BE%97/" rel="tag">心得</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag">数据库</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E5%BF%97/" rel="tag">日志</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A1%86%E6%9E%B6/" rel="tag">框架</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8B%82%E7%A5%9E/" rel="tag">狂神</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag">笔记</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C/" rel="tag">网络</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BE%A4%E9%9B%86/" rel="tag">群集</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%AD%E6%B3%95/" rel="tag">语法</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/" rel="tag">课程设计</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B8%A9%E5%9D%91/" rel="tag">踩坑</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95/" rel="tag">面试</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE/" rel="tag">项目</a><span class="tag-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/Java/" style="font-size: 13px;">Java</a> <a href="/tags/MyBatis/" style="font-size: 13px;">MyBatis</a> <a href="/tags/Redis/" style="font-size: 13px;">Redis</a> <a href="/tags/SDN/" style="font-size: 13px;">SDN</a> <a href="/tags/SpringBoot/" style="font-size: 13px;">SpringBoot</a> <a href="/tags/SpringBoot2/" style="font-size: 13px;">SpringBoot2</a> <a href="/tags/SpringCloud/" style="font-size: 13px;">SpringCloud</a> <a href="/tags/android/" style="font-size: 13px;">android</a> <a href="/tags/default/" style="font-size: 14px;">default</a> <a href="/tags/docker/" style="font-size: 13px;">docker</a> <a href="/tags/git/" style="font-size: 13px;">git</a> <a href="/tags/github/" style="font-size: 13px;">github</a> <a href="/tags/hexo/" style="font-size: 13px;">hexo</a> <a href="/tags/idea/" style="font-size: 13px;">idea</a> <a href="/tags/java/" style="font-size: 13.8px;">java</a> <a href="/tags/jsp/" style="font-size: 13px;">jsp</a> <a href="/tags/jvm/" style="font-size: 13px;">jvm</a> <a href="/tags/markdown/" style="font-size: 13px;">markdown</a> <a href="/tags/springCloud/" style="font-size: 13px;">springCloud</a> <a href="/tags/ubuntu/" style="font-size: 13px;">ubuntu</a> <a href="/tags/vue/" style="font-size: 13px;">vue</a> <a href="/tags/web/" style="font-size: 13px;">web</a> <a href="/tags/%E5%85%A5%E9%97%A8/" style="font-size: 13px;">入门</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 13px;">前端</a> <a href="/tags/%E5%AE%9E%E8%B7%B5/" style="font-size: 13.2px;">实践</a> <a href="/tags/%E5%AE%9E%E9%AA%8C/" style="font-size: 13px;">实验</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 13.4px;">工具</a> <a href="/tags/%E5%BF%83%E5%BE%97/" style="font-size: 13px;">心得</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 13px;">数据库</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 13px;">日志</a> <a href="/tags/%E6%A1%86%E6%9E%B6/" style="font-size: 13.2px;">框架</a> <a href="/tags/%E7%8B%82%E7%A5%9E/" style="font-size: 13px;">狂神</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 13.2px;">笔记</a> <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 13px;">网络</a> <a href="/tags/%E7%BE%A4%E9%9B%86/" style="font-size: 13px;">群集</a> <a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 13px;">语法</a> <a href="/tags/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/" style="font-size: 13px;">课程设计</a> <a href="/tags/%E8%B8%A9%E5%9D%91/" style="font-size: 13px;">踩坑</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 13.4px;">面试</a> <a href="/tags/%E9%A1%B9%E7%9B%AE/" style="font-size: 13.6px;">项目</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">八月 2021</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">七月 2021</a><span class="archive-list-count">18</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">六月 2021</a><span class="archive-list-count">7</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled ">
+        
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/2021/08/26/project-2021-08-26-EVENGOfNetwork/" class="thumb">
+    
+    
+        <span class="thumb-image thumb-none"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E9%A1%B9%E7%9B%AE/">项目</a>
+              </p>
+              <p class="item-title">
+                <a href="/2021/08/26/project-2021-08-26-EVENGOfNetwork/" class="title">EVE-NG仿真路由组网与交换机配置</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-08-26T05:40:34.000Z" itemprop="datePublished">2021-08-26</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/2021/08/26/project-2021-08-26-windowsServerHyperV/" class="thumb">
+    
+    
+        <span class="thumb-image thumb-none"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E9%A1%B9%E7%9B%AE/">项目</a>
+              </p>
+              <p class="item-title">
+                <a href="/2021/08/26/project-2021-08-26-windowsServerHyperV/" class="title">基于windows server搭建的故障群集转移</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-08-26T05:31:28.000Z" itemprop="datePublished">2021-08-26</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/2021/08/26/project-2021-08-26-dockerOfDeploy/" class="thumb">
+    
+    
+        <span class="thumb-image thumb-none"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E9%A1%B9%E7%9B%AE/">项目</a>
+              </p>
+              <p class="item-title">
+                <a href="/2021/08/26/project-2021-08-26-dockerOfDeploy/" class="title">docker实现企业服务负载均衡架构</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-08-26T05:31:04.000Z" itemprop="datePublished">2021-08-26</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/2021/08/26/project-2021-08-26-PerceptionAndControl/" class="thumb">
+    
+    
+        <span class="thumb-image thumb-none"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E9%A1%B9%E7%9B%AE/">项目</a>
+              </p>
+              <p class="item-title">
+                <a href="/2021/08/26/project-2021-08-26-PerceptionAndControl/" class="title">感知与控制（快递柜）</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-08-26T05:29:47.000Z" itemprop="datePublished">2021-08-26</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/2021/08/26/project-2021-08-26-androidAndIoT/" class="thumb">
+    
+    
+        <span class="thumb-image thumb-none"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E9%A1%B9%E7%9B%AE/">项目</a>
+              </p>
+              <p class="item-title">
+                <a href="/2021/08/26/project-2021-08-26-androidAndIoT/" class="title">远程数据采集控制（android）</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-08-26T05:28:03.000Z" itemprop="datePublished">2021-08-26</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E%EF%BC%9A"><span class="toc-number">1.</span> <span class="toc-text">说明：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-number"></span> <span class="toc-text">概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83"><span class="toc-number">1.</span> <span class="toc-text">环境</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1"><span class="toc-number"></span> <span class="toc-text">设计</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9C%80%E6%B1%82"><span class="toc-number">1.</span> <span class="toc-text">需求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8B%93%E6%89%91"><span class="toc-number">2.</span> <span class="toc-text">拓扑</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0"><span class="toc-number"></span> <span class="toc-text">实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E6%8B%93%E6%89%91%E6%90%AD%E5%BB%BA"><span class="toc-number">1.</span> <span class="toc-text">基础拓扑搭建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0"><span class="toc-number">2.</span> <span class="toc-text">功能实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C%E4%B8%8A%E7%BD%91"><span class="toc-number">2.1.</span> <span class="toc-text">1家庭网络上网</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E8%BF%90%E8%90%A5%E5%95%86%E7%BD%91%E7%BB%9C"><span class="toc-number">2.2.</span> <span class="toc-text">2运营商网络</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E4%BC%81%E4%B8%9A%E7%BD%91%E7%BB%9C"><span class="toc-number">2.3.</span> <span class="toc-text">3企业网络</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%AA%8C%E8%AF%81"><span class="toc-number"></span> <span class="toc-text">验证</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C%E4%B8%8A%E7%BD%91-1"><span class="toc-number">1.</span> <span class="toc-text">1家庭网络上网</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E8%BF%90%E8%90%A5%E5%95%86%E7%BD%91%E7%BB%9C%E9%AA%8C%E8%AF%81"><span class="toc-number">2.</span> <span class="toc-text">2运营商网络验证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E4%BC%81%E4%B8%9A%E7%BD%91%E7%BB%9C%E8%BF%9E%E9%80%9A%E6%80%A7%E9%AA%8C%E8%AF%81"><span class="toc-number">3.</span> <span class="toc-text">3企业网络连通性验证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E6%80%BB%E7%BB%93"><span class="toc-number">4.</span> <span class="toc-text">4总结</span></a></li></ol>
+    </nav>
+  </div>
+</aside>
+
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-project-2021-08-26-EVENGOfNetwork" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      EVE-NG仿真路由组网与交换机配置
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2021/08/26/project-2021-08-26-EVENGOfNetwork/" class="article-date">
+	  <time datetime="2021-08-26T05:40:34.000Z" itemprop="datePublished">2021-08-26</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E9%A1%B9%E7%9B%AE/">项目</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/%E5%AE%9E%E8%B7%B5/" rel="tag">实践</a>, <a class="article-tag-link-link" href="/tags/%E7%BD%91%E7%BB%9C/" rel="tag">网络</a>
+  </span>
+
+
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2021/08/26/project-2021-08-26-EVENGOfNetwork/#comments" class="article-comment-link">评论</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 817(字)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2(分)</span>
+	
+
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h2 id="说明："><a href="#说明：" class="headerlink" title="说明："></a>说明：</h2><p>本项目截止日期：2021年1月11日</p>
+<p>本项目为之前的学习实践内容整理，记录学习过程，仅供参考、学习。</p>
+<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>windows 10</p>
+<p>VMware 15.5</p>
+<p>EVE-NG</p>
+<p>VNC</p>
+<p>Xshell</p>
+<p>……</p>
+<h1 id="设计"><a href="#设计" class="headerlink" title="设计"></a>设计</h1><p>本次实验拓扑图由12台路由器和一台电脑、一个云网络接口构成。</p>
+<p>主体分为四个部分：由两台路由器组成的公司网络，由两台路由器组成的子公司网络，由7台路由器和云组成的运营商网络，和由一台路由器和一台电脑组成的用户网络。公司和子公司之家通过运营商网络连接，用户通过运营商网络保证可以正常上网。</p>
+<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>1.用户网络可以上网</p>
+<p>2.运营商网络，运营商设备运行OSPF，重要节点运行BGP</p>
+<p>3.企业与子公司之间使用MPLS VPN连接内网</p>
+<h2 id="拓扑"><a href="#拓扑" class="headerlink" title="拓扑"></a>拓扑</h2><p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215423618.png" alt="image-20210826215423618"></p>
+<h1 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h1><h2 id="基础拓扑搭建"><a href="#基础拓扑搭建" class="headerlink" title="基础拓扑搭建"></a>基础拓扑搭建</h2><p>略</p>
+<h2 id="功能实现"><a href="#功能实现" class="headerlink" title="功能实现"></a>功能实现</h2><h3 id="1家庭网络上网"><a href="#1家庭网络上网" class="headerlink" title="1家庭网络上网"></a>1家庭网络上网</h3><p>基本ip配置与ospf</p>
+<p>R5</p>
+<p>​                   <img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215433479.png" alt="image-20210826215433479"></p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215534464.png" alt="image-20210826215534464"></p>
+<p>配置nat及下发默认路由</p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215601197.png" alt="image-20210826215601197"></p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215613450.png" alt="image-20210826215613450"></p>
+<p>R6</p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215626515.png" alt="image-20210826215626515"></p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215633376.png" alt="image-20210826215633376"></p>
+<p>R11</p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215644389.png" alt="image-20210826215644389"></p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215650009.png" alt="image-20210826215650009"></p>
+<p>用户网络配置</p>
+<p>R12：</p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215703083.png" alt="image-20210826215703083"></p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215708897.png" alt="image-20210826215708897"></p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215712952.png" alt="image-20210826215712952"></p>
+<h3 id="2运营商网络"><a href="#2运营商网络" class="headerlink" title="2运营商网络"></a>2运营商网络</h3><p>基本IP与ospf配置</p>
+<p>R3：</p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215728508.png" alt="image-20210826215728508"></p>
+<p>R4</p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215736938.png" alt="image-20210826215736938"></p>
+<p>R6</p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215747870.png" alt="image-20210826215747870"></p>
+<p>R7</p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215757456.png" alt="image-20210826215757456"></p>
+<p>R8</p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215809777.png" alt="image-20210826215809777"></p>
+<p>MPLS</p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215821981.png" alt="image-20210826215821981"></p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215827576.png" alt="image-20210826215827576"></p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215833265.png" alt="image-20210826215833265"></p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215837972.png" alt="image-20210826215837972"></p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215842647.png" alt="image-20210826215842647"></p>
+<p>建立bgp</p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215853984.png" alt="image-20210826215853984"></p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215858598.png" alt="image-20210826215858598"></p>
+<p>虚拟路由：</p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215908758.png" alt="image-20210826215908758"></p>
+<h3 id="3企业网络"><a href="#3企业网络" class="headerlink" title="3企业网络"></a>3企业网络</h3><p>公司ip配置与ospf</p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215918229.png" alt="image-20210826215918229"></p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215927032.png" alt="image-20210826215927032"></p>
+<p>子公司IP配置与ospf</p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215937138.png" alt="image-20210826215937138"></p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215942973.png" alt="image-20210826215942973"></p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215947092.png" alt="image-20210826215947092"></p>
+<p>bgp抓取、转发数据</p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826215957968.png" alt="image-20210826215957968"></p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826220003268.png" alt="image-20210826220003268"></p>
+<h1 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h1><h2 id="1家庭网络上网-1"><a href="#1家庭网络上网-1" class="headerlink" title="1家庭网络上网"></a>1家庭网络上网</h2><p>用户网络可以正常上网：</p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826220021171.png" alt="image-20210826220021171"></p>
+<h2 id="2运营商网络验证"><a href="#2运营商网络验证" class="headerlink" title="2运营商网络验证"></a>2运营商网络验证</h2><p>mpls检查：</p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826220030818.png" alt="image-20210826220030818"></p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826220036267.png" alt="image-20210826220036267"></p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826220040454.png" alt="image-20210826220040454"></p>
+<p>验证bgp</p>
+<p>验证bgp邻居关系：</p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826220050622.png" alt="image-20210826220050622"></p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826220055219.png" alt="image-20210826220055219"></p>
+<h2 id="3企业网络连通性验证"><a href="#3企业网络连通性验证" class="headerlink" title="3企业网络连通性验证"></a>3企业网络连通性验证</h2><p>公司与运营商联通测试：</p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826220105585.png" alt="image-20210826220105585"></p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826220109834.png" alt="image-20210826220109834"></p>
+<p>公司和子公司网络连通性验证：</p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826220118342.png" alt="image-20210826220118342"></p>
+<p><img src="/2021/08/26/project-2021-08-26-EVENGOfNetwork/image-20210826220124689.png" alt="image-20210826220124689"></p>
+<h2 id="4总结"><a href="#4总结" class="headerlink" title="4总结"></a>4总结</h2><p>经过好几天的不断学习与尝试后，最终基本完成了本次实验，实验的过程并非一帆风顺，经常会遇到许多问题，许多东西，虽然老师上课讲过，但是自己实际操作时，仍会有许多疏漏与错误，一步一步做实验的过程，也是一个学习与思考的过程，付出与收获是一个正比例的关系，本次实验花了很多时间，同时也收获了许多东西。</p>
+<p>不同与之前的几次作业，本次实验需要我们自己独立思考，独立构思网络结构，并实现该网络的各种配置，这对于习惯了跟着老师走的我们来说，无疑是一个不大不小的挑战，一方面，我们缺少这种独立搭建一个项目的经验，另一方面，我们未来工作需要的也正是这种经验，而这次实验则很好地填补了我们实验方面的短板。</p>
+<p>在这次实验中，极大地加强了我的网络相关知识，但给我印象最深的还是关于组网、网络搭建这件事本身，互联网时代，人人都挂在网络上，但我们对网络的认知却依旧停留在一个十分浅显的表面。通过这次实验，我对网络有了一个十分深刻的认识与了解，在 进一步了解网络的组网与配置后，才能更进一步体会到互联网先辈的智慧与伟大，学习的道路仍旧漫长。</p>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/" title="EVE-NG仿真路由组网与交换机配置" target="_blank" rel="external">http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://stary1999.github.io" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://stary1999.github.io" target="_blank"><span class="text-dark">stary</span><small class="ml-1x">愿启明星照亮信仰，照进现实</small></a></h3>
+        <div>成长中的程序员，半个极客，伪文艺青年</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    
+    <li class="next">
+      <a href="/2021/08/26/project-2021-08-26-windowsServerHyperV/" title="基于windows server搭建的故障群集转移"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">
+        <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+  </div>
+  </div>
+</nav>
+  
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/stary" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        &copy; 2021 stary
+        
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '',
+    appKey: '',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
+
+
+
+
+
+
+
+</body>
+</html>

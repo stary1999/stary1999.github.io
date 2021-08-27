@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://stary2020.gitee.io/2021/08/26/PerceptionAndControl/</loc>
-    <lastmod>2021-08-26</lastmod>
-  </url>
-  <url>
-    <loc>http://stary2020.gitee.io/2021/08/26/windowsServerHyperV/</loc>
-    <lastmod>2021-08-26</lastmod>
-  </url>
-  <url>
-    <loc>http://stary2020.gitee.io/2021/08/26/EVENGOfNetwork/</loc>
-    <lastmod>2021-08-26</lastmod>
-  </url>
-  <url>
-    <loc>http://stary2020.gitee.io/2021/08/26/dockerOfDeploy/</loc>
-    <lastmod>2021-08-26</lastmod>
-  </url>
-  <url>
-    <loc>http://stary2020.gitee.io/2021/08/26/androidAndIoT/</loc>
-    <lastmod>2021-08-26</lastmod>
+    <loc>http://stary2020.gitee.io/2021/07/10/tools-2021-07-10-MyBatis/</loc>
+    <lastmod>2021-08-27</lastmod>
   </url>
   <url>
     <loc>http://stary2020.gitee.io/2021/08/26/javaWeb2/</loc>
+    <lastmod>2021-08-27</lastmod>
+  </url>
+  <url>
+    <loc>http://stary2020.gitee.io/2021/08/26/project-2021-08-26-PerceptionAndControl/</loc>
+    <lastmod>2021-08-26</lastmod>
+  </url>
+  <url>
+    <loc>http://stary2020.gitee.io/2021/08/26/project-2021-08-26-windowsServerHyperV/</loc>
+    <lastmod>2021-08-26</lastmod>
+  </url>
+  <url>
+    <loc>http://stary2020.gitee.io/2021/08/26/project-2021-08-26-EVENGOfNetwork/</loc>
+    <lastmod>2021-08-26</lastmod>
+  </url>
+  <url>
+    <loc>http://stary2020.gitee.io/2021/08/26/project-2021-08-26-dockerOfDeploy/</loc>
+    <lastmod>2021-08-26</lastmod>
+  </url>
+  <url>
+    <loc>http://stary2020.gitee.io/2021/08/26/project-2021-08-26-androidAndIoT/</loc>
     <lastmod>2021-08-26</lastmod>
   </url>
   <url>
@@ -29,7 +33,7 @@
     <lastmod>2021-08-26</lastmod>
   </url>
   <url>
-    <loc>http://stary2020.gitee.io/2021/08/20/leetcode/</loc>
+    <loc>http://stary2020.gitee.io/2021/08/20/default-2021-08-20-leetcode/</loc>
     <lastmod>2021-08-26</lastmod>
   </url>
   <url>
@@ -121,10 +125,6 @@
     <lastmod>2021-08-19</lastmod>
   </url>
   <url>
-    <loc>http://stary2020.gitee.io/2021/07/10/tools-2021-07-10-MyBatis/</loc>
-    <lastmod>2021-08-19</lastmod>
-  </url>
-  <url>
     <loc>http://stary2020.gitee.io/2021/07/11/tools-2021-07-11-DesignPatterns/</loc>
     <lastmod>2021-08-19</lastmod>
   </url>
@@ -141,7 +141,7 @@
     <lastmod>2021-08-19</lastmod>
   </url>
   <url>
-    <loc>http://stary2020.gitee.io/2021/08/03/faceToFace/</loc>
+    <loc>http://stary2020.gitee.io/2021/08/03/default-2021-08-03-faceToFace/</loc>
     <lastmod>2021-08-19</lastmod>
   </url>
   <url>
