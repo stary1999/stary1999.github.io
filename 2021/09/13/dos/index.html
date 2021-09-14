@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>常用命令 | Hexo</title>
+  <meta name="description" content="dos常用命令参考脚本之家：https:&#x2F;&#x2F;www.jb51.net&#x2F;article&#x2F;12360.htm (1)cd..             cd..    退到次一级目录  cd\             cd\    退到根目录下的意思  cd 文件夹名字        cd windows 进入WINDOWS目录 (2)md 文件夹名字        md win   建立名为win的文">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常用命令">
+<meta property="og:url" content="http://stary2020.gitee.io/2021/09/13/dos/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="dos常用命令参考脚本之家：https:&#x2F;&#x2F;www.jb51.net&#x2F;article&#x2F;12360.htm (1)cd..             cd..    退到次一级目录  cd\             cd\    退到根目录下的意思  cd 文件夹名字        cd windows 进入WINDOWS目录 (2)md 文件夹名字        md win   建立名为win的文">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-09-13T11:37:09.000Z">
+<meta property="article:modified_time" content="2021-09-14T05:29:28.825Z">
+<meta property="article:author" content="stary">
+<meta property="article:tag" content="default">
+<meta name="twitter:card" content="summary">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://stary2020.gitee.io/2021/09/13/dos/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://stary1999.github.io" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">stary</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">愿启明星照亮信仰，照进现实</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Jiangsu, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav menu-highlight">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/stary" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享经验!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/default/">default</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%A1%86%E6%9E%B6/">框架</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E8%AE%BE/">课设</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%A1%B9%E7%9B%AE/">项目</a><span class="category-list-count">7</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/MyBatis/" style="font-size: 13px;">MyBatis</a> <a href="/tags/Redis/" style="font-size: 13px;">Redis</a> <a href="/tags/SDN/" style="font-size: 13px;">SDN</a> <a href="/tags/SpringBoot/" style="font-size: 13px;">SpringBoot</a> <a href="/tags/SpringBoot2/" style="font-size: 13px;">SpringBoot2</a> <a href="/tags/SpringCloud/" style="font-size: 13px;">SpringCloud</a> <a href="/tags/android/" style="font-size: 13px;">android</a> <a href="/tags/default/" style="font-size: 14px;">default</a> <a href="/tags/docker/" style="font-size: 13px;">docker</a> <a href="/tags/git/" style="font-size: 13px;">git</a> <a href="/tags/github/" style="font-size: 13px;">github</a> <a href="/tags/hexo/" style="font-size: 13px;">hexo</a> <a href="/tags/idea/" style="font-size: 13px;">idea</a> <a href="/tags/java/" style="font-size: 13.75px;">java</a> <a href="/tags/jsp/" style="font-size: 13px;">jsp</a> <a href="/tags/jvm/" style="font-size: 13px;">jvm</a> <a href="/tags/markdown/" style="font-size: 13px;">markdown</a> <a href="/tags/springCloud/" style="font-size: 13px;">springCloud</a> <a href="/tags/ubuntu/" style="font-size: 13px;">ubuntu</a> <a href="/tags/vue/" style="font-size: 13px;">vue</a> <a href="/tags/web/" style="font-size: 13px;">web</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 13px;">前端</a> <a href="/tags/%E5%90%88%E9%9B%86/" style="font-size: 13px;">合集</a> <a href="/tags/%E5%AE%9E%E8%B7%B5/" style="font-size: 13.25px;">实践</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 13.5px;">工具</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 13px;">数据库</a> <a href="/tags/%E6%A1%86%E6%9E%B6/" style="font-size: 13.25px;">框架</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 13.25px;">笔记</a> <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 13px;">网络</a> <a href="/tags/%E7%BE%A4%E9%9B%86/" style="font-size: 13px;">群集</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 13.5px;">面试</a> <a href="/tags/%E9%A1%B9%E7%9B%AE/" style="font-size: 13.5px;">项目</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">九月 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">八月 2021</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">七月 2021</a><span class="archive-list-count">17</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">六月 2021</a><span class="archive-list-count">7</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled ">
+        
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/2021/09/13/dos/" class="thumb">
+    
+    
+        <span class="thumb-image thumb-none"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/default/">default</a>
+              </p>
+              <p class="item-title">
+                <a href="/2021/09/13/dos/" class="title">常用命令</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-09-13T11:37:09.000Z" itemprop="datePublished">2021-09-13</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/2021/09/04/messagesOfSkill/" class="thumb">
+    
+    
+        <span class="thumb-image thumb-none"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/java/">java</a>
+              </p>
+              <p class="item-title">
+                <a href="/2021/09/04/messagesOfSkill/" class="title">面试备考1</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-09-04T13:19:17.000Z" itemprop="datePublished">2021-09-04</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/2021/08/26/project-2021-08-26-EVENGOfNetwork/" class="thumb">
+    
+    
+        <span class="thumb-image thumb-none"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E9%A1%B9%E7%9B%AE/">项目</a>
+              </p>
+              <p class="item-title">
+                <a href="/2021/08/26/project-2021-08-26-EVENGOfNetwork/" class="title">EVE-NG仿真路由组网与交换机配置</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-08-26T05:40:34.000Z" itemprop="datePublished">2021-08-26</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/2021/08/26/project-2021-08-26-windowsServerHyperV/" class="thumb">
+    
+    
+        <span class="thumb-image thumb-none"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E9%A1%B9%E7%9B%AE/">项目</a>
+              </p>
+              <p class="item-title">
+                <a href="/2021/08/26/project-2021-08-26-windowsServerHyperV/" class="title">基于windows server搭建的故障群集转移</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-08-26T05:31:28.000Z" itemprop="datePublished">2021-08-26</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/2021/08/26/project-2021-08-26-dockerOfDeploy/" class="thumb">
+    
+    
+        <span class="thumb-image thumb-none"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E9%A1%B9%E7%9B%AE/">项目</a>
+              </p>
+              <p class="item-title">
+                <a href="/2021/08/26/project-2021-08-26-dockerOfDeploy/" class="title">docker实现企业服务负载均衡架构</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-08-26T05:31:04.000Z" itemprop="datePublished">2021-08-26</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#dos%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">1.</span> <span class="toc-text">dos常用命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#help"><span class="toc-number">1.1.</span> <span class="toc-text">help</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vbs"><span class="toc-number">1.2.</span> <span class="toc-text">vbs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bat"><span class="toc-number">1.3.</span> <span class="toc-text">bat</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">2.</span> <span class="toc-text">linux常用命令</span></a></li></ol>
+    </nav>
+  </div>
+</aside>
+
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-dos" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      常用命令
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2021/09/13/dos/" class="article-date">
+	  <time datetime="2021-09-13T11:37:09.000Z" itemprop="datePublished">2021-09-13</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/default/">default</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/default/" rel="tag">default</a>
+  </span>
+
+
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2021/09/13/dos/#comments" class="article-comment-link">评论</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 6.2k(字)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 24(分)</span>
+	
+
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h1 id="dos常用命令"><a href="#dos常用命令" class="headerlink" title="dos常用命令"></a>dos常用命令</h1><p>参考脚本之家：<a target="_blank" rel="noopener" href="https://www.jb51.net/article/12360.htm">https://www.jb51.net/article/12360.htm</a></p>
+<p>(1)cd..             cd..    退到次一级目录<br>  cd\             cd\    退到根目录下的意思<br>  cd 文件夹名字        cd windows 进入WINDOWS目录</p>
+<p>(2)md 文件夹名字        md win   建立名为win的文件夹</p>
+<p>(3)rd 文件夹名字        rd win   删除名为win的文件夹<br>                   （前提是win里没有任何文件）</p>
+<p>(4)copy 路径下文件 目标路径   copy C:\1\mima.txt C:\2\ 拷贝文件 </p>
+<p>(5)del 目标路径下文件      del C:\1\3\TCP.txt  删除文件</p>
+<p>​               del c:\1  删除c盘1目录所有文件  看见没mima.txt被删除了 但是3这个文件夹还没删除<br>​                       只是文件不会删除ghost里<br>​                       其他文件夹里的东西。</p>
+<p>(6)dir 文件夹名字或盘符     dir c:\windows 查看C盘windows里目录文件</p>
+<table>
+<thead>
+<tr>
+<th>dir/W</th>
+<th>宽屏显示，一排显示5个文件名，而不会显示修改时间，文件大小等信息</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>dir/S</td>
+<td>显示当前目录及其子目录下所有的文件，</td>
+</tr>
+<tr>
+<td>dir/a</td>
+<td>查看所有文件包括隐藏文件  dir c:\windows /a</td>
+</tr>
+<tr>
+<td>dir/p</td>
+<td>分页查看，这里的很实用的,大家一定要自己试试</td>
+</tr>
+</tbody></table>
+<p>(7)format 盘符  格式化硬盘</p>
+<p>(8)ren 文件名 文件名 改名   ren 1.bat 2.bat 将1.bat改名为2.bat </p>
+<p>(9)type 文件名 查看文件内容（一般用来看bat或txt文件）</p>
+<p>(10)cls 清屏（没多大用）</p>
+<p>二、常用网络DOS命令</p>
+<p>(11)fport               查看系统端口和端口上运行的程序</p>
+<p>(12)netstat -an            查看所有连接本机IP </p>
+<p>(13)ipconfig /all           查看所有连接本机IP</p>
+<p>(14)telnet IP 端口           连接对方机器某个端口</p>
+<p>(15)net user              查看本机用户<br>  net user 用户名 密码 /add     建立一个用户<br>  net user 用户名 /del        删除一个用户</p>
+<p>(16)net localgroup administrators 用户名 /add  把用户添加到管理员<br>  net localgroup administrators 用户名 /del  把用户从管理员组删除</p>
+<p>三、批处理文件</p>
+<p>批处理。就是批量处理多条命令的文件。</p>
+<p>后缀为bat</p>
+<p>内容可以自己编辑多条dos命令。他会按照顺序自动运行。<br>(17)怎样在对方机器DOS窗口下建立批处理文件?</p>
+<p>copy con 文件名.bat</p>
+<p>C:&gt;cd 2</p>
+<p>C:\2&gt;dir 这就是我刚才打的命令</p>
+<p>（省略号代表命令）</p>
+<p>CTRL+Z 存盘退出</p>
+<p>这样一个bat文件也就做好了。我们执行一下</p>
+<p>四、其它命令<br>(18)mem–查看你的计算机内存有多少，以及内存的使用情况</p>
+<p>(19)time–显示和设置DOS的系统时间 Enter the new time: 意思是设置时间,我们按回车就可以跳过去了</p>
+<p>(20)date–显示和设置DOS的系统日期 用法和time命令一样</p>
+<p>(21)ver–显示正在运行的DOS系统版本号</p>
+<h2 id="help"><a href="#help" class="headerlink" title="help"></a>help</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\stary&gt;help</span><br><span class="line">有关某个命令的详细信息，请键入 HELP 命令名</span><br><span class="line">ASSOC          显示或修改文件扩展名关联。</span><br><span class="line">ATTRIB         显示或更改文件属性。</span><br><span class="line">BREAK          设置或清除扩展式 CTRL+C 检查。</span><br><span class="line">BCDEDIT        设置启动数据库中的属性以控制启动加载。</span><br><span class="line">CACLS          显示或修改文件的访问控制列表(ACL)。</span><br><span class="line">CALL           从另一个批处理程序调用这一个。</span><br><span class="line">CD             显示当前目录的名称或将其更改。</span><br><span class="line">CHCP           显示或设置活动代码页数。</span><br><span class="line">CHDIR          显示当前目录的名称或将其更改。</span><br><span class="line">CHKDSK         检查磁盘并显示状态报告。</span><br><span class="line">CHKNTFS        显示或修改启动时间磁盘检查。</span><br><span class="line">CLS            清除屏幕。</span><br><span class="line">CMD            打开另一个 Windows 命令解释程序窗口。</span><br><span class="line">COLOR          设置默认控制台前景和背景颜色。</span><br><span class="line">COMP           比较两个或两套文件的内容。</span><br><span class="line">COMPACT        显示或更改 NTFS 分区上文件的压缩。</span><br><span class="line">CONVERT        将 FAT 卷转换成 NTFS。你不能转换当前驱动器。</span><br><span class="line">COPY           将至少一个文件复制到另一个位置。</span><br><span class="line">DATE           显示或设置日期。</span><br><span class="line">DEL            删除至少一个文件。</span><br><span class="line">DIR            显示一个目录中的文件和子目录。</span><br><span class="line">DISKPART       显示或配置磁盘分区属性。</span><br><span class="line">DOSKEY         编辑命令行、撤回 Windows 命令并创建宏。</span><br><span class="line">DRIVERQUERY    显示当前设备驱动程序状态和属性。</span><br><span class="line">ECHO           显示消息，或将命令回显打开或关闭。</span><br><span class="line">ENDLOCAL       结束批文件中环境更改的本地化。</span><br><span class="line">ERASE          删除一个或多个文件。</span><br><span class="line">EXIT           退出 CMD.EXE 程序(命令解释程序)。</span><br><span class="line">FC             比较两个文件或两个文件集并显示它们之间的不同。</span><br><span class="line">FIND           在一个或多个文件中搜索一个文本字符串。</span><br><span class="line">FINDSTR        在多个文件中搜索字符串。</span><br><span class="line">FOR            为一组文件中的每个文件运行一个指定的命令。</span><br><span class="line">FORMAT         格式化磁盘，以便用于 Windows。</span><br><span class="line">FSUTIL         显示或配置文件系统属性。</span><br><span class="line">FTYPE          显示或修改在文件扩展名关联中使用的文件类型。</span><br><span class="line">GOTO           将 Windows 命令解释程序定向到批处理程序中某个带标签的行。</span><br><span class="line">GPRESULT       显示计算机或用户的组策略信息。</span><br><span class="line">GRAFTABL       使 Windows 在图形模式下显示扩展字符集。</span><br><span class="line">HELP           提供 Windows 命令的帮助信息。</span><br><span class="line">ICACLS         显示、修改、备份或还原文件和目录的 ACL。</span><br><span class="line">IF             在批处理程序中执行有条件的处理操作。</span><br><span class="line">LABEL          创建、更改或删除磁盘的卷标。</span><br><span class="line">MD             创建一个目录。</span><br><span class="line">MKDIR          创建一个目录。</span><br><span class="line">MKLINK         创建符号链接和硬链接</span><br><span class="line">MODE           配置系统设备。</span><br><span class="line">MORE           逐屏显示输出。</span><br><span class="line">MOVE           将一个或多个文件从一个目录移动到另一个目录。</span><br><span class="line">OPENFILES      显示远程用户为了文件共享而打开的文件。</span><br><span class="line">PATH           为可执行文件显示或设置搜索路径。</span><br><span class="line">PAUSE          暂停批处理文件的处理并显示消息。</span><br><span class="line">POPD           还原通过 PUSHD 保存的当前目录的上一个值。</span><br><span class="line">PRINT          打印一个文本文件。</span><br><span class="line">PROMPT         更改 Windows 命令提示。</span><br><span class="line">PUSHD          保存当前目录，然后对其进行更改。</span><br><span class="line">RD             删除目录。</span><br><span class="line">RECOVER        从损坏的或有缺陷的磁盘中恢复可读信息。</span><br><span class="line">REM            记录批处理文件或 CONFIG.SYS 中的注释(批注)。</span><br><span class="line">REN            重命名文件。</span><br><span class="line">RENAME         重命名文件。</span><br><span class="line">REPLACE        替换文件。</span><br><span class="line">RMDIR          删除目录。</span><br><span class="line">ROBOCOPY       复制文件和目录树的高级实用工具</span><br><span class="line">SET            显示、设置或删除 Windows 环境变量。</span><br><span class="line">SETLOCAL       开始本地化批处理文件中的环境更改。</span><br><span class="line">SC             显示或配置服务(后台进程)。</span><br><span class="line">SCHTASKS       安排在一台计算机上运行命令和程序。</span><br><span class="line">SHIFT          调整批处理文件中可替换参数的位置。</span><br><span class="line">SHUTDOWN       允许通过本地或远程方式正确关闭计算机。</span><br><span class="line">SORT           对输入排序。</span><br><span class="line">START          启动单独的窗口以运行指定的程序或命令。</span><br><span class="line">SUBST          将路径与驱动器号关联。</span><br><span class="line">SYSTEMINFO     显示计算机的特定属性和配置。</span><br><span class="line">TASKLIST       显示包括服务在内的所有当前运行的任务。</span><br><span class="line">TASKKILL       中止或停止正在运行的进程或应用程序。</span><br><span class="line">TIME           显示或设置系统时间。</span><br><span class="line">TITLE          设置 CMD.EXE 会话的窗口标题。</span><br><span class="line">TREE           以图形方式显示驱动程序或路径的目录结构。</span><br><span class="line">TYPE           显示文本文件的内容。</span><br><span class="line">VER            显示 Windows 的版本。</span><br><span class="line">VERIFY         告诉 Windows 是否进行验证，以确保文件</span><br><span class="line">正确写入磁盘。</span><br><span class="line">VOL            显示磁盘卷标和序列号。</span><br><span class="line">XCOPY          复制文件和目录树。</span><br><span class="line">WMIC           在交互式命令 shell 中显示 WMI 信息。</span><br><span class="line"></span><br><span class="line">有关工具的详细信息，请参阅联机帮助中的命令行参考。</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="vbs"><a href="#vbs" class="headerlink" title="vbs"></a>vbs</h2><h2 id="bat"><a href="#bat" class="headerlink" title="bat"></a>bat</h2><p>脚本之家：<a target="_blank" rel="noopener" href="https://www.jb51.net/article/49627.htm">https://www.jb51.net/article/49627.htm</a></p>
+<p>作者不详。敬意！</p>
+<p>echo、@、call、pause、rem(小技巧：用::代替rem)是批处理文件最常用的几个命令，我们就从他们开始学起。<br>echo 表示显示此命令后的字符<br>echo off 表示在此语句后所有运行的命令都不显示命令行本身<br>@与echo off相象，但它是加在每个命令行的最前面，表示运行时不显示这一行的命令行（只能影响当前行）。<br>call 调用另一个批处理文件（如果不用call而直接调用别的批处理文件，那么执行完那个批处理文件后将无法返回当前文件并执行当前文件的后续命令）。<br>pause 运行此句会暂停批处理的执行并在屏幕上显示Press any key to continue…的提示，等待用户按任意键后继续<br>rem 表示此命令后的字符为解释行（注释），不执行，只是给自己今后参考用的（相当于程序中的注释）。</p>
+<p>例1：用edit编辑a.bat文件，输入下列内容后存盘为c:\a.bat，执行该批处理文件后可实现：将根目录中所有文件写入 a.txt中，启动UCDOS，进入WPS等功能。</p>
+<table>
+<thead>
+<tr>
+<th>批处理文件的内容为:</th>
+<th>命令注释：</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>@echo off</td>
+<td>不显示后续命令行及当前命令行</td>
+</tr>
+<tr>
+<td>dir c:*.* &gt;a.txt</td>
+<td>将c盘文件列表写入a.txt</td>
+</tr>
+<tr>
+<td>call c:\ucdos\ucdos.bat</td>
+<td>调用ucdos</td>
+</tr>
+<tr>
+<td>echo 你好</td>
+<td>显示”你好”</td>
+</tr>
+<tr>
+<td>pause</td>
+<td>暂停,等待按键继续</td>
+</tr>
+<tr>
+<td>rem 准备运行wps</td>
+<td>注释：准备运行wps</td>
+</tr>
+<tr>
+<td>cd ucdos</td>
+<td>进入ucdos目录</td>
+</tr>
+<tr>
+<td>wps</td>
+<td>运行wps</td>
+</tr>
+</tbody></table>
+<p><strong>批处理文件的参数</strong></p>
+<p>批处理文件还可以像C语言的函数一样使用参数（相当于DOS命令的命令行参数），这需要用到一个参数表示符“%”。</p>
+<p>%[1-9]表示参数，参数是指在运行批处理文件时在文件名后加的以空格（或者Tab）分隔的字符串。变量可以从%0到%9，%0表示批处理命令本身，其它参数字符串用%1到%9顺序表示。</p>
+<p>例2：C:根目录下有一批处理文件名为f.bat，内容为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@echo off format %1</span><br></pre></td></tr></table></figure>
+
+<p>如果执行<code>C:\&gt;f a:</code></p>
+<p>那么在执行f.bat时，%1就表示a:，这样format %1就相当于format a:，于是上面的命令运行时实际执行的是format a:</p>
+<p>例3：C:根目录下一批处理文件名为t.bat，内容为:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@echo off type %1 type %2</span><br></pre></td></tr></table></figure>
+
+<p>那么运行<code>C:\&gt;t a.txt b.txt</code><br>%1 : 表示a.txt<br>%2 : 表示b.txt<br>于是上面的命令将顺序地显示a.txt和b.txt文件的内容。</p>
+<p><strong>特殊命令</strong></p>
+<p>if goto choice for是批处理文件中比较高级的命令，如果这几个你用得很熟练，你就是批处理文件的专家啦。</p>
+<p><strong>一、if 是条件语句，用来判断是否符合规定的条件，从而决定执行不同的命令。 有三种格式:</strong></p>
+<p>1、<code>if [not] &quot;参数&quot; == &quot;字符串&quot; </code>待执行的命令</p>
+<p>参数如果等于(not表示不等，下同)指定的字符串，则条件成立，运行命令，否则运行下一句。</p>
+<p>例：<code>if &quot;%1&quot;==&quot;a&quot; format a:</code></p>
+<p>2、<code>if [not] exist [路径\]文件名 待执行的命令</code><br>如果有指定的文件，则条件成立，运行命令，否则运行下一句。</p>
+<p>如:<code> if exist c:\config.sys type c:\config.sys</code><br>表示如果存在c:\config.sys文件，则显示它的内容。</p>
+<p>3、<code>if errorlevel &lt;数字&gt; 待执行的命令</code></p>
+<p>很多DOS程序在运行结束后会返回一个数字值用来表示程序运行的结果(或者状态)，通过if errorlevel命令可以判断程序的返回值，根据不同的返回值来决定执行不同的命令(返回值必须按照从大到小的顺序排列)。如果返回值等于指定的数字，则条件成立，运行命令，否则运行下一句。</p>
+<p>如<code>if errorlevel 2 goto x2</code></p>
+<p><strong>二、goto 批处理文件运行到这里将跳到goto所指定的标号(标号即label，标号用:后跟标准字符串来定义)处，goto语句一般与if配合使用，根据不同的条件来执行不同的命令组。</strong></p>
+<p>如:</p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">goto</span> <span class="keyword">end</span> </span><br><span class="line">:<span class="keyword">end</span> </span><br><span class="line">echo this <span class="built_in">is</span> the <span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<p>标号用“:字符串”来定义，标号所在行不被执行。</p>
+<p><strong>三、choice 使用此命令可以让用户输入一个字符（用于选择），从而根据用户的选择返回不同的errorlevel，然后于if errorlevel配合，根据用户的选择运行不同的命令。</strong></p>
+<p>注意：choice命令为DOS或者Windows系统提供的外部命令，不同版本的choice命令语法会稍有不同，请用choice /?查看用法。</p>
+<p>choice的命令语法（该语法为Windows 2003中choice命令的语法，其它版本的choice的命令语法与此大同小异）：</p>
+<p><code>CHOICE [/C choices] [/N] [/CS] [/T timeout /D choice] [/M text]</code></p>
+<p>描述:<br>  该工具允许用户从选择列表选择一个项目并返回所选项目的索引。</p>
+<p>参数列表:</p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">/C   choices    指定要创建的选项列表。默认列表是 <span class="string">&quot;YN&quot;</span>。</span><br><span class="line">/N          在提示符中隐藏选项列表。提示前面的消息得到显示，选项依旧处于启用状态。</span><br><span class="line">/CS         允许选择分大小写的选项。在默认情况下，这个工具是不分大小写的。</span><br><span class="line">/T   timeout    做出默认选择之前，暂停的秒数。可接受的值是从 <span class="number">0</span>到 <span class="number">9999</span>。如果指定了 <span class="number">0</span>，就不会有暂停，默认选项会得到选择。</span><br><span class="line">/D   choice     在 nnnn 秒之后指定默认选项。字符必须在用 </span><br><span class="line">/C 选项指定的一组选择中; 同时，必须用 </span><br><span class="line">/T 指定 nnnn。</span><br><span class="line">/M   <span class="keyword">text</span>      指定提示之前要显示的消息。如果没有指定，工具只显示提示。</span><br><span class="line">/?          显示帮助消息。</span><br></pre></td></tr></table></figure>
+
+<p>注意:</p>
+<p>ERRORLEVEL 环境变量被设置为从选择集选择的键索引。列出的第一个选择返回 1，第二个选择返回 2，等等。如果用户按的键不是有效的选择，该工具会发出警告响声。如果该工具检测到错误状态，它会返回 255 的ERRORLEVEL 值。如果用户按 Ctrl+Break 或 Ctrl+C 键，该工具会返回 0的 ERRORLEVEL 值。在一个批程序中使用 ERRORLEVEL 参数时，将参数降序排列。</p>
+<p>示例:</p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CHOICE /?</span><br><span class="line">CHOICE /C YNC /M <span class="string">&quot;确认请按 Y，否请按 N，或者取消请按 C。&quot;</span></span><br><span class="line">CHOICE /T <span class="number">10</span> /C ync /CS /D y</span><br><span class="line">CHOICE /C ab /M <span class="string">&quot;选项 1 请选择 a，选项 2 请选择 b。&quot;</span></span><br><span class="line">CHOICE /C ab /N /M <span class="string">&quot;选项 1 请选择 a，选项 2 请选择 b。&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>如果我运行命令：<code>CHOICE /C YNC /M &quot;确认请按 Y，否请按 N，或者取消请按 C。&quot;</code><br>屏幕上会显示：<br>确认请按 Y，否请按 N，或者取消请按 C。 [Y,N,C]?</p>
+<p>例：test.bat的内容如下（注意，用if errorlevel判断返回值时，要按返回值从高到低排列）:</p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">@echo <span class="keyword">off</span> </span><br><span class="line">choice /C dme /M <span class="string">&quot;defrag,mem,end&quot;</span></span><br><span class="line"><span class="keyword">if</span> errorlevel <span class="number">3</span> <span class="keyword">goto</span> <span class="keyword">end</span></span><br><span class="line"><span class="keyword">if</span> errorlevel <span class="number">2</span> <span class="keyword">goto</span> mem </span><br><span class="line"><span class="keyword">if</span> errotlevel <span class="number">1</span> <span class="keyword">goto</span> defrag</span><br><span class="line"> </span><br><span class="line">:defrag </span><br><span class="line"><span class="symbol">c:</span>\dos\defrag </span><br><span class="line"><span class="keyword">goto</span> <span class="keyword">end</span></span><br><span class="line"> </span><br><span class="line">:mem </span><br><span class="line">mem </span><br><span class="line"><span class="keyword">goto</span> <span class="keyword">end</span></span><br><span class="line"> </span><br><span class="line">:<span class="keyword">end</span> </span><br><span class="line">echo good bye</span><br></pre></td></tr></table></figure>
+
+<p>此批处理运行后，将显示“defrag,mem,end[D,M,E]?” ，用户可选择d m e ，然后if语句根据用户的选择作出判断，d表示执行标号为defrag的程序段，m表示执行标号为mem的程序段，e表示执行标号为end的程序段，每个程序段最后都以goto end将程序跳到end标号处，然后程序将显示good bye，批处理运行结束。</p>
+<p><strong>四、for 循环命令，只要条件符合，它将多次执行同一命令。</strong></p>
+<p>语法：<br>对一组文件中的每一个文件执行某个特定命令。</p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FOR</span> %%variable <span class="keyword">IN</span> (<span class="keyword">set</span>) <span class="keyword">DO</span> command [command-parameters]</span><br><span class="line"></span><br><span class="line">%%variable  指定一个单一字母可替换的参数。</span><br><span class="line">(<span class="keyword">set</span>)    指定一个或一组文件。可以使用通配符。</span><br><span class="line">command   指定对每个文件执行的命令。</span><br><span class="line">command-parameters  为特定命令指定参数或命令行开关。</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>例如一个批处理文件中有一行:<br><code>for %%c in (*.bat *.txt) do type %%c</code></p>
+<p>则该命令行会显示当前目录下所有以bat和txt为扩展名的文件的内容。</p>
+<p><strong>批处理示例</strong></p>
+<p>\1. IF-EXIST</p>
+<p>1)</p>
+<p>首先用记事本在C:\建立一个test1.bat批处理文件，文件内容如下：</p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@echo <span class="keyword">off</span> </span><br><span class="line"><span class="keyword">IF</span> EXIST \AUTOEXEC.BAT TYPE \AUTOEXEC.BAT </span><br><span class="line"><span class="keyword">IF</span> <span class="built_in">NOT</span> EXIST \AUTOEXEC.BAT ECHO \AUTOEXEC.BAT does <span class="built_in">not</span> exist</span><br></pre></td></tr></table></figure>
+
+<p>然后运行它： </p>
+<p><code>C:\&gt;TEST1.BAT</code></p>
+<p>如果C:\存在AUTOEXEC.BAT文件，那么它的内容就会被显示出来，如果不存在，批处理就会提示你该文件不存在。</p>
+<p>2)</p>
+<p>接着再建立一个test2.bat文件，内容如下：</p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@ECHO <span class="keyword">OFF</span> </span><br><span class="line"><span class="keyword">IF</span> EXIST \%<span class="number">1</span> TYPE \%<span class="number">1</span> </span><br><span class="line"><span class="keyword">IF</span> <span class="built_in">NOT</span> EXIST \%<span class="number">1</span> ECHO \%<span class="number">1</span> does <span class="built_in">not</span> exist</span><br></pre></td></tr></table></figure>
+
+<p>执行:<br><code>C:\&gt;TEST2 AUTOEXEC.BAT</code><br>该命令运行结果同上。</p>
+<p>说明：<br>(1) IF EXIST 是用来测试文件是否存在的，格式为<br>IF EXIST [路径+文件名] 命令<br>(2) test2.bat文件中的%1是参数，DOS允许传递9个批参数信息给批处理文件，分别为%1~%9(%0表示test2命令本身) ，这有点象编程中的实参和形参的关系，%1是形参，AUTOEXEC.BAT是实参。</p>
+<ol start="3">
+<li>更进一步的，建立一个名为TEST3.BAT的文件，内容如下：</li>
+</ol>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@echo <span class="keyword">off</span></span><br><span class="line"><span class="keyword">IF</span> <span class="string">&quot;%1&quot;</span> == <span class="string">&quot;A&quot;</span> ECHO XIAO </span><br><span class="line"><span class="keyword">IF</span> <span class="string">&quot;%2&quot;</span> == <span class="string">&quot;B&quot;</span> ECHO TIAN </span><br><span class="line"><span class="keyword">IF</span> <span class="string">&quot;%3&quot;</span> == <span class="string">&quot;C&quot;</span> ECHO XIN</span><br></pre></td></tr></table></figure>
+
+<p>如果运行：</p>
+<p><code>C:\&gt;TEST3 A B C</code></p>
+<p>屏幕上会显示:<br>XIAO<br>TIAN<br>XIN</p>
+<p>如果运行：<br><code>C:\&gt;TEST3 A B</code><br>屏幕上会显示<br>XIAO<br>TIAN</p>
+<p>在这个命令执行过程中，DOS会将一个空字符串指定给参数%3。</p>
+<p>2、IF-ERRORLEVEL</p>
+<p>建立TEST4.BAT，内容如下：</p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@ECHO <span class="keyword">OFF</span></span><br><span class="line">XCOPY C:\AUTOEXEC.BAT D:<span class="keyword">IF</span> ERRORLEVEL <span class="number">1</span> ECHO 文件拷贝失败</span><br><span class="line"><span class="keyword">IF</span> ERRORLEVEL <span class="number">0</span> ECHO 成功拷贝文件</span><br></pre></td></tr></table></figure>
+
+
+
+<p>然后执行文件:<br>C:&gt;TEST4</p>
+<p>如果文件拷贝成功，屏幕就会显示“成功拷贝文件”，否则就会显示“文件拷贝失败”。</p>
+<p>IF ERRORLEVEL 是用来测试它的上一个DOS命令的返回值的，注意只是上一个命令的返回值，而且返回值必须依照从大到小次序顺序判断。<br>因此下面的批处理文件是错误的：</p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@ECHO <span class="keyword">OFF</span> </span><br><span class="line">XCOPY C:\AUTOEXEC.BAT D:\ </span><br><span class="line"><span class="keyword">IF</span> ERRORLEVEL <span class="number">0</span> ECHO 成功拷贝文件 </span><br><span class="line"><span class="keyword">IF</span> ERRORLEVEL <span class="number">1</span> ECHO 未找到拷贝文件 </span><br><span class="line"><span class="keyword">IF</span> ERRORLEVEL <span class="number">2</span> ECHO 用户通过ctrl-c中止拷贝操作 </span><br><span class="line"><span class="keyword">IF</span> ERRORLEVEL <span class="number">3</span> ECHO 预置错误阻止文件拷贝操作 </span><br><span class="line"><span class="keyword">IF</span> ERRORLEVEL <span class="number">4</span> ECHO 拷贝过程中写盘错误</span><br></pre></td></tr></table></figure>
+
+<p>无论拷贝是否成功，后面的：</p>
+<p>未找到拷贝文件<br>用户通过ctrl-c中止拷贝操作<br>预置错误阻止文件拷贝操作<br>拷贝过程中写盘错误</p>
+<p>都将显示出来。</p>
+<p>以下就是几个常用命令的返回值及其代表的意义：<br>backup<br>0 备份成功<br>1 未找到备份文件<br>2 文件共享冲突阻止备份完成<br>3 用户用ctrl-c中止备份<br>4 由于致命的错误使备份操作中止</p>
+<p>diskcomp<br>0 盘比较相同<br>1 盘比较不同<br>2 用户通过ctrl-c中止比较操作<br>3 由于致命的错误使比较操作中止<br>4 预置错误中止比较</p>
+<p>diskcopy<br>0 盘拷贝操作成功<br>1 非致命盘读/写错<br>2 用户通过ctrl-c结束拷贝操作<br>3 因致命的处理错误使盘拷贝中止<br>4 预置错误阻止拷贝操作</p>
+<p>format<br>0 格式化成功<br>3 用户通过ctrl-c中止格式化处理<br>4 因致命的处理错误使格式化中止<br>5 在提示“proceed with format（y/n）?”下用户键入n结束</p>
+<p>xcopy<br>0 成功拷贝文件<br>1 未找到拷贝文件<br>2 用户通过ctrl-c中止拷贝操作<br>4 预置错误阻止文件拷贝操作<br>5 拷贝过程中写盘错误</p>
+<p>3、IF STRING1 == STRING2</p>
+<p>建立TEST5.BAT，文件内容如下：</p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@echo <span class="keyword">off</span></span><br><span class="line"><span class="keyword">IF</span> <span class="string">&quot;%1&quot;</span> == <span class="string">&quot;A&quot;</span> formAT A:</span><br></pre></td></tr></table></figure>
+
+<p>执行：<br><code>C:\&gt;TEST5 A</code><br>屏幕上就出现是否将A:盘格式化的内容。</p>
+<p>注意：为了防止参数为空的情况，一般会将字符串用双引号（或者其它符号，注意不能使用保留符号）括起来。<br>如：<code>if [%1]==[A] 或者 if %1*==A*</code></p>
+<p><strong>5、GOTO</strong></p>
+<p>建立TEST6.BAT，文件内容如下：</p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@ECHO <span class="keyword">OFF</span></span><br><span class="line"><span class="keyword">IF</span> EXIST C:\AUTOEXEC.BAT <span class="keyword">GOTO</span> _COPY</span><br><span class="line"><span class="keyword">GOTO</span> _DONE</span><br><span class="line">:_COPY</span><br><span class="line">COPY C:\AUTOEXEC.BAT D:\</span><br><span class="line">:_DONE</span><br></pre></td></tr></table></figure>
+
+<p>注意：<br>(1) 标号前是ASCII字符的冒号”:”，冒号与标号之间不能有空格。<br>(2) 标号的命名规则与文件名的命名规则相同。<br>(3) DOS支持最长八位字符的标号，当无法区别两个标号时，将跳转至最近的一个标号。</p>
+<p><strong>6、FOR</strong></p>
+<p>建立C:\TEST7.BAT，文件内容如下：</p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@ECHO <span class="keyword">OFF</span></span><br><span class="line"><span class="keyword">FOR</span> %C <span class="keyword">IN</span> (*.BAT *.TXT *.SYS) <span class="keyword">DO</span> TYPE %C</span><br></pre></td></tr></table></figure>
+
+<p>运行：<br>C:&gt;TEST7</p>
+<p>执行以后，屏幕上会将C:盘根目录下所有以BAT、TXT、SYS为扩展名的文件内容显示出来（不包括隐藏文件）。</p>
+<p><strong>bat命令的使用</strong></p>
+<p>一. 简单批处理内部命令简介<br>　<br>　　1. Echo 命令</p>
+<p>　　打开回显或关闭请求回显功能，或显示消息。如果没有任何参数，echo 命令将显示当前回显设置。</p>
+<p>　　语法</p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">　echo [&#123;<span class="keyword">on</span>　<span class="keyword">off</span>&#125;] [message]</span><br><span class="line">　　Sample：@echo <span class="keyword">off</span> / echo hello world</span><br></pre></td></tr></table></figure>
+
+<p>　　在实际应用中我们会把这条命令和重定向符号（也称为管道符号，一般用&gt; &gt;&gt; ）结合来实现输入一些命令到特定格式的文件中.这将在以后的例子中体现出来。</p>
+<p>　　<strong>2. @ 命令</strong></p>
+<p>　　表示不显示@后面的命令，在入侵过程中（例如使用批处理来格式化敌人的硬盘）自然不能让对方看到你使用的命令啦。</p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">　　Sample：@echo <span class="keyword">off</span></span><br><span class="line">　　@echo Now initializing the program,please wait a minite...</span><br><span class="line">　　@format X: /q/u/autoset (format 这个命令是不可以使用/y这个参数的，可喜的是微软留了个autoset这个参数给我们，效果和/y是一样的。)</span><br></pre></td></tr></table></figure>
+
+<p>　　<strong>3. Goto 命令</strong></p>
+<p>　　指定跳转到标签，找到标签后，程序将处理从下一行开始的命令。</p>
+<p>　　语法：</p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">　　<span class="keyword">goto</span> label （label是参数，指定所要转向的批处理程序中的行。）</span><br><span class="line">　　Sample：</span><br><span class="line">　　<span class="keyword">if</span> &#123;%<span class="number">1</span>&#125;==&#123;&#125; <span class="keyword">goto</span> noparms</span><br><span class="line">　　<span class="keyword">if</span> &#123;%<span class="number">2</span>&#125;==&#123;&#125; <span class="keyword">goto</span> noparms（如果这里的<span class="keyword">if</span>、%<span class="number">1</span>、%<span class="number">2</span>你不明白的话，先跳过去，后面会有详细的解释。）</span><br><span class="line">　　@Rem check parameters <span class="keyword">if</span> null show usage</span><br><span class="line">　　:noparms</span><br><span class="line">　　echo Usage: monitor.bat ServerIP PortNumber</span><br><span class="line">　　<span class="keyword">goto</span> <span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<p>　　标签的名字可以随便起，但是最好是有意义的字母啦，字母前加个：用来表示这个字母是标签，goto命令就是根据这个：来寻找下一步跳到到那里。最好有一些说明这样你别人看起来才会理解你的意图啊。</p>
+<p>　　<strong>4. Rem 命令</strong></p>
+<p>　　注释命令，在C语言中相当与/<em>——–</em>/,它并不会被执行，只是起一个注释的作用，便于别人阅读和你自己日后修改。</p>
+<p>　</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">　Rem Message</span><br><span class="line">　　Sample：@Rem Here is the description.?</span><br></pre></td></tr></table></figure>
+
+<p>  <strong>5. Pause 命令</strong></p>
+<p>　　运行 Pause 命令时，将显示下面的消息：</p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">　　Press any <span class="keyword">key</span> <span class="keyword">to</span> <span class="keyword">continue</span> . . .</span><br><span class="line">　　Sample：</span><br><span class="line">　　@echo <span class="keyword">off</span></span><br><span class="line">　　:begin</span><br><span class="line">　　copy a:*.* d：\back</span><br><span class="line">　　echo Please put a <span class="built_in">new</span> disk <span class="keyword">into</span> driver A</span><br><span class="line">　　pause</span><br><span class="line">　　<span class="keyword">goto</span> begin</span><br></pre></td></tr></table></figure>
+
+<p>　　在这个例子中，驱动器 A 中磁盘上的所有文件均复制到d:\back中。显示的注释提示您将另一张磁盘放入驱动器 A 时，pause 命令会使程序挂起，以便您更换磁盘，然后按任意键继续处理。</p>
+<p>　　<strong>6. Call 命令</strong></p>
+<p>　　从一个批处理程序调用另一个批处理程序，并且不终止父批处理程序。call 命令接受用作调用目标的标签。如果在脚本或批处理文件外使用 Call，它将不会在命令行起作用。</p>
+<p>　　语法</p>
+<p>　</p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">　<span class="keyword">call</span> [[Drive:][Path] FileName [BatchParameters]] [:label [arguments]]</span><br><span class="line"></span><br><span class="line">　　参数</span><br><span class="line"></span><br><span class="line">　　[Drive:&#125;[Path] FileName</span><br></pre></td></tr></table></figure>
+
+<p>　　指定要调用的批处理程序的位置和名称。filename 参数必须具有 .bat 或 .cmd 扩展名。</p>
+<p>　　<strong>7. start 命令</strong></p>
+<p>　　调用外部程序，所有的DOS命令和命令行程序都可以由start命令来调用。</p>
+<p>　　入侵常用参数：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">　　MIN 开始时窗口最小化</span><br><span class="line">　　SEPARATE 在分开的空间内开始 16 位 Windows 程序</span><br><span class="line">　　HIGH 在 HIGH 优先级类别开始应用程序</span><br><span class="line">　　REALTIME 在 REALTIME 优先级类别开始应用程序</span><br><span class="line">　　WAIT 启动应用程序并等候它结束</span><br><span class="line">　　parameters 这些为传送到命令/程序的参数</span><br></pre></td></tr></table></figure>
+
+<p>　　执行的应用程序是 32-位 GUI 应用程序时，CMD.EXE 不等应用程序终止就返回命令提示。如果在命令脚本内执行，该新行为则不会发生。</p>
+<p>　　<strong>8. choice 命令  #这一个命令还不会用，上网再找找资料#</strong></p>
+<p>　　choice 使用此命令可以让用户输入一个字符，从而运行不同的命令。使用时应该加/c:参数，c:后应写提示可输入的字符，之间无空格。它的返回码为1234……</p>
+<p>　　如: choice /c:dme defrag,mem,end</p>
+<p>　　将显示</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">　　defrag,mem,end[D,M,E]?</span><br><span class="line">　　Sample：</span><br><span class="line">　　Sample.bat的内容如下:</span><br><span class="line">　　@echo off</span><br><span class="line">　　choice /c:dme defrag,mem,end</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="linux常用命令"><a href="#linux常用命令" class="headerlink" title="linux常用命令"></a>linux常用命令</h1>
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://stary2020.gitee.io/2021/09/13/dos/" title="常用命令" target="_blank" rel="external">http://stary2020.gitee.io/2021/09/13/dos/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://stary1999.github.io" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://stary1999.github.io" target="_blank"><span class="text-dark">stary</span><small class="ml-1x">愿启明星照亮信仰，照进现实</small></a></h3>
+        <div>成长中的程序员，半个极客，伪文艺青年</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    
+    <li class="next">
+      <a href="/2021/09/04/messagesOfSkill/" title="面试备考1"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">
+        <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+  </div>
+  </div>
+</nav>
+  
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/stary" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        &copy; 2021 stary
+        
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+   
+
+
+
+
+
+
+</body>
+</html>

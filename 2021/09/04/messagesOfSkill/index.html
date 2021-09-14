@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>面试备考1 | Hexo</title>
+  <meta name="description" content="基础： 熟悉JavaSE基础知识，基本功扎实，熟悉面向对象的设计思想，掌握集合、多线程、泛型、IO流、网络、反射等知识。熟悉Jvm内存结构，类加载器，回收算法等。 熟悉基本数据结构（数组、链表、哈希表、栈、队列、等），掌握基本算法实现，以及常见的设计模式等。 了解计算机组成基本原理，操作系统基础知识，了解网络通讯协议、进程处理等。 了解数据库编程的基本知识，熟悉Mysql数据库的使用，学习使用过S">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面试备考1">
+<meta property="og:url" content="http://stary2020.gitee.io/2021/09/04/messagesOfSkill/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="基础： 熟悉JavaSE基础知识，基本功扎实，熟悉面向对象的设计思想，掌握集合、多线程、泛型、IO流、网络、反射等知识。熟悉Jvm内存结构，类加载器，回收算法等。 熟悉基本数据结构（数组、链表、哈希表、栈、队列、等），掌握基本算法实现，以及常见的设计模式等。 了解计算机组成基本原理，操作系统基础知识，了解网络通讯协议、进程处理等。 了解数据库编程的基本知识，熟悉Mysql数据库的使用，学习使用过S">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-09-04T13:19:17.000Z">
+<meta property="article:modified_time" content="2021-09-13T11:56:18.289Z">
+<meta property="article:author" content="stary">
+<meta property="article:tag" content="default">
+<meta property="article:tag" content="合集">
+<meta name="twitter:card" content="summary">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://stary2020.gitee.io/2021/09/04/messagesOfSkill/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://stary1999.github.io" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">stary</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">愿启明星照亮信仰，照进现实</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Jiangsu, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav menu-highlight">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/stary" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享经验!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/default/">default</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%A1%86%E6%9E%B6/">框架</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E8%AE%BE/">课设</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%A1%B9%E7%9B%AE/">项目</a><span class="category-list-count">7</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/MyBatis/" style="font-size: 13px;">MyBatis</a> <a href="/tags/Redis/" style="font-size: 13px;">Redis</a> <a href="/tags/SDN/" style="font-size: 13px;">SDN</a> <a href="/tags/SpringBoot/" style="font-size: 13px;">SpringBoot</a> <a href="/tags/SpringBoot2/" style="font-size: 13px;">SpringBoot2</a> <a href="/tags/SpringCloud/" style="font-size: 13px;">SpringCloud</a> <a href="/tags/android/" style="font-size: 13px;">android</a> <a href="/tags/default/" style="font-size: 14px;">default</a> <a href="/tags/docker/" style="font-size: 13px;">docker</a> <a href="/tags/git/" style="font-size: 13px;">git</a> <a href="/tags/github/" style="font-size: 13px;">github</a> <a href="/tags/hexo/" style="font-size: 13px;">hexo</a> <a href="/tags/idea/" style="font-size: 13px;">idea</a> <a href="/tags/java/" style="font-size: 13.75px;">java</a> <a href="/tags/jsp/" style="font-size: 13px;">jsp</a> <a href="/tags/jvm/" style="font-size: 13px;">jvm</a> <a href="/tags/markdown/" style="font-size: 13px;">markdown</a> <a href="/tags/springCloud/" style="font-size: 13px;">springCloud</a> <a href="/tags/ubuntu/" style="font-size: 13px;">ubuntu</a> <a href="/tags/vue/" style="font-size: 13px;">vue</a> <a href="/tags/web/" style="font-size: 13px;">web</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 13px;">前端</a> <a href="/tags/%E5%90%88%E9%9B%86/" style="font-size: 13px;">合集</a> <a href="/tags/%E5%AE%9E%E8%B7%B5/" style="font-size: 13.25px;">实践</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 13.5px;">工具</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 13px;">数据库</a> <a href="/tags/%E6%A1%86%E6%9E%B6/" style="font-size: 13.25px;">框架</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 13.25px;">笔记</a> <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 13px;">网络</a> <a href="/tags/%E7%BE%A4%E9%9B%86/" style="font-size: 13px;">群集</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 13.5px;">面试</a> <a href="/tags/%E9%A1%B9%E7%9B%AE/" style="font-size: 13.5px;">项目</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">九月 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">八月 2021</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">七月 2021</a><span class="archive-list-count">17</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">六月 2021</a><span class="archive-list-count">7</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled ">
+        
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/2021/09/13/dos/" class="thumb">
+    
+    
+        <span class="thumb-image thumb-none"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/default/">default</a>
+              </p>
+              <p class="item-title">
+                <a href="/2021/09/13/dos/" class="title">常用命令</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-09-13T11:37:09.000Z" itemprop="datePublished">2021-09-13</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/2021/09/04/messagesOfSkill/" class="thumb">
+    
+    
+        <span class="thumb-image thumb-none"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/java/">java</a>
+              </p>
+              <p class="item-title">
+                <a href="/2021/09/04/messagesOfSkill/" class="title">面试备考1</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-09-04T13:19:17.000Z" itemprop="datePublished">2021-09-04</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/2021/08/26/project-2021-08-26-EVENGOfNetwork/" class="thumb">
+    
+    
+        <span class="thumb-image thumb-none"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E9%A1%B9%E7%9B%AE/">项目</a>
+              </p>
+              <p class="item-title">
+                <a href="/2021/08/26/project-2021-08-26-EVENGOfNetwork/" class="title">EVE-NG仿真路由组网与交换机配置</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-08-26T05:40:34.000Z" itemprop="datePublished">2021-08-26</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/2021/08/26/project-2021-08-26-windowsServerHyperV/" class="thumb">
+    
+    
+        <span class="thumb-image thumb-none"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E9%A1%B9%E7%9B%AE/">项目</a>
+              </p>
+              <p class="item-title">
+                <a href="/2021/08/26/project-2021-08-26-windowsServerHyperV/" class="title">基于windows server搭建的故障群集转移</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-08-26T05:31:28.000Z" itemprop="datePublished">2021-08-26</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/2021/08/26/project-2021-08-26-dockerOfDeploy/" class="thumb">
+    
+    
+        <span class="thumb-image thumb-none"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E9%A1%B9%E7%9B%AE/">项目</a>
+              </p>
+              <p class="item-title">
+                <a href="/2021/08/26/project-2021-08-26-dockerOfDeploy/" class="title">docker实现企业服务负载均衡架构</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-08-26T05:31:04.000Z" itemprop="datePublished">2021-08-26</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%EF%BC%9A"><span class="toc-number">1.</span> <span class="toc-text">基础：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7%EF%BC%9A"><span class="toc-number">2.</span> <span class="toc-text">工具：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7%EF%BC%9A"><span class="toc-number">3.</span> <span class="toc-text">高级：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7"><span class="toc-number"></span> <span class="toc-text">高级</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#SpringCloud"><span class="toc-number"></span> <span class="toc-text">SpringCloud</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-number"></span> <span class="toc-text">概述</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF%E5%BE%AE%E6%9C%8D%E5%8A%A1"><span class="toc-number">0.1.</span> <span class="toc-text">1、什么是微服务</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%8E%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84"><span class="toc-number"></span> <span class="toc-text">微服务与服务架构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%8A%80%E6%9C%AF%E6%A0%88"><span class="toc-number"></span> <span class="toc-text">微服务技术栈</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B9%8B%E9%97%B4%E6%98%AF%E5%A6%82%E4%BD%95%E7%8B%AC%E7%AB%8B%E9%80%9A%E8%AE%AF%E7%9A%84"><span class="toc-number">0.1.</span> <span class="toc-text">2、微服务之间是如何独立通讯的</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81SpringCloud%E5%92%8CDubbo%E6%9C%89%E5%93%AA%E4%BA%9B%E5%8C%BA%E5%88%AB"><span class="toc-number">0.2.</span> <span class="toc-text">3、SpringCloud和Dubbo有哪些区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4%E3%80%81SpringBoot%E5%92%8CSpringCloud%EF%BC%8C%E8%AF%B7%E8%B0%88%E8%B0%88%E4%BD%A0%E5%AF%B9%E4%BB%96%E4%BB%AC%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-number">0.3.</span> <span class="toc-text">4、SpringBoot和SpringCloud，请谈谈你对他们的理解</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF%E6%9C%8D%E5%8A%A1%E7%86%94%E6%96%AD-%E4%BB%80%E4%B9%88%E6%98%AF%E6%9C%8D%E5%8A%A1%E9%99%8D%E7%BA%A7"><span class="toc-number">0.4.</span> <span class="toc-text">5、什么是服务熔断?什么是服务降级?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6%E3%80%81%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9%E5%88%86%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88-%E8%AF%B4%E4%B8%8B%E4%BD%A0%E5%9C%A8%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91"><span class="toc-number">0.5.</span> <span class="toc-text">6、微服务的优缺点分别是什么?说下你在项目开发中遇到的坑</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7%E3%80%81%E4%BD%A0%E6%89%80%E7%9F%A5%E9%81%93%E7%9A%84%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%8A%80%E6%9C%AF%E6%A0%88%E6%9C%89%E5%93%AA%E4%BA%9B-%E5%88%97%E4%B8%BE%E4%B8%80%E4%BA%8C"><span class="toc-number">0.6.</span> <span class="toc-text">7、你所知道的微服务技术栈有哪些?列举一二</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8%E3%80%81Eureka%E5%92%8CZookeeper%E9%83%BD%E5%8F%AF%E4%BB%A5%E6%8F%90%E4%BE%9B%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0%E7%9A%84%E5%8A%9F%E8%83%BD%EF%BC%8C%E8%AF%B7%E8%AF%B4%E8%AF%B4%E4%B8%A4%E8%80%85%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">0.7.</span> <span class="toc-text">8、Eureka和Zookeeper都可以提供服务注册与发现的功能，请说说两者的区别</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Eureka"><span class="toc-number">1.</span> <span class="toc-text">Eureka</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFEureka"><span class="toc-number">1.1.</span> <span class="toc-text">什么是Eureka</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8E%9F%E7%90%86%E7%90%86%E8%A7%A3"><span class="toc-number">1.2.</span> <span class="toc-text">原理理解</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JVM"><span class="toc-number"></span> <span class="toc-text">JVM</span></a>
+    </nav>
+  </div>
+</aside>
+
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-messagesOfSkill" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      面试备考1
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2021/09/04/messagesOfSkill/" class="article-date">
+	  <time datetime="2021-09-04T13:19:17.000Z" itemprop="datePublished">2021-09-04</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/java/">java</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/default/" rel="tag">default</a>, <a class="article-tag-link-link" href="/tags/%E5%90%88%E9%9B%86/" rel="tag">合集</a>
+  </span>
+
+
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2021/09/04/messagesOfSkill/#comments" class="article-comment-link">评论</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 3k(字)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 10(分)</span>
+	
+
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h3 id="基础："><a href="#基础：" class="headerlink" title="基础："></a>基础：</h3><ol>
+<li>熟悉JavaSE基础知识，基本功扎实，熟悉面向对象的设计思想，掌握集合、多线程、泛型、IO流、网络、反射等知识。熟悉Jvm内存结构，类加载器，回收算法等。</li>
+<li>熟悉基本数据结构（数组、链表、哈希表、栈、队列、等），掌握基本算法实现，以及常见的设计模式等。</li>
+<li>了解计算机组成基本原理，操作系统基础知识，了解网络通讯协议、进程处理等。</li>
+<li>了解数据库编程的基本知识，熟悉Mysql数据库的使用，学习使用过SQL Server，学习并使用过Redis。</li>
+<li>熟悉JavaWeb知识，了解Web开发流程，熟练使用Web服务器Tomcat。了解JavaScript，HTML，CSS等基础知识，简单学习过Thymeleaf、jQuery，使用过Bootstrap进行简单前端页面开发。</li>
+</ol>
+<h3 id="工具："><a href="#工具：" class="headerlink" title="工具："></a>工具：</h3><ol>
+<li>掌握IDEA、Git、Maven等开发及版本控制工具，具备独立开发能力。</li>
+<li>熟悉Linux操作系统，掌握常用命令，有开发经验和部署项目经验。掌握Docker知识和基本命令。</li>
+<li>熟练使用Word、Typore等文档编辑，熟练使用计算机。</li>
+</ol>
+<h3 id="高级："><a href="#高级：" class="headerlink" title="高级："></a>高级：</h3><ol>
+<li>熟悉Spring、MyBatis、SpringMVC、SpringBoot等开源框架，熟悉部分原理，并能熟练使用SpringBoot2进行开发。</li>
+<li>了解Elasticsearch搜索引擎、RabbitMQ中间件等知识。</li>
+<li>了解微服务架构模式和分布式技术，了解SpringCloud生态，了解Eureka、Zookeeper、Gateway、Ribbon、Feign、Hystrix、Config等组件。</li>
+</ol>
+<h1 id="高级"><a href="#高级" class="headerlink" title="高级"></a>高级</h1><h2 id="SpringCloud"><a href="#SpringCloud" class="headerlink" title="SpringCloud"></a>SpringCloud</h2><h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>SpringCloud五大组件:</p>
+<ul>
+<li>服务注册与发现:Netflix Eureka</li>
+<li>负载均衡:<ul>
+<li>客户端:Netflix Ribbon</li>
+<li>服务端:Feign(依赖与ribbon，只是将调用方式RestTemplete更改成Service接口)</li>
+<li>断路器:Netflix Hystrix</li>
+<li>服务网关:Netflix Zuul</li>
+<li>分布式配置:Spring Cloud Config</li>
+</ul>
+</li>
+</ul>
+<p>常见面试题:</p>
+<ol>
+<li>什么是微服务</li>
+<li>微服务之间是如何独立通讯的</li>
+<li>SpringCloud和Dubbo有哪些区别</li>
+<li>SpringBoot和SpringCloud，请谈谈你对他们的理解</li>
+<li>什么是服务熔断?什么是服务降级?</li>
+<li>微服务的优缺点分别是什么?说下你在项目开发中遇到的坑</li>
+<li>你所知道的微服务技术栈有哪些?列举一二</li>
+<li>Eureka和Zookeeper都可以提供服务注册与发现的功能，请说说两者的区别</li>
+<li>……</li>
+</ol>
+<h4 id="1、什么是微服务"><a href="#1、什么是微服务" class="headerlink" title="1、什么是微服务"></a>1、什么是微服务</h4><ul>
+<li>就目前而言，对于微服务，业界并没有一个统一的，标准的定义。</li>
+<li>但通常而言，微服务架构是一种架构模式，或者说是一种架构风格，<strong>它提倡将单一的应用程序划分为一组小的服务，</strong>但每个服务运行在其独立的进程内，服务之间互相协调，互相配置，为用户提供最终价值，服务之间采用轻量级的通信机制(<strong>HTTP</strong>)互相沟通，每个服务都围绕着具体的业务进行构建，并且能够被独立的部署到生产环境中，另外，应尽量避免统一的，集中式的服务管理机制，对具体的一个服务而言，应该根据业务上下文，选择合适的语言、工具，对其进行构建，可以有一个非常轻量级的集中式管理来协调这些服务，可以使用不同的语言来编写服务，也可以使用不同的数据存储。</li>
+</ul>
+<p>从技术角度来看:</p>
+<ul>
+<li>微服务化的核心就是将传统的一站式应用，根据业务拆分成一个一个的服务，彻底地去耦合，每个微服务提供单个业务功能的服务，一个服务做一件事情，从技术角度看就是一种小而独立的处理过程，类似进程的概念，能够自行单独启动或销毁，拥有自己的独立数据库。</li>
+</ul>
+<h2 id="微服务与服务架构"><a href="#微服务与服务架构" class="headerlink" title="微服务与服务架构"></a>微服务与服务架构</h2><p>微服务:</p>
+<p>微服务强调的是服务的大小，它关注的是某一个点，是具体解决某一个问题/提供落地对应服务的一个服务应用，狭义的看，可以看作是IDEA中的一个个微服务工程，或者Moudel。IDEA 工具里面使用Maven开发的一个个独立的小Moudel，它具体是使用SpringBoot开发的一个小模块，专业的事情交给专业的模块来做，一个模块就做着一件事情。强调的是一个个的个体，每个个体完成一个具体的任务或者功能。</p>
+<p>微服务架构:</p>
+<p>一种新的架构形式，Martin Fowler 于2014年提出。</p>
+<p>微服务架构是一种架构模式，它体长将单一应用程序划分成一组小的服务，服务之间相互协调，互相配合，为用户提供最终价值。每个服务运行在其独立的进程中，服务与服务之间采用轻量级的通信机制**(如HTTP)<strong>互相协作，每个服务都围绕着具体的业务进行构建，并且能够被独立的部署到生产环境中，另外，应尽量避免统一的，集中式的服务管理机制，对具体的一个服务而言，应根据业务上下文，选择合适的语言、工具</strong>(如Maven)**对其进行构建。</p>
+<h2 id="微服务技术栈"><a href="#微服务技术栈" class="headerlink" title="微服务技术栈"></a>微服务技术栈</h2><table>
+<thead>
+<tr>
+<th>微服务技术条目</th>
+<th>落地技术</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>服务开发</td>
+<td>SpringBoot、Spring、SpringMVC等</td>
+</tr>
+<tr>
+<td>服务配置与管理</td>
+<td>Netfix公司的Archaius、阿里的Diamond等</td>
+</tr>
+<tr>
+<td>服务注册与发现</td>
+<td>Eureka、Consul、Zookeeper等</td>
+</tr>
+<tr>
+<td>服务调用</td>
+<td>Rest、PRC、gRPC</td>
+</tr>
+<tr>
+<td>服务熔断器</td>
+<td>Hystrix、Envoy等</td>
+</tr>
+<tr>
+<td>负载均衡</td>
+<td>Ribbon、Nginx等</td>
+</tr>
+<tr>
+<td>服务接口调用</td>
+<td>Fegin等</td>
+</tr>
+<tr>
+<td>消息队列</td>
+<td>Kafka、RabbitMQ、ActiveMQ等</td>
+</tr>
+<tr>
+<td>服务配置中心管理</td>
+<td>SpringCloudConfig、Chef等</td>
+</tr>
+<tr>
+<td>服务路由(API网关)</td>
+<td>Zuul等</td>
+</tr>
+<tr>
+<td>服务监控</td>
+<td>Zabbix、Nagios、Metrics、Specatator等</td>
+</tr>
+<tr>
+<td>全链路追踪</td>
+<td>Zipkin、Brave、Dapper等</td>
+</tr>
+<tr>
+<td>数据流操作开发包</td>
+<td>SpringCloud Stream(封装与Redis，Rabbit</td>
+</tr>
+<tr>
+<td>时间消息总线</td>
+<td>SpringCloud Bus</td>
+</tr>
+<tr>
+<td>服务部署</td>
+<td>Docker、OpenStack、Kubernetes等</td>
+</tr>
+</tbody></table>
+<h4 id="2、微服务之间是如何独立通讯的"><a href="#2、微服务之间是如何独立通讯的" class="headerlink" title="2、微服务之间是如何独立通讯的"></a>2、微服务之间是如何独立通讯的</h4><p><strong>最大区别：Spring Cloud 抛弃了Dubbo的RPC通信，采用的是基于HTTP的REST方式</strong></p>
+<p>严格来说，这两种方式各有优劣。虽然从一定程度上来说，后者牺牲了服务调用的性能，但也避免了上面提到的原生RPC带来的问题。而且REST相比RPC更为灵活，服务提供方和调用方的依赖只依靠一纸契约，不存在代码级别的强依赖，这个优点在当下强调快速演化的微服务环境下，显得更加合适。</p>
+<p>RPC：1）RPC，全称为Remote Procedure Call，即远程过程调用，它是一个计算机通信协议。它允许像调用本地服务一样调用远程服务。它可以有不同的实现方式。如RMI(远程方法调用)、Hessian、Http invoker等。另外，RPC是与语言无关的。</p>
+<h4 id="3、SpringCloud和Dubbo有哪些区别"><a href="#3、SpringCloud和Dubbo有哪些区别" class="headerlink" title="3、SpringCloud和Dubbo有哪些区别"></a>3、SpringCloud和Dubbo有哪些区别</h4><table>
+<thead>
+<tr>
+<th></th>
+<th>Dubbo</th>
+<th>SpringCloud</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>服务注册中心</td>
+<td>Zookeeper</td>
+<td>Spring Cloud Netfilx Eureka</td>
+</tr>
+<tr>
+<td>服务调用方式</td>
+<td>RPC</td>
+<td>REST API</td>
+</tr>
+<tr>
+<td>服务监控</td>
+<td>Dubbo-monitor</td>
+<td>Spring Boot Admin</td>
+</tr>
+<tr>
+<td>断路器</td>
+<td>不完善</td>
+<td>Spring Cloud Netfilx Hystrix</td>
+</tr>
+<tr>
+<td>服务网关</td>
+<td>无</td>
+<td>Spring Cloud Netfilx Zuul</td>
+</tr>
+<tr>
+<td>分布式配置</td>
+<td>无</td>
+<td>Spring Cloud Config</td>
+</tr>
+<tr>
+<td>服务跟踪</td>
+<td>无</td>
+<td>Spring Cloud Sleuth</td>
+</tr>
+<tr>
+<td>消息总栈</td>
+<td>无</td>
+<td>Spring Cloud Bus</td>
+</tr>
+<tr>
+<td>数据流</td>
+<td>无</td>
+<td>Spring Cloud Stream</td>
+</tr>
+<tr>
+<td>批量任务</td>
+<td>无</td>
+<td>Spring Cloud Task</td>
+</tr>
+</tbody></table>
+<h4 id="4、SpringBoot和SpringCloud，请谈谈你对他们的理解"><a href="#4、SpringBoot和SpringCloud，请谈谈你对他们的理解" class="headerlink" title="4、SpringBoot和SpringCloud，请谈谈你对他们的理解"></a>4、SpringBoot和SpringCloud，请谈谈你对他们的理解</h4><ul>
+<li>SpringBoot专注于开苏方便的开发单个个体微服务；</li>
+<li>SpringCloud是关注全局的微服务协调整理治理框架，它将SpringBoot开发的一个个单体微服务，整合并管理起来，为各个微服务之间提供：配置管理、服务发现、断路器、路由、为代理、事件总栈、全局锁、决策竞选、分布式会话等等集成服务；</li>
+<li>SpringBoot可以离开SpringCloud独立使用，开发项目，但SpringCloud离不开SpringBoot，属于依赖关系；</li>
+<li>SpringBoot专注于快速、方便的开发单个个体微服务，SpringCloud关注全局的服务治理框架；</li>
+</ul>
+<h4 id="5、什么是服务熔断-什么是服务降级"><a href="#5、什么是服务熔断-什么是服务降级" class="headerlink" title="5、什么是服务熔断?什么是服务降级?"></a>5、什么是服务熔断?什么是服务降级?</h4><h4 id="6、微服务的优缺点分别是什么-说下你在项目开发中遇到的坑"><a href="#6、微服务的优缺点分别是什么-说下你在项目开发中遇到的坑" class="headerlink" title="6、微服务的优缺点分别是什么?说下你在项目开发中遇到的坑"></a>6、微服务的优缺点分别是什么?说下你在项目开发中遇到的坑</h4><p>优点:</p>
+<ul>
+<li>单一职责原则</li>
+<li>每个服务足够内聚，足够小，代码容易理解，这样能聚焦一个指定的业务功能或业务需求</li>
+<li>开发简单，开发效率高，一个服务可能就是专一的只干一件事</li>
+<li>微服务能够被小团队开发，这个团队只需2-5个开发人员组成</li>
+<li>微服务是松耦合的，是有功能意义的服务，无论是在开发阶段或部署阶段都是独立的</li>
+<li>微服务能使用不同的语言开发</li>
+<li>易于和第三方集成，微服务允许容易且灵活的方式集成自动部署，通过持续集成工具，如jenkis，hudson，bamboo</li>
+<li>微服务易于被一个开发人员理解、修改和维护，这样小团队能够更关注自己的工作成果，无需通过合作才能体现价值</li>
+<li>微服务允许利用和融合最新技术</li>
+<li><strong>微服务只是业务逻辑的代码，不会和HTML、CSS，或其他的界面混合</strong></li>
+<li><strong>每个微服务都有自己的存储能力，可以有自己的数据库，也可以有统一的数据库</strong></li>
+</ul>
+<p>缺点:</p>
+<ul>
+<li>开发人员要处理分布式系统的复杂性</li>
+<li>多服务运维难度，随着服务的增加，运维的压力也在增大</li>
+<li>系统部署依赖问题</li>
+<li>服务间通信成本问题</li>
+<li>数据一致性问题</li>
+<li>系统集成测试问题</li>
+<li>性能和监控问题</li>
+</ul>
+<h4 id="7、你所知道的微服务技术栈有哪些-列举一二"><a href="#7、你所知道的微服务技术栈有哪些-列举一二" class="headerlink" title="7、你所知道的微服务技术栈有哪些?列举一二"></a>7、你所知道的微服务技术栈有哪些?列举一二</h4><h4 id="8、Eureka和Zookeeper都可以提供服务注册与发现的功能，请说说两者的区别"><a href="#8、Eureka和Zookeeper都可以提供服务注册与发现的功能，请说说两者的区别" class="headerlink" title="8、Eureka和Zookeeper都可以提供服务注册与发现的功能，请说说两者的区别"></a>8、Eureka和Zookeeper都可以提供服务注册与发现的功能，请说说两者的区别</h4><ol>
+<li>……</li>
+</ol>
+<h3 id="Eureka"><a href="#Eureka" class="headerlink" title="Eureka"></a>Eureka</h3><p>Eureka服务注册中心</p>
+<h4 id="什么是Eureka"><a href="#什么是Eureka" class="headerlink" title="什么是Eureka"></a>什么是Eureka</h4><ul>
+<li>Netflix在涉及Eureka时，遵循的就是API原则.</li>
+<li>Eureka是Netflix的有个子模块，也是核心模块之一。Eureka是基于REST的服务，用于定位服务，以实现云端中间件层服务发现和故障转移，服务注册与发现对于微服务来说是非常重要的，有了服务注册与发现，只需要使用服务的标识符，就可以访问到服务，而不需要修改服务调用的配置文件了，功能类似于Dubbo的注册中心，比如Zookeeper.</li>
+</ul>
+<h4 id="原理理解"><a href="#原理理解" class="headerlink" title="原理理解"></a>原理理解</h4><ul>
+<li><p>Eureka基本的架构</p>
+<ul>
+<li>Springcloud 封装了Netflix公司开发的Eureka模块来实现服务注册与发现 (对比Zookeeper).</li>
+<li>Eureka采用了C-S的架构设计，EurekaServer作为服务注册功能的服务器，他是服务注册中心.</li>
+<li>而系统中的其他微服务，使用Eureka的客户端连接到EurekaServer并维持心跳连接。这样系统的维护人员就可以通过EurekaServer来监控系统中各个微服务是否正常运行，Springcloud 的一些其他模块 (比如Zuul) 就可以通过EurekaServer来发现系统中的其他微服务，并执行相关的逻辑.</li>
+</ul>
+</li>
+<li><p>和Dubbo架构对比.</p>
+<ul>
+<li>Eureka 包含两个组件：<strong>Eureka Server</strong> 和 <strong>Eureka Client</strong>.</li>
+<li>Eureka Server 提供服务注册，各个节点启动后，回在EurekaServer中进行注册，这样Eureka Server中的服务注册表中将会储存所有课用服务节点的信息，服务节点的信息可以在界面中直观的看到.</li>
+<li>Eureka Client 是一个Java客户端，用于简化EurekaServer的交互，客户端同时也具备一个内置的，使用轮询负载算法的负载均衡器。在应用启动后，将会向EurekaServer发送心跳 (默认周期为30秒) 。如果Eureka Server在多个心跳周期内没有接收到某个节点的心跳，EurekaServer将会从服务注册表中把这个服务节点移除掉 (默认周期为90s).</li>
+</ul>
+</li>
+<li><p>三大角色</p>
+<ul>
+<li>Eureka Server：提供服务的注册与发现</li>
+<li>Service Provider：服务生产方，将自身服务注册到Eureka中，从而使服务消费方能狗找到</li>
+<li>Service Consumer：服务消费方，从Eureka中获取注册服务列表，从而找到消费服务</li>
+</ul>
+</li>
+</ul>
+<h2 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h2>
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://stary2020.gitee.io/2021/09/04/messagesOfSkill/" title="面试备考1" target="_blank" rel="external">http://stary2020.gitee.io/2021/09/04/messagesOfSkill/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://stary1999.github.io" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://stary1999.github.io" target="_blank"><span class="text-dark">stary</span><small class="ml-1x">愿启明星照亮信仰，照进现实</small></a></h3>
+        <div>成长中的程序员，半个极客，伪文艺青年</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2021/09/13/dos/" title="常用命令"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/2021/08/26/project-2021-08-26-EVENGOfNetwork/" title="EVE-NG仿真路由组网与交换机配置"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">
+        <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+  </div>
+  </div>
+</nav>
+  
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/stary" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        &copy; 2021 stary
+        
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+   
+
+
+
+
+
+
+</body>
+</html>
